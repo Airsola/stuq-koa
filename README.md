@@ -43,5 +43,5 @@
 
 具体开课时间应该在4月初左右，如关注，请各位加[Node全栈]公众号或我的私人微信
 
-<img src='./1.pic.jpg' width='200px' height='200px' />
+<img src='./1.pic.jpg' width='200px' height='300px' />
 
