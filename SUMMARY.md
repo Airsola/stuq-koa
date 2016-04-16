@@ -1,6 +1,13 @@
 # Summary
 
 * [Node.js + es6入门](nodejs-with-es6/README.md)
+  * [什么是Node.js](nodejs-with-es6/node.md)
+  * [什么是npm](nodejs-with-es6/npm.md)
+  * [es6入门](nodejs-with-es6/es6.md)
+  * [CommonJS规范](nodejs-with-es6/commonjs.md)
+  * [node sdk](nodejs-with-es6/sdk.md)
+  * [node模块开发](nodejs-with-es6/module.md)
+  * [测试](nodejs-with-es6/test.md)
 * [Koa入门](koa-getting-start/README.md)
   * [什么是Koa？](koa-getting-start/koa.md)
   * [入门](koa-getting-start/gettingstart.md)
