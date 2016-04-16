@@ -3,7 +3,7 @@
 * [Node.js + es6入门](nodejs-with-es6/README.md)
   * [什么是Node.js](nodejs-with-es6/node.md)
   * [什么是npm](nodejs-with-es6/npm.md)
-  * [3m大法安装Node.js](nodejs-with-es6/install.md)
+  * [3m大法安装](nodejs-with-es6/install.md)
   * [es6入门](nodejs-with-es6/es6.md)
   * [CommonJS规范](nodejs-with-es6/commonjs.md)
   * [Node.js SDK](nodejs-with-es6/sdk.md)
