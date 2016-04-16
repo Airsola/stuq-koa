@@ -21,7 +21,7 @@
     * [Lifecycle](koa-getting-start/core/lifecycle.md)
   * [异步流程控制](koa-getting-start/async.md)
 * [Koa进阶](koa-practice/README.md)
-  * [Http](koa-practice/mongodb.md)
+  * [http](koa-practice/mongodb.md)
   * [文件上传](koa-practice/mongodb.md)
   * [pub/sub](koa-practice/mongodb.md)
   * [mq](koa-practice/mongodb.md)
