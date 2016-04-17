@@ -22,6 +22,7 @@
     * [Views](koa-getting-start/core/views.md)
     * [Lifecycle](koa-getting-start/core/lifecycle.md)
   * [异步流程控制](koa-getting-start/async.md)
+  * [压测](koa-getting-start/benchmark.md)
 * [Koa进阶](koa-practice/README.md)
   * [http](koa-practice/mongodb.md)
   * [文件上传](koa-practice/mongodb.md)
