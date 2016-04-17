@@ -66,3 +66,6 @@ server {
 sudo nginx -s reload
 ```
 
+## 使用gulp和ftp部署
+
+https://github.com/nodeonly/gulp-sftp
