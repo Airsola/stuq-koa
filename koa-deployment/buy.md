@@ -29,7 +29,7 @@ https://account.aliyun.com/login/login.htm?oauth_callback=https%3A%2F%2Fwww.aliy
 
 一定要记得选【按量付费】
 
-![](img/2.png)
+![](img/3.png)
 
 ## 如何选择最便宜的机器？
 
@@ -46,7 +46,7 @@ https://account.aliyun.com/login/login.htm?oauth_callback=https%3A%2F%2Fwww.aliy
 
 ## 选择操作系统，设置root用户密码
 
-![4](img/4.png)
+![4](img/5.png)
 
 ## 点击立即购买即可
 
