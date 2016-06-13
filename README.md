@@ -32,14 +32,18 @@
 
 ## 课程目录
 
-- 第一节：Node.js + es6
-- 第二节：Koa入门
-- 第三节：Koa进阶（best practice）
-- 第四节：数据库操作
-  - mysql/postgre
-  - mongodb
-- 第五节：项目实战
-- 第六节：部署实战(阿里云或docker)
+- Node.js入门（4.0+）
+  - es6
+  - vscode
+  - ava
+- Koa 1.x 和 2.x入门
+- HTTP with Koa
+- 异步流程控制(co, promise/a+, thunk, generator, aysnc/await)
+- 数据库：mongodb
+- 项目实战：实现值乎、分答类的系统
+- 部署实战：阿里云部署
+- Koa实战：moa2框架和脚手架
+
 
 具体目录和正文见 [目录](SUMMARY.md)
 
