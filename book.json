@@ -1,23 +1,23 @@
 {
-  "gitbook": "2.x.x",
-  "structure": {
-    "summary": "./SUMMARY.md"
-  },
-  "plugins": [
-    "edit-link",
-    "prism",
-    "-highlight",
-    "github",
-    "anchors",
-    "collapsible-menu"
-  ],
-  "pluginsConfig": {
-    "edit-link": {
-      "base": "https://github.com/i5ting/stuq-koa/tree/master",
-      "label": "Edit This Page"
+    "gitbook": "2.x.x",
+    "structure": {
+        "summary": "./SUMMARY.md"
     },
-    "github": {
-      "url": "https://github.com/i5ting/stuq-koa/"
+    "plugins": [
+        "edit-link",
+        "prism",
+        "-highlight",
+        "github",
+        "anchors",
+        "collapsible-menu"
+    ],
+    "pluginsConfig": {
+        "edit-link": {
+            "base": "https://github.com/i5ting/stuq-koa/tree/master",
+            "label": "Edit This Page"
+        },
+        "github": {
+            "url": "https://github.com/i5ting/stuq-koa/"
+        }
     }
-  }
 }
