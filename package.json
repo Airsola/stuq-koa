@@ -4,11 +4,6 @@
   "description": "这是和StuQ合作的一门关于Node.js下一代web框架Koajs的在线课程的文档",
   "main": "index.js",
   "dependencies": {
-    "gitbook-plugin-anchors": "^0.7.0",
-    "gitbook-plugin-edit-link": "^2.0.2",
-    "gitbook-plugin-collapsible-menu": "^1.0.2",
-    "gitbook-plugin-github": "^2.0.0",
-    "gitbook-plugin-prism": "^1.0.0",
     "gitbook-plugin-toc2": "^1.0.5"
   },
   "devDependencies": {},
