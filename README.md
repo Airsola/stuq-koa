@@ -96,18 +96,16 @@
 ## 课程学习环境使用说明
 
 - https://github.com/i5ting/nodejs-newbie
-
 - vscode
 
+## 报名
+
+具体开课时间
+
+- 第一期7月，已开课，30多人
 
 
-## 联系我
-
-具体开课时间应该在7月初左右，如关注，请各位加[Node全栈]公众号或我的私人微信
-
-<img src='./1.pic.jpg' width='200px' height='300px' />
-
-
+如关注，请各位加[Stuq]公众号或Stuq小助手的私人微信StuQxiaozhushou
 
 ## Koa的预习资料  
 
