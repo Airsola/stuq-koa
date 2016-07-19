@@ -15,7 +15,7 @@
   * [什么是Koa？](koa-getting-start/koa.md)
   * [异步流程控制](koa-getting-start/async.md)
   * [co源码解析](koa-getting-start/co.md)
-  * [中间件](koa-getting-start/middleware.md)
+  * [中间件简介](koa-getting-start/middleware.md)
   * [中间件原理](koa-getting-start/middleware2.md)
   * [安装Koa-generator](koa-getting-start/koa-generator.md)
   * [hello world](koa-getting-start/hello-world.md)
