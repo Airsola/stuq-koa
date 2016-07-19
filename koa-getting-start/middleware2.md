@@ -4,7 +4,7 @@
 
 ### 从generator说起
 
-book-source/koa-core/middleware/core/a.js
+koa-getting-start/middleware/core/a.js
 
 ```
 function * a(){
@@ -27,7 +27,7 @@ console.log(it1.next());             // { value: 1, done: false }
 
 ### 用co简化一下代码
 
-book-source/koa-core/middleware/core/b.js
+koa-getting-start/middleware/core/b.js
 
 ```
 var co = require('co')
@@ -50,7 +50,7 @@ co(function* () {
 
 ### 看一下具体的1342
 
-book-source/koa-core/middleware/core/c.js
+koa-getting-start/middleware/core/c.js
 
 ```
 var co = require('co')
@@ -81,7 +81,7 @@ co(function* () {
 
 ### 中间件写法
 
-book-source/koa-core/middleware/core/d.js
+koa-getting-start/middleware/core/d.js
 
 ```
 var co = require('co');
@@ -121,7 +121,7 @@ co(compose(stack))
 
 ### v1
 
-book-source/koa-core/middleware/v1/app.js
+koa-getting-start/middleware/v1/app.js
 
 ```
 var co = require('co');
@@ -299,7 +299,7 @@ add.call(sub, 3, 1)
 
 // 这个例子中的意思就是用 add 来替换 sub，
 // add.call(sub,3,1) == add(3,1) ，
-// 所以运行结果为：alert(4); 
+// 所以运行结果为：console.log(4); 
 // 注意：js 中的函数其实是对象，函数名是对 Function对象的引用。
 ```
 
@@ -314,7 +314,7 @@ next = middleware[i].call(this, next);
 
 还记得
 
-book-source/koa-core/middleware/core/b.js
+koa-getting-start/middleware/core/b.js
 
 ```
 var co = require('co')
@@ -368,7 +368,7 @@ compose返回的是generator，那么它就需要一个generator执行器，也�
 
 ### v2
 
-book-source/koa-core/middleware/v2/app.js
+koa-getting-start/middleware/v2/app.js
 
 ```
 var co = require('co');
@@ -399,7 +399,7 @@ module.exports = {
 
 测试
 
-book-source/koa-core/middleware/v2/test.js
+koa-getting-start/middleware/v2/test.js
 
 ```
 var app = require('./app')
@@ -484,7 +484,7 @@ describe('convert.compose()', () => {
   
 ## v3
 
-book-source/koa-core/middleware/v3/app.js
+koa-getting-start/middleware/v3/app.js
 
 ```
 const co = require('co');
@@ -513,7 +513,7 @@ module.exports = {
 
 ```
 
-book-source/koa-core/middleware/v3/test.js
+koa-getting-start/middleware/v3/test.js
 
 ```
 'use strict'
