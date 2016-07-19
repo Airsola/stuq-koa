@@ -16,7 +16,6 @@ Koa is not bundled with any middleware.
 
 由 Express 原班人马打造的 koa，致力于成为一个更小、更健壮、更富有表现力的 Web 框架。使用 koa 编写 web 应用，通过组合不同的 generator，可以免除重复繁琐的回调函数嵌套，并极大地提升常用错误处理效率。Koa 不在内核方法中绑定任何中间件，它仅仅提供了一个轻量优雅的函数库，使得编写 Web 应用和API变得得心应手。
 
-
 Koa中间件的栈流以类似栈的方式，允许你下行执行动作，然后过滤和操作响应的upstream，这其实是和express有区别的另一个大点。
 
 Koa 应用是一个包含一系列中间件 generator 函数的对象。 这些中间件函数基于 request 请求以一个类似于栈的结构组成并依次执行。 Koa 类似于其他中间件系统（比如 Ruby's Rack 、Connect 等）， 然而 Koa 的核心设计思路是为中间件层提供高级语法糖封装，以增强其互用性和健壮性，并使得编写中间件变得相当有趣。
@@ -24,6 +23,14 @@ Koa 应用是一个包含一系列中间件 generator 函数的对象。 这些�
 Koa 包含了像 content-negotiation（内容协商）、cache freshness（缓存刷新）、proxy support（代理支持）和 redirection（重定向）等常用任务方法。 与提供庞大的函数支持不同，Koa只包含很小的一部分，因为Koa并不绑定任何中间件。
 
 ## Koa能干什么？
+
+主要用途
+
+- 网站（比如cnode这样的论坛）
+- api（三端：pc、移动端、h5）
+- 与其他模块搭配，比如和socket.io搭配写弹幕、im（即时聊天）等
+
+koa是微型web框架，但它也是个Node.js模块，也就是说我们也可以利用它做一些http相关的事儿。举例：实现类似于http-server这样的功能，在vue或react开发里，在爬虫里，利用路由触发爬虫任务等。比如在bin模块里，集成koa模块，启动个static-http-server这样的功能，都是非常容易的。
 
 ## Koa好在哪里？
 
@@ -56,6 +63,10 @@ koa 1.x
 
 koa 2.x
 
+- async和generator写法的中间件，通过 try catch 来捕获所有的异常
+- promise写法的中间件，采用promise的异常捕获方式
+- 所有 throw 出去的 error 都会被 koa 捕获到
+
 5）大小
 
 Koa是没有任何中间件捆绑的，连路由都没有内置，所以它更纯粹、干净一些。
@@ -63,7 +74,16 @@ Koa是没有任何中间件捆绑的，连路由都没有内置，所以它更�
 Express提供了健壮的路由，集成了少量中间件（其实是独立出去的）
 
 
-## Koa分支体系： Koa 1 和 Koa 2
+## Koa分支体系
+
+主要分为 koa 1.x和koa 2.x
+
+### Koa 1（基于co和generator的，中间件只有一种）
+
+### Koa 2（不在支持从）
+  - common function
+  - generator/yield(此种情况下依赖co)
+  - async/await（此种情况下依赖babel编译，目前Node.js还不支持async函数，不过很快就支持了，v8-5.1已经实现了，node也已经着手合并了）
 
 ```
 ➜  koa-benchmark git:(master) ✗ npm i -S koa@1
