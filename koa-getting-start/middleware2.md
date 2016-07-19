@@ -995,3 +995,50 @@ module.exports = class Application extends Emitter {
 1. Pre-Request 通常用来改写request的原始数据
 2. Request/Response 大部分中间件都在这里，功能各异
 3. Post-Response 全局异常处理，改写response数据等
+
+## 练习koa用法，集成以下中间件
+
+```
+    "koa": "^2.0.0",
+    "koa-compress": "^2.0.0",
+    "koa-conditional-get": "^2.0.0",
+    "koa-etag": "^3.0.0",
+    "koa-favicon": "^2.0.0",
+    "koa-static": "^3.0.0",
+```
+
+app.js
+
+```
+var serve = require('koa-static');
+var Koa = require('koa');
+var app = new Koa();
+
+var favicon = require('koa-favicon');
+var compress = require('koa-compress')
+var conditional = require('koa-conditional-get');
+var etag = require('koa-etag');
+
+app.use(compress({
+  filter: function (content_type) {
+    return /text/i.test(content_type)
+  },
+  threshold: 2048,
+  flush: require('zlib').Z_SYNC_FLUSH
+}))
+
+
+app.use(favicon(__dirname + '/public/favicon.ico'));
+
+// etag works together with conditional-get
+app.use(conditional());
+app.use(etag());
+
+
+// or use absolute paths
+app.use(serve(__dirname + '/dist'));
+
+app.listen(9090);
+
+console.log('listening on port 9090');
+```
