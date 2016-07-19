@@ -40,4 +40,5 @@ $ npm install -g koa-generator
 koa -h
 ```
 ![](img/koa_help.png)
+
 查看可用命令
