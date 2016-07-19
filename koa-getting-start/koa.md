@@ -73,18 +73,144 @@ Koa是没有任何中间件捆绑的，连路由都没有内置，所以它更�
 
 Express提供了健壮的路由，集成了少量中间件（其实是独立出去的）
 
-
 ## Koa分支体系
 
 主要分为 koa 1.x和koa 2.x
 
 ### Koa 1（基于co和generator的，中间件只有一种）
 
-### Koa 2（不在支持从）
-  - common function
-  - generator/yield(此种情况下依赖co)
-  - async/await（此种情况下依赖babel编译，目前Node.js还不支持async函数，不过很快就支持了，v8-5.1已经实现了，node也已经着手合并了）
+koa-getting-start/1.x/app.js
 
+```
+var koa = require('koa');
+var app = koa();
+
+// logger
+
+app.use(function *(next){
+  var start = new Date;
+  yield next;
+  var ms = new Date - start;
+  console.log('%s %s - %s', this.method, this.url, ms);
+});
+
+// response
+
+app.use(function *(){
+  this.body = 'Hello World';
+});
+
+app.listen(3000);
+```
+### Koa 2（支持3种中间件，co变成了可选依赖）
+
+- common function
+- generator/yield(此种情况下依赖co)
+- async/await
+
+####  common function
+
+koa-getting-start/2.x/app.js
+
+```
+const Koa = require('koa');
+const app = new Koa();
+
+// logger
+
+app.use((ctx, next) => {
+  const start = new Date();
+  return next().then(() => {
+    const ms = new Date() - start;
+    console.log(`${ctx.method} ${ctx.url} - ${ms}ms`);
+  });
+});
+
+// response
+app.use(ctx => {
+  ctx.body = 'Hello Koa';
+});
+
+app.listen(3000);
+
+```
+
+执行
+
+```
+$ node app.js
+```
+
+####  generator/yield(此种情况下依赖co)
+
+此种情况下依赖babel编译，目前Node.js还不支持async函数，不过很快就支持了，v8-5.1已经实现了，node也已经着手合并了
+
+koa-getting-start/2.x/app2.js
+
+```
+const Koa = require('koa');
+const co = require('co');
+const app = new Koa();
+
+// logger
+
+app.use(co.wrap(function *(ctx, next) {
+  const start = new Date();
+  yield next();
+  const ms = new Date() - start;
+  console.log(`${ctx.method} ${ctx.url} - ${ms}ms`);
+}));
+
+// response
+app.use(ctx => {
+  ctx.body = 'Hello Koa';
+});
+
+app.listen(3000);
+
+```
+
+执行
+
+```
+$ runkoa app2.js
+```
+
+这里为了从简，使用封装babel的runkoa来执行。
+
+####  async/await
+
+koa-getting-start/2.x/app3.js
+
+```
+const Koa = require('koa');
+const app = new Koa();
+
+// logger
+
+app.use(async (ctx, next) => {
+  const start = new Date();
+  await next();
+  const ms = new Date() - start;
+  console.log(`${ctx.method} ${ctx.url} - ${ms}ms`);
+});
+
+// response
+app.use(ctx => {
+  ctx.body = 'Hello Koa';
+});
+
+app.listen(3000);
+
+```
+
+执行
+
+```
+$ runkoa app3.js
+```
+
+### 依赖模块对比
 ```
 ➜  koa-benchmark git:(master) ✗ npm i -S koa@1
 koa@1.2.0 node_modules/koa
@@ -195,8 +321,6 @@ http://nodeonly.com/stack/
 - 合理使用standard 代码风格约定
 - es6语法，写的一般，比较啰嗦，凑合看吧 http://es6.ruanyifeng.com/
 - 需要大家重视OO（面向对象）写法的学习和使用，这是es的另一个好处,推荐蔡伟小兄弟的《JavaScript Patterns》 examples in ECMAScript6
-
-
 
 ## Why Node.js 4.x？
 
