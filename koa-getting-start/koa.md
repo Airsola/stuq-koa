@@ -1,4 +1,6 @@
-## 什么是Koa？
+# Koa
+
+## Koa是什么？
 
 Koa是Node.js下一代web框架
 
@@ -21,7 +23,11 @@ Koa 应用是一个包含一系列中间件 generator 函数的对象。 这些�
 
 Koa 包含了像 content-negotiation（内容协商）、cache freshness（缓存刷新）、proxy support（代理支持）和 redirection（重定向）等常用任务方法。 与提供庞大的函数支持不同，Koa只包含很小的一部分，因为Koa并不绑定任何中间件。
 
-## 和Express对比
+## Koa能干什么？
+
+## Koa好在哪里？
+
+和Express对比
 
 1）依赖的Node.js版本
 
@@ -43,7 +49,12 @@ koa主要是通过Context来处理，避免里每个中间件传递请求和响�
 
 4）异常处理
 
+koa 1.x
 
+- 通过 try catch 来捕获所有的异常
+- 所有 throw 出去的 error 都会被 koa 捕获到
+
+koa 2.x
 
 5）大小
 
@@ -52,7 +63,7 @@ Koa是没有任何中间件捆绑的，连路由都没有内置，所以它更�
 Express提供了健壮的路由，集成了少量中间件（其实是独立出去的）
 
 
-## Koa 1 和 Koa 2
+## Koa分支体系： Koa 1 和 Koa 2
 
 ```
 ➜  koa-benchmark git:(master) ✗ npm i -S koa@1
@@ -128,12 +139,49 @@ koa 1 和 koa 2 都有，但版本不同
 ```
 ├── koa-compose@3.1.0 (any-promise@1.1.0)（1是2.4而2是3.1）
 ```
-## 技术栈变更历史
 
-http://stackshare.io/nodejs/in-stacks
+
+
+## 技术栈演变
+
+http://nodeonly.com/stack/
+
+
+目录
+
+2016升级Node 4.x和Koa
+
+- Web框架：koa
+- 数据库：mongoose
+- 测试：ava
+- 流程控制：bluebird（generator、async）
+- 调试：vscode
+
+2015
+
+- Web框架：express
+- 数据库：mongoose
+- 测试：mocha + chai
+- 流程控制：bluebird（传统的promise）
+- 调试：node-inspector
+
+点击链接，可以阅读详情，对每种选型原因做了解释说明
+
+为什么要升级？
+
+核心变更：es语法支持
+
+- 使用Node.js 4.x或5.x里的es6特性，如果想玩更高级的，可以使用babel编译支持es7特性
+- 合理使用standard 代码风格约定
+- es6语法，写的一般，比较啰嗦，凑合看吧 http://es6.ruanyifeng.com/
+- 需要大家重视OO（面向对象）写法的学习和使用，这是es的另一个好处,推荐蔡伟小兄弟的《JavaScript Patterns》 examples in ECMAScript6
+
 
 
 ## Why Node.js 4.x？
 
 - es6语法特性支持支持，如generator
 - koa是基于node 4+开发的，使用generator、箭头函数等特性
+
+
+## 如何学习Koa？
