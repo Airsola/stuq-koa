@@ -20,6 +20,7 @@
   * [安装Koa-generator](koa-getting-start/koa-generator.md)
   * [hello world](koa-getting-start/hello-world.md)
   * [压测](koa-getting-start/benchmark.md)
+  * [以express的方式学习koa](koa-getting-start/express.md)
   * [随堂练习：写一个基于koa的静态http模块并发布](koa-getting-start/exercises.md)
 * [Koa进阶](koa-practice/README.md)
   * [http](koa-practice/mongodb.md)
