@@ -311,10 +311,6 @@ http://nodeonly.com/stack/
 - 流程控制：bluebird（传统的promise）
 - 调试：node-inspector
 
-点击链接，可以阅读详情，对每种选型原因做了解释说明
-
-为什么要升级？
-
 核心变更：es语法支持
 
 - 使用Node.js 4.x或5.x里的es6特性，如果想玩更高级的，可以使用babel编译支持es7特性
@@ -326,6 +322,3 @@ http://nodeonly.com/stack/
 
 - es6语法特性支持支持，如generator
 - koa是基于node 4+开发的，使用generator、箭头函数等特性
-
-## 如何学习Koa？
-
