@@ -1,6 +1,6 @@
-## 安装koa-generator
+# [koa-generator](github.com/base-n/koa-generator)
 
-这里的generator是生成器的意思，用于生成项目骨架，[express-generator](https://github.com/expressjs/generator)就是一个比较好的例子，虽然比较精简，但结构清晰，足矣满足一般性的开发需求
+这里的generator是生成器的意思，用于生成项目骨架，[express-generator](https://github.com/expressjs/generator)就是一个比较好的例子，虽然比较精简，但结构清晰，足矣满足一般性的开发需求。
 
 鉴于很多人非常熟悉expressjs，这里假定大家也熟悉express-generator
 
@@ -27,8 +27,17 @@ koa-generator提供的功能
 
 koa-generator支持koa1.x和2.x，安装后，可以分别使用`koa`和`koa2`分别创建。
 
-### 安装koa-generator
+# 安装koa-generator
 
 ```shell
 $ npm install -g koa-generator
 ```
+
+# 创建项目
+
+[koa-generator](github.com/base-n/koa-generator)支持Koa1.x和2.x，安装后，可以分别使用`koa`和`koa2`创建。
+```
+koa -h
+```
+![](img/koa_help.png)
+查看可用命令
