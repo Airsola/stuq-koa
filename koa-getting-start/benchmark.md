@@ -6,16 +6,23 @@ https://github.com/17koa/koa-benchmark
 
 ![Preview](img/preview.png)
 
-## 原理
-
-![Wrk Architecture Structure](img/wrk-architecture-structure.png)
-
 ## Prerequisites
 
 for OSX
 
 ```
 brew install wrk
+```
+
+
+## wrk原理
+
+![Wrk Architecture Structure](img/wrk-architecture-structure.png)
+
+命令行操作
+
+```
+$ wrk -t8 -c1000 -d10  http://127.0.0.1:3000
 ```
 
 ## Test
