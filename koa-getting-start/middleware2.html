@@ -1,0 +1,1734 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
+        <title>中间件原理 | StuQ Koa在线课程</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.0.1">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    
+    
+    <link rel="next" href="../koa-getting-start/koa-generator.html" />
+    
+    
+    <link rel="prev" href="../koa-getting-start/middleware.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-toc2/toc2.css">
+        
+    
+    
+
+        
+    <div class="book" data-level="2.5" data-basepath=".." data-revision="Tue Jul 19 2016 23:29:30 GMT+0800 (CST)">
+    
+
+<div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Type to search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+        
+        
+        
+
+        
+
+        
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="nodejs-with-es6-with-es6/index.html">
+            
+            <span><b>1.</b> Nodejs入门</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="nodejs-with-es6/skill.html">
+            
+                
+                    <a href="../nodejs-with-es6/skill.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        skill
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="nodejs-with-es6/introduce.html">
+            
+                
+                    <a href="../nodejs-with-es6/introduce.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        入门
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="nodejs-with-es6/install.html">
+            
+                
+                    <a href="../nodejs-with-es6/install.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        安装
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="nodejs-with-es6/helloworld.html">
+            
+                
+                    <a href="../nodejs-with-es6/helloworld.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        Hello world
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="nodejs-with-es6/commonjs.html">
+            
+                
+                    <a href="../nodejs-with-es6/commonjs.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                        Common JS规范
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="nodejs-with-es6/module-exports.html">
+            
+                
+                    <a href="../nodejs-with-es6/module-exports.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.</b>
+                        
+                        模块导出
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="nodejs-with-es6/terms.html">
+            
+                
+                    <a href="../nodejs-with-es6/terms.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.7.</b>
+                        
+                        Nodejs代码调试
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="nodejs-with-es6/npm.html">
+            
+                
+                    <a href="../nodejs-with-es6/npm.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.8.</b>
+                        
+                        编写Nodejs模块
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="nodejs-with-es6/how-to-study.html">
+            
+                
+                    <a href="../nodejs-with-es6/how-to-study.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.9.</b>
+                        
+                        最小化问题
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="nodejs-with-es6/exercises.html">
+            
+                
+                    <a href="../nodejs-with-es6/exercises.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.10.</b>
+                        
+                        随堂练习：写一个Nodejs模块并发布
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="koa-getting-start/index.html">
+            
+                
+                    <a href="../koa-getting-start/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Koa入门
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="koa-getting-start/koa.html">
+            
+                
+                    <a href="../koa-getting-start/koa.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        什么是Koa？
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="koa-getting-start/async.html">
+            
+                
+                    <a href="../koa-getting-start/async.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        异步流程控制
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="koa-getting-start/co.html">
+            
+                
+                    <a href="../koa-getting-start/co.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        co源码解析
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="koa-getting-start/middleware.html">
+            
+                
+                    <a href="../koa-getting-start/middleware.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        中间件简介
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.5" data-path="koa-getting-start/middleware2.html">
+            
+                
+                    <a href="../koa-getting-start/middleware2.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        中间件原理
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="koa-getting-start/koa-generator.html">
+            
+                
+                    <a href="../koa-getting-start/koa-generator.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.6.</b>
+                        
+                        安装Koa-generator
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="koa-getting-start/hello-world.html">
+            
+                
+                    <a href="../koa-getting-start/hello-world.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.7.</b>
+                        
+                        hello world
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="koa-getting-start/benchmark.html">
+            
+                
+                    <a href="../koa-getting-start/benchmark.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.8.</b>
+                        
+                        压测
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="koa-getting-start/express.html">
+            
+                
+                    <a href="../koa-getting-start/express.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.9.</b>
+                        
+                        以express的方式学习koa
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" data-path="koa-getting-start/exercises.html">
+            
+                
+                    <a href="../koa-getting-start/exercises.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.10.</b>
+                        
+                        随堂练习：写一个基于koa的静态http模块并发布
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="koa-practice/index.html">
+            
+                
+                    <a href="../koa-practice/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        Koa进阶
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="koa-practice/mongodb.html">
+            
+            <span><b>3.1.</b> http</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="koa-practice/mongodb.html">
+            
+            <span><b>3.2.</b> 文件上传</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="koa-practice/mongodb.html">
+            
+            <span><b>3.3.</b> session</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="koa-practice/mongodb.html">
+            
+            <span><b>3.4.</b> pub/sub</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="koa-practice/mongodb.html">
+            
+            <span><b>3.5.</b> mq</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="koa-practice/mongodb.html">
+            
+            <span><b>3.6.</b> cache</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="koa-practice/mongodb.html">
+            
+            <span><b>3.7.</b> cors</span>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="koa-with-db/index.html">
+            
+                
+                    <a href="../koa-with-db/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        Koa与数据库
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="koa-with-db/mongodb.html">
+            
+                
+                    <a href="../koa-with-db/mongodb.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        mongodb
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="koa-with-db/mongoose.html">
+            
+                
+                    <a href="../koa-with-db/mongoose.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        mongoose
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="koa-with-db/pagination.html">
+            
+                
+                    <a href="../koa-with-db/pagination.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        分页
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="koa-with-db/hook.html">
+            
+                
+                    <a href="../koa-with-db/hook.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.</b>
+                        
+                        回调
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="koa-with-db/relationship.html">
+            
+                
+                    <a href="../koa-with-db/relationship.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.</b>
+                        
+                        关系
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="koa-with-db/extend.html">
+            
+                
+                    <a href="../koa-with-db/extend.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.6.</b>
+                        
+                        扩展
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="koa-with-db/virtual.html">
+            
+                
+                    <a href="../koa-with-db/virtual.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.7.</b>
+                        
+                        虚拟属性
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8" data-path="koa-with-db/plugin.html">
+            
+                
+                    <a href="../koa-with-db/plugin.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.8.</b>
+                        
+                        插件
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.9" data-path="koa-with-db/aggregation.html">
+            
+                
+                    <a href="../koa-with-db/aggregation.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.9.</b>
+                        
+                        Aggregation关联
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.10" data-path="koa-with-db/optimize.html">
+            
+                
+                    <a href="../koa-with-db/optimize.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.10.</b>
+                        
+                        索引优化
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.11" data-path="koa-with-db/other.html">
+            
+                
+                    <a href="../koa-with-db/other.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.11.</b>
+                        
+                        其他
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="koa-in-action/index.html">
+            
+                
+                    <a href="../koa-in-action/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        项目实战
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="koa-deployment/index.html">
+            
+                
+                    <a href="../koa-deployment/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        部署
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1" data-path="koa-deployment/buy.html">
+            
+                
+                    <a href="../koa-deployment/buy.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.</b>
+                        
+                        购买
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="koa-deployment/creat.html">
+            
+            <span><b>6.2.</b> 创建</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="koa-deployment/sofeware.html">
+            
+            <span><b>6.3.</b> 安装必备软件</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="koa-deployment/node.html">
+            
+                
+                    <a href="../koa-deployment/node.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.4.</b>
+                        
+                        安装node
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="koa-deployment/mongo.html">
+            
+                
+                    <a href="../koa-deployment/mongo.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.5.</b>
+                        
+                        Mongodb部署
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6" data-path="koa-deployment/git.html">
+            
+                
+                    <a href="../koa-deployment/git.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.6.</b>
+                        
+                        代码部署
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.7" data-path="koa-deployment/pm2.html">
+            
+                
+                    <a href="../koa-deployment/pm2.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.7.</b>
+                        
+                        pm2
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.8" data-path="koa-deployment/monitor.html">
+            
+                
+                    <a href="../koa-deployment/monitor.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.8.</b>
+                        
+                        监控
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                Published with GitBook
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Table of Contents"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Search"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Font Settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="Share"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">
+                    Share on Twitter
+                </button>
+                <button type="button" data-sharing="google-plus" class="button">
+                    Share on Google
+                </button>
+                <button type="button" data-sharing="facebook" class="button">
+                    Share on Facebook
+                </button>
+                <button type="button" data-sharing="weibo" class="button">
+                    Share on Weibo
+                </button>
+                <button type="button" data-sharing="instapaper" class="button">
+                    Share on Instapaper
+                </button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Google"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >StuQ Koa在线课程</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="%E4%B8%AD%E9%97%B4%E4%BB%B6%E5%8E%9F%E7%90%86">&#x4E2D;&#x95F4;&#x4EF6;&#x539F;&#x7406;</h1>
+<h2 id="%E4%BD%A0%E5%A5%BD%E5%A5%87%E4%B8%BA%E4%BB%80%E4%B9%88%E6%98%AF-1342-%E4%B9%88%EF%BC%9F">&#x4F60;&#x597D;&#x5947;&#x4E3A;&#x4EC0;&#x4E48;&#x662F;<code>1342</code>&#x4E48;&#xFF1F;</h2>
+<h3 id="%E4%BB%8Egenerator%E8%AF%B4%E8%B5%B7">&#x4ECE;generator&#x8BF4;&#x8D77;</h3>
+<p>koa-getting-start/middleware/core/a.js</p>
+<pre><code>function * a(){
+  console.log(&apos;&#x7B2C;1&#x4E2A;&#x4E2D;&#x95F4;&#x4EF6;before 1&apos;)
+  yield *b()
+  console.log(&apos;&#x7B2C;1&#x4E2A;&#x4E2D;&#x95F4;&#x4EF6;after 2&apos;)
+}
+
+function * b(){
+  console.log(&apos;  &#x4E1A;&#x52A1;&#x903B;&#x8F91;&#x5904;&#x7406;&apos;)
+}
+
+function *hello() {
+  yield *a()
+}
+
+var it1 = hello();
+console.log(it1.next());             // { value: 1, done: false }
+</code></pre><h3 id="%E7%94%A8co%E7%AE%80%E5%8C%96%E4%B8%80%E4%B8%8B%E4%BB%A3%E7%A0%81">&#x7528;co&#x7B80;&#x5316;&#x4E00;&#x4E0B;&#x4EE3;&#x7801;</h3>
+<p>koa-getting-start/middleware/core/b.js</p>
+<pre><code>var co = require(&apos;co&apos;)
+
+function * a(){
+  console.log(&apos;&#x7B2C;1&#x4E2A;&#x4E2D;&#x95F4;&#x4EF6;before 1&apos;)
+  yield *b()
+  console.log(&apos;&#x7B2C;1&#x4E2A;&#x4E2D;&#x95F4;&#x4EF6;after 2&apos;)
+}
+
+function * b(){
+  console.log(&apos;  &#x4E1A;&#x52A1;&#x903B;&#x8F91;&#x5904;&#x7406;&apos;)
+}
+
+co(function* () {
+  yield *a()
+})
+</code></pre><h3 id="%E7%9C%8B%E4%B8%80%E4%B8%8B%E5%85%B7%E4%BD%93%E7%9A%841342">&#x770B;&#x4E00;&#x4E0B;&#x5177;&#x4F53;&#x7684;1342</h3>
+<p>koa-getting-start/middleware/core/c.js</p>
+<pre><code>var co = require(&apos;co&apos;)
+
+function * a(){
+  console.log(&apos;&#x7B2C;1&#x4E2A;&#x4E2D;&#x95F4;&#x4EF6;before 1&apos;)
+  yield *b()
+  console.log(&apos;&#x7B2C;1&#x4E2A;&#x4E2D;&#x95F4;&#x4EF6;after 2&apos;)
+}
+
+function * b(){
+  console.log(&apos;  &#x7B2C;2&#x4E2A;&#x4E2D;&#x95F4;&#x4EF6;before 3&apos;)
+  yield *c()
+  console.log(&apos;  &#x7B2C;2&#x4E2A;&#x4E2D;&#x95F4;&#x4EF6;after 4&apos;)
+}
+
+function * c(){
+  console.log(&apos;    &#x4E1A;&#x52A1;&#x903B;&#x8F91;&#x5904;&#x7406;&apos;)
+}
+
+co(function* () {
+  yield *a()
+})
+</code></pre><p>&#x8FD9;&#x770B;&#x8D77;&#x6765;&#x4E0D;&#x592A;&#x50CF;&#x4E2D;&#x95F4;&#x4EF6;&#x554A;&#xFF0C;next&#x5462;&#xFF1F;</p>
+<h3 id="%E4%B8%AD%E9%97%B4%E4%BB%B6%E5%86%99%E6%B3%95">&#x4E2D;&#x95F4;&#x4EF6;&#x5199;&#x6CD5;</h3>
+<p>koa-getting-start/middleware/core/d.js</p>
+<pre><code>var co = require(&apos;co&apos;);
+var compose = require(&apos;koa-compose&apos;)
+
+function * a(next){
+  console.log(&apos;&#x7B2C;1&#x4E2A;&#x4E2D;&#x95F4;&#x4EF6;before 1&apos;)
+  yield next
+  console.log(&apos;&#x7B2C;1&#x4E2A;&#x4E2D;&#x95F4;&#x4EF6;after 2&apos;)
+}
+
+function * b(next){
+  console.log(&apos;  &#x7B2C;2&#x4E2A;&#x4E2D;&#x95F4;&#x4EF6;before 3&apos;)
+  yield next;
+  console.log(&apos;  &#x7B2C;2&#x4E2A;&#x4E2D;&#x95F4;&#x4EF6;after 4&apos;)
+}
+
+function * c(next){
+  console.log(&apos;    &#x4E1A;&#x52A1;&#x903B;&#x8F91;&#x5904;&#x7406;&apos;)
+}
+
+var stack = [a, b, c];
+
+co(compose(stack))
+</code></pre><h3 id="%E6%80%BB%E7%BB%93">&#x603B;&#x7ED3;</h3>
+<p>&#x901A;&#x8FC7;&#x4E0A;&#x9762;&#x7684;3&#x4E2A;demo&#xFF0C;&#x76F8;&#x4FE1;&#x5927;&#x5BB6;&#x80FD;&#x591F;&#x7406;&#x89E3;generator&#x7684;yield&#x8F6C;&#x8BA9;&#x5904;&#x7406;&#x6743;&#x7684;&#x3002;&#x901A;&#x8FC7;generator&#x5D4C;&#x5957;next&#xFF0C;&#x5B9E;&#x73B0;&#x8FD9;&#x79CD;&#x56DE;&#x6EAF;&#x529F;&#x80FD;&#x3002;</p>
+<h2 id="%E6%8E%A2%E7%B4%A2%E4%B8%AD%E9%97%B4%E4%BB%B6%E5%8E%9F%E7%90%86">&#x63A2;&#x7D22;&#x4E2D;&#x95F4;&#x4EF6;&#x539F;&#x7406;</h2>
+<p>&#x4E4B;&#x524D;&#x8BB2;&#x4E86;&#x4E2D;&#x95F4;&#x4EF6;&#x5404;&#x79CD;&#x7528;&#x6CD5;&#xFF0C;&#x539F;&#x7406;&#xFF0C;&#x4EE5;&#x81F3;&#x4E8E;&#x6211;&#x4EEC;&#x8FD8;&#x6316;&#x51FA;&#x4E86;1342&#x95EE;&#x9898;&#xFF0C;&#x90A3;&#x4E48;&#x4F60;&#x597D;&#x5947;Koa&#x91CC;&#x5230;&#x5E95;&#x662F;&#x600E;&#x4E48;&#x5B9E;&#x73B0;&#x4E2D;&#x95F4;&#x4EF6;&#x673A;&#x5236;&#x7684;&#x5417;&#xFF1F;</p>
+<p>&#x672C;&#x5C0F;&#x8282;&#x5C06;&#x7ED9;&#x51FA;&#x7CBE;&#x7B80;Koa&#x4E2D;&#x95F4;&#x4EF6;&#x673A;&#x5236;&#xFF0C;&#x4EE5;&#x4FBF;&#x8BFB;&#x8005;&#x66F4;&#x5BB9;&#x6613;&#x8BFB;&#x61C2;Koa&#x6E90;&#x7801;</p>
+<h3 id="v1">v1</h3>
+<p>koa-getting-start/middleware/v1/app.js</p>
+<pre><code>var co = require(&apos;co&apos;);
+var debug = require(&apos;debug&apos;)(&apos;v0&apos;)
+
+module.exports = {
+  middleware :[],
+  use: function (fn) {
+    debug(&apos;use:&apos; + fn);
+
+    this.middleware.push(fn);
+    return this;
+  },
+  callback: function (cb) {
+    const fn = this.compose(this.middleware);
+    debug(&apos;callback compose fn = &apos; + fn)
+
+    co(fn).then(cb, function (err) {
+      console.error(err.stack);
+    });
+  },
+  compose: function (middleware) {
+    debug(&apos;compose=&apos; + middleware)
+    return function *(next){
+      if (!next) {
+        next = function *(){}
+      }
+
+      var i = middleware.length;
+
+      while (i--) {
+        debug(&apos;compose middleware[&apos; + i + &apos;]=: &apos; + middleware[i])
+        // next = co.wrap(middleware[i]).call(this);
+        next = middleware[i].call(this, next);
+
+        debug(next)
+      }
+
+      return yield *next;
+    }
+  } 
+}
+</code></pre><p>&#x6D4B;&#x8BD5;&#x4EE3;&#x7801;</p>
+<pre><code>var app = require(&apos;./app&apos;)
+
+app.use(function *(next){
+  console.log(1)
+  yield next;
+  console.log(2)
+})
+
+app.use(function *(next){
+  console.log(3)
+  yield next;
+  console.log(4)
+})
+
+app.callback();
+// 1
+// 3
+// 4
+// 2
+</code></pre><p>v1&#x7684;&#x4EE3;&#x7801;&#x91CC;&#x53EA;&#x4F9D;&#x8D56;co&#xFF0C;&#x6574;&#x4F53;&#x6765;&#x8BF4;&#x662F;&#x975E;&#x5E38;&#x7CBE;&#x7B80;&#x548C;&#x597D;&#x7406;&#x89E3;&#x7684;&#xFF0C;&#x4E0B;&#x9762;&#x6211;&#x4EEC;&#x4E00;&#x4E00;&#x89E3;&#x8BFB;</p>
+<p>1&#xFF09;&#x4E2D;&#x95F4;&#x4EF6;&#x662F;&#x7531;&#x6570;&#x7EC4;&#x4FDD;&#x5B58;&#x7684;</p>
+<pre><code>middleware :[],
+</code></pre><p>2&#xFF09;app.use&#x4F7F;&#x7528;&#x4E2D;&#x95F4;&#x4EF6;</p>
+<pre><code>  use: function (fn) {
+    debug(&apos;use:&apos; + fn);
+
+    this.middleware.push(fn);
+    return this;
+  },
+</code></pre><ul>
+<li>&#x901A;&#x8FC7;push&#x65B9;&#x6CD5;&#x7ED9;&#x6570;&#x7EC4;&#x589E;&#x52A0;&#x4E2D;&#x95F4;&#x4EF6;</li>
+<li>&#x8FD4;&#x56DE;this&#xFF0C;&#x662F;&#x7B80;&#x5355;&#x7684;&#x94FE;&#x5F0F;&#x5199;&#x6CD5;&#xFF0C;&#x4EE5;&#x4FBF;&#x53EF;&#x4EE5;&#x65E0;&#x9650;&#x7684;<code>app.use(fn).use(fn2)</code></li>
+</ul>
+<p>3&#xFF09;&#x6838;&#x5FC3;&#x5165;&#x53E3;</p>
+<p>&#x5148;&#x770B;&#x6D4B;&#x8BD5;&#x91CC;&#x4EE3;&#x7801;</p>
+<pre><code>app.callback();
+// 1
+// 3
+// 4
+// 2
+</code></pre><p>&#x77E5;&#x9053;&#x5230;callback&#x51FD;&#x6570;&#xFF0C;&#x6253;&#x5370;&#x51FA;1342&#xFF0C;&#x5373;callback&#x51FD;&#x6570;&#x662F;&#x5165;&#x53E3;&#xFF0C;&#x5904;&#x7406;&#x4E86;&#x6240;&#x6709;&#x4E2D;&#x95F4;&#x4EF6;&#x8C03;&#x7528;&#x3002;</p>
+<p>&#x4EE3;&#x7801;&#x5982;&#x4E0B;</p>
+<pre><code>  callback: function (cb) {
+    const fn = this.compose(this.middleware);
+    debug(&apos;callback compose fn = &apos; + fn)
+
+    co(fn).then(cb, function (err) {
+      console.error(err.stack);
+    });
+  },
+</code></pre><p>&#x89E3;&#x8BFB;</p>
+<ul>
+<li>&#x901A;&#x8FC7;this.compose&#x628A;this.middleware&#x8F6C;&#x53D8;&#x4E00;&#x4E2A;&#x540D;&#x4E3A;fn&#x7684;generator&#x51FD;&#x6570;</li>
+<li>&#x901A;&#x8FC7;co&#x6765;&#x6267;&#x884C;fn</li>
+<li>co&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x662F;Promise&#x5BF9;&#x8C61;&#xFF0C;&#x6240;&#x4EE5;&#x540E;&#x9762;&#x7684;then&#x63A5;&#x4E86;2&#x4E2A;&#x53C2;&#x6570;&#xFF0C;cb&#x662F;&#x6210;&#x529F;&#x7684;&#x56DE;&#x8C03;&#xFF0C;&#x540E;&#x9762;&#x7684;&#x533F;&#x540D;&#x51FD;&#x6570;&#x662F;&#x7528;&#x4E8E;&#x5904;&#x7406;&#x53D1;&#x751F;&#x5F02;&#x5E38;&#x7684;&#x3002;</li>
+</ul>
+<p>&#x8FD9;&#x91CC;&#x7684;&#x903B;&#x8F91;&#x6BD4;&#x8F83;&#x7B80;&#x5355;&#xFF0C;&#x5C31;&#x662F;co&#x53BB;&#x6267;&#x884C;fn&#x83B7;&#x5F97;&#x6700;&#x7EC8;&#x7ED3;&#x679C;&#x3002;&#x4F46;&#x95EE;&#x9898;&#x662F;this.middleware&#x662F;&#x57FA;&#x4E8E;generator&#x51FD;&#x6570;&#x7684;&#x6570;&#x7EC4;&#xFF0C;&#x600E;&#x4E48;&#x628A;&#x5B83;&#x8F6C;&#x6210;generator&#x5462;&#xFF1F;&#x8FD9;&#x5176;&#x5B9E;&#x5C31;&#x662F;this.compose&#x505A;&#x7684;&#x4E8B;&#x513F;&#x3002;</p>
+<p>4&#xFF09;&#x6838;&#x5FC3;&#x53D8;&#x5316;compose</p>
+<pre><code>  compose: function (middleware) {
+    return function *(next){
+      if (!next) {
+        next = function *(){}
+      }
+
+      var i = middleware.length;
+
+      while (i--) {
+        next = middleware[i].call(this, next);
+      }
+
+      return yield *next;
+    }
+  }
+</code></pre><p>&#x5176;&#x5B9E;&#x5C31;&#x662F;compose([f1, f2, ..., fn])&#x8F6C;&#x5316;&#x4E3A;fn(...f2(f1(noop())))&#xFF0C;&#x6700;&#x7EC8;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x662F;&#x4E00;&#x4E2A;generator function&#x3002;</p>
+<p>4.0&#xFF09;&#x9AD8;&#x9636;&#x51FD;&#x6570;</p>
+<blockquote>
+<p>&#x9AD8;&#x9636;&#x51FD;&#x6570;&#x53EA;&#x662F;&#x5C06;&#x51FD;&#x6570;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x6216;&#x8FD4;&#x56DE;&#x503C;&#x7684;&#x51FD;&#x6570;</p>
+</blockquote>
+<p>4.1&#xFF09;i--</p>
+<p>i--&#x4E4B;&#x540E;&#x7684;i = i - 1&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#xFF0C;&#x5F53;&#x524D;&#x7684;next&#x548C;</p>
+<ul>
+<li>middleware[i]&#x662F;&#x524D;&#x4E00;&#x4E2A;&#x4E2D;&#x95F4;&#x4EF6;&#x3002;</li>
+</ul>
+<p>4.2&#xFF09;call</p>
+<p>&#x5148;&#x6765;&#x770B;&#x4E00;&#x4E0B;call</p>
+<pre><code>function add(a,b){  
+  console.log(a+b)
+}
+
+function sub(a,b){  
+  console.log(a-b)
+}
+
+add.call(sub, 3, 1)
+
+
+// &#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x4E2D;&#x7684;&#x610F;&#x601D;&#x5C31;&#x662F;&#x7528; add &#x6765;&#x66FF;&#x6362; sub&#xFF0C;
+// add.call(sub,3,1) == add(3,1) &#xFF0C;
+// &#x6240;&#x4EE5;&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#x4E3A;&#xFF1A;console.log(4); 
+// &#x6CE8;&#x610F;&#xFF1A;js &#x4E2D;&#x7684;&#x51FD;&#x6570;&#x5176;&#x5B9E;&#x662F;&#x5BF9;&#x8C61;&#xFF0C;&#x51FD;&#x6570;&#x540D;&#x662F;&#x5BF9; Function&#x5BF9;&#x8C61;&#x7684;&#x5F15;&#x7528;&#x3002;
+</code></pre><p>&#x90A3;&#x4E48;</p>
+<pre><code>next = middleware[i].call(this, next);
+</code></pre><p>4.3) yield *</p>
+<p>&#x8FD8;&#x8BB0;&#x5F97;</p>
+<p>koa-getting-start/middleware/core/b.js</p>
+<pre><code>var co = require(&apos;co&apos;)
+
+function * a(){
+  console.log(&apos;&#x7B2C;1&#x4E2A;&#x4E2D;&#x95F4;&#x4EF6;before 1&apos;)
+  yield *b()
+  console.log(&apos;&#x7B2C;1&#x4E2A;&#x4E2D;&#x95F4;&#x4EF6;after 2&apos;)
+}
+
+function * b(){
+  console.log(&apos;  &#x4E1A;&#x52A1;&#x903B;&#x8F91;&#x5904;&#x7406;&apos;)
+}
+
+co(function* () {
+  yield *a()
+})
+</code></pre><p>&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#x76F8;&#x5F53;&#x4E8E;</p>
+<pre><code>function * a(){
+  console.log(&apos;&#x7B2C;1&#x4E2A;&#x4E2D;&#x95F4;&#x4EF6;before 1&apos;)
+    // yield *b()
+    console.log(&apos;  &#x4E1A;&#x52A1;&#x903B;&#x8F91;&#x5904;&#x7406;&apos;)
+  console.log(&apos;&#x7B2C;1&#x4E2A;&#x4E2D;&#x95F4;&#x4EF6;after 2&apos;)
+}
+</code></pre><p>&#x4EA6;&#x5373;</p>
+<pre><code>a(b())
+</code></pre><p>&#x901A;&#x8FC7;yield*&#x9012;&#x5F52;&#x6267;&#x884C;generator&#xFF0C;&#x662F;&#x975E;&#x5E38;&#x6709;&#x7528;&#x7684;&#x624B;&#x6BB5;&#x3002;</p>
+<p>4.4) &#x603B;&#x7ED3;</p>
+<ul>
+<li>&#x5982;&#x679C;next&#x4E3A;&#x7A7A;&#xFF0C;<code>next = function *(){}</code></li>
+<li>i--&#x4E4B;&#x540E;&#xFF0C;middleware[i]&#x5C31;&#x662F;&#x4E4B;&#x524D;&#x7684;&#x4E2D;&#x95F4;&#x4EF6;&#xFF0C;&#x5373;f(n-1)</li>
+<li>&#x901A;&#x8FC7;call&#xFF0C;&#x5B9E;&#x9645;&#x8F6C;&#x6210;&#x4E4B;&#x524D;&#x4E2D;&#x95F4;&#x4EF6;&#x4E3A;next</li>
+<li>&#x901A;&#x8FC7;while i--&#x89C4;&#x7EA6;&#x6240;&#x6709;&#x4E2D;&#x95F4;&#x4EF6;&#x4E3A;&#x4E00;&#x4E2A;generator</li>
+<li>&#x901A;&#x8FC7;yield *&#x9012;&#x5F52;&#x6267;&#x884C;generator</li>
+</ul>
+<p>compose&#x8FD4;&#x56DE;&#x7684;&#x662F;generator&#xFF0C;&#x90A3;&#x4E48;&#x5B83;&#x5C31;&#x9700;&#x8981;&#x4E00;&#x4E2A;generator&#x6267;&#x884C;&#x5668;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x4E0A;&#x6587;&#x51FA;&#x73B0;&#x7684;co&#xFF0C;&#x4E0E;&#x4E4B;&#x642D;&#x914D;&#x662F;&#x975E;&#x5E38;&#x5408;&#x7406;&#x7684;&#x3002;</p>
+<h3 id="v2">v2</h3>
+<p>koa-getting-start/middleware/v2/app.js</p>
+<pre><code>var co = require(&apos;co&apos;);
+var debug = require(&apos;debug&apos;)(&apos;v1&apos;)
+const convert = require(&apos;koa-convert&apos;)
+
+module.exports = {
+  middleware :[],
+  use: function (fn) {
+    this.middleware.push(fn);
+    return this;
+  },
+  callback: function () {
+    const fn = convert.compose(this.middleware);
+    debug(&apos;callback compose fn = &apos; + fn)
+
+    var ctx = {
+
+    }
+
+    fn(ctx).then(function(){
+
+    })
+  }
+}
+</code></pre><p>&#x6D4B;&#x8BD5;</p>
+<p>koa-getting-start/middleware/v2/test.js</p>
+<pre><code>var app = require(&apos;./app&apos;)
+
+app.use((ctx, next) =&gt;{
+  console.log(1)
+  // before
+  return next().then(() =&gt; {
+    // after
+    console.log(2)
+  })
+})
+
+app.use(function *(next){
+  console.log(3)
+  yield next;
+  console.log(4)
+})
+
+// console.log(app.middleware)
+app.callback();
+// 1
+// 3
+// 4
+// 2
+</code></pre><h3 id="v2%E8%A1%A5%E5%85%85">v2&#x8865;&#x5145;</h3>
+<p><a href="https://github.com/koajs/convert/blob/master/test.js" target="_blank">https://github.com/koajs/convert/blob/master/test.js</a></p>
+<pre><code>describe(&apos;convert.compose()&apos;, () =&gt; {
+  it(&apos;should work&apos;, () =&gt; {
+    let call = []
+    let context = {}
+    let _context
+    let mw = convert.compose([
+      function * name (next) {
+        call.push(1)
+        yield next
+        call.push(11)
+      },
+      (ctx, next) =&gt; {
+        call.push(2)
+        return next().then(() =&gt; {
+          call.push(10)
+        })
+      },
+      function * (next) {
+        call.push(3)
+        yield* next
+        call.push(9)
+      },
+      co.wrap(function * (ctx, next) {
+        call.push(4)
+        yield next()
+        call.push(8)
+      }),
+      function * (next) {
+        try {
+          call.push(5)
+          yield next
+        } catch (e) {
+          call.push(7)
+        }
+      },
+      (ctx, next) =&gt; {
+        _context = ctx
+        call.push(6)
+        throw new Error()
+      }
+    ])
+
+    return mw(context).then(() =&gt; {
+      assert.equal(context, _context)
+      assert.deepEqual(call, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11])
+    })
+  })
+</code></pre><h2 id="v3">v3</h2>
+<p>koa-getting-start/middleware/v3/app.js</p>
+<pre><code>const co = require(&apos;co&apos;);
+const debug = require(&apos;debug&apos;)(&apos;v1&apos;)
+const compose = require(&apos;koa-compose&apos;)
+
+module.exports = {
+  middleware :[],
+  use: function (fn) {
+    this.middleware.push(fn);
+    return this;
+  },
+  callback: function () {
+    const fn = compose(this.middleware);
+    debug(&apos;callback compose fn = &apos; + fn)
+
+    var ctx = {
+
+    }
+
+    fn(ctx).then(function(){
+
+    })
+  }
+}
+</code></pre><p>koa-getting-start/middleware/v3/test.js</p>
+<pre><code>&apos;use strict&apos;
+
+const co = require(&apos;co&apos;);
+const debug = require(&apos;debug&apos;)(&apos;v1&apos;)
+
+module.exports = {
+  middleware :[],
+  use: function (fn) {
+    this.middleware.push(fn);
+    return this;
+  },
+  compose: function (middleware) {
+    return function (context, next) {
+      // last called middleware #
+      let index = -1
+      return dispatch(0)
+      function dispatch (i) {
+        if (i &lt;= index) return Promise.reject(new Error(&apos;next() called multiple times&apos;))
+        index = i
+        const fn = middleware[i] || next
+        if (!fn) return Promise.resolve()
+        try {
+          return Promise.resolve(fn(context, function next () {
+            return dispatch(i + 1)
+          }))
+        } catch (err) {
+          return Promise.reject(err)
+        }
+      }
+    }
+  },
+  callback: function () {
+    const fn = this.compose(this.middleware);
+    debug(&apos;callback compose fn = &apos; + fn)
+
+    var ctx = {
+
+    }
+
+    fn(ctx).then(function(){
+
+    })
+  }
+}
+</code></pre><p>&#x5982;&#x679C;&#x6B64;&#x65F6;&#x628A;&#x5176;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x4E2D;&#x95F4;&#x4EF6;&#x53D8;&#x6210;koa 1.x&#x652F;&#x6301;&#x7684;v3/test2.js</p>
+<pre><code>var app = require(&apos;./app&apos;)
+var co = require(&apos;co&apos;)
+
+app.use((ctx, next) =&gt; {
+  console.log(1)
+  // before
+  return next().then(() =&gt; {
+    // after
+    console.log(2)
+  })
+})
+
+app.use(function *(next) {
+  console.log(3)
+  yield next;
+  console.log(4)
+})
+
+
+// app.use(function *(next) {
+//   console.log(3)
+//   yield next;
+//   console.log(4)
+// })
+
+// console.log(app.middleware)
+app.callback();
+//1
+//2
+</code></pre><h2 id="%E5%9B%9E%E5%BD%A2%E9%92%88%E7%9A%84%E5%AE%9E%E7%8E%B0-koa-compose">&#x56DE;&#x5F62;&#x9488;&#x7684;&#x5B9E;&#x73B0; koa compose</h2>
+<pre><code> compose: function (middleware) {
+  return function (context, next) {
+    // last called middleware #
+    let index = -1
+    return dispatch(0)
+    function dispatch (i) {
+      if (i &lt;= index) return Promise.reject(new Error(&apos;next() called multiple times&apos;))
+      index = i
+      const fn = middleware[i] || next
+      if (!fn) return Promise.resolve()
+      try {
+        return Promise.resolve(fn(context, function next () {
+          return dispatch(i + 1)
+        }))
+      } catch (err) {
+        return Promise.reject(err)
+      }
+    }
+  }
+}
+</code></pre><p>&#x5176;&#x5B9E;&#x5C31;&#x662F;compose([f1, f2, ..., fn])&#x8F6C;&#x5316;&#x4E3A;f1(...f(n-1)(fn(noop())))&#xFF0C;&#x6700;&#x7EC8;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x662F;&#x4E00;&#x4E2A;function (context, next) {}&#x3002;</p>
+<p>1&#xFF09;&#x6700;&#x7EC8;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x662F;function (context, next) {}&#xFF0C;&#x9012;&#x5F52;&#x51FD;&#x6570;&#x3002;</p>
+<p>2&#xFF09;&#x9012;&#x5F52;&#xFF0C;&#x4ECE;dispatch(0)&#x5F00;&#x59CB;&#xFF0C;</p>
+<p>i = 0</p>
+<pre><code>fn == middleware[i]
+</code></pre><p>&#x7136;&#x540E;</p>
+<pre><code>fn(context, function next () {
+  return dispatch(i + 1)
+})
+</code></pre><p>&#x6B64;&#x5904;&#x662F;&#x6267;&#x884C;&#x7B2C;&#x4E00;&#x4E2A;&#x4E2D;&#x95F4;&#x4EF6;&#xFF0C;&#x5982;&#x679C;&#x6210;&#x529F;&#x7684;&#x5316;&#xFF0C;&#x5C31;&#x7EE7;&#x7EED;&#x6267;&#x884C;&#x7B2C;&#x4E8C;&#x4E2A;&#x4E2D;&#x95F4;&#x4EF6;&#x3002;&#x5176;&#x4ED6;&#x4F9D;&#x6B21;&#x7C7B;&#x63A8;&#xFF0C;&#x76F4;&#x81F3;&#x6267;&#x884C;&#x5B8C;&#x6240;&#x6709;&#x7684;&#x4E2D;&#x95F4;&#x4EF6;&#x3002;</p>
+<p>&#x7ED3;&#x5408;&#x8FD9;&#x4E2A;&#x4E2D;&#x95F4;&#x4EF6;</p>
+<pre><code>app.use((ctx, next) =&gt; {
+  console.log(1)
+  // before
+  return next().then(() =&gt; {
+    // after
+    console.log(2)
+  })
+})
+</code></pre><p>&#x5B9E;&#x9645;&#x4E0A;&#xFF0C;</p>
+<pre><code>var value = fn(context, function next () {
+  return dispatch(i + 1)
+})
+
+return Promise.resolve(value)
+</code></pre><p>&#x6211;&#x4EEC;&#x77E5;&#x9053;Promise.resolve()&#x8FD4;&#x56DE;&#x7684;&#x662F;Promise&#x5BF9;&#x8C61;&#xFF0C;&#x5B83;&#x53EF;&#x4EE5;thenable&#x7684;&#x3002;</p>
+<p>&#x4E3E;&#x4E2A;&#x591A;&#x4E2A;&#x4E2D;&#x95F4;&#x4EF6;&#x7684;&#x4F8B;&#x5B50;</p>
+<pre><code>app.use((ctx, next) =&gt; {
+  console.log(1)
+  // before
+  return next().then(() =&gt; {
+    // after
+    console.log(2)
+  })
+})
+
+app.use((ctx, next) =&gt; {
+  console.log(3)
+  // before
+  return next().then(() =&gt; {
+    // after
+    console.log(4)
+  })
+})
+</code></pre><p>&#x5B9E;&#x9645;&#x4E0A;</p>
+<pre><code>var value = fn(context, function next () {
+  var dispatch_1_value = fn(context, function next () {
+    return dispatch(2)
+  })
+  return Promise.resolve(dispatch_1_value)
+})
+
+return Promise.resolve(value)
+</code></pre><p>&#x5982;&#x679C;dispatch_1_value&#x6709;then&#xFF0C;&#x90A3;&#x4E48;&#x80AF;&#x5B9A;&#x6709;&#x4E9B;&#x6267;&#x884C;&#xFF0C;&#x5373;&#x6253;&#x5370;&#x51FA;4&#xFF0C;&#x7136;&#x540E;&#x6267;&#x884C;</p>
+<pre><code>return Promise.resolve(value)
+</code></pre><p>&#x6B64;&#x65F6;&#xFF0C;&#x8FD8;&#x6709;&#x4E2A;then&#xFF0C;&#x5373;&#x6253;&#x5370;&#x51FA;2.</p>
+<p>&#x5927;&#x81F4;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x7406;&#x89E3;</p>
+<pre><code>function(ctx, next){
+  console.log(1)
+  reutrn Promise.resolve(
+    console.log(&apos;3&apos;)
+    return Promise.resolve(
+
+    )
+    .then(function(){
+      console.log(&apos;4&apos;)
+    })
+  )
+  .then(function(){
+    console.log(2)
+  })
+}
+</code></pre><p>&#x81F3;&#x6B64;&#xFF0C;1342&#x6709;&#x5B8C;&#x7F8E;&#x7684;&#x89E3;&#x51B3;&#x4E86;&#x3002;</p>
+<h2 id="v3-app2">v3 app2</h2>
+<p>&#x6B64;&#x65F6;&#x9700;&#x8981;&#x4FEE;&#x6539;app&#x4E3A;app2</p>
+<pre><code>&apos;use strict&apos;
+
+const co = require(&apos;co&apos;);
+const debug = require(&apos;debug&apos;)(&apos;v1&apos;)
+const convert = require(&apos;koa-convert&apos;)
+const isGeneratorFunction = require(&apos;is-generator-function&apos;);
+
+module.exports = {
+  middleware :[],
+  use: function (fn) {
+    if (isGeneratorFunction(fn)) {
+      console.log(&apos;Support for generators will been removed in v3. &apos; +
+                &apos;See the documentation for examples of how to convert old middleware &apos; +
+                &apos;https://github.com/koajs/koa/tree/v2.x#old-signature-middleware-v1x&apos;);
+      fn = convert(fn);
+    }
+    this.middleware.push(fn);
+    return this;
+  },
+  compose: function (middleware) {
+    return function (context, next) {
+      // last called middleware #
+      let index = -1
+      return dispatch(0)
+      function dispatch (i) {
+        if (i &lt;= index) return Promise.reject(new Error(&apos;next() called multiple times&apos;))
+        index = i
+        const fn = middleware[i] || next
+        if (!fn) return Promise.resolve()
+        try {
+          return Promise.resolve(fn(context, function next () {
+            return dispatch(i + 1)
+          }))
+        } catch (err) {
+          return Promise.reject(err)
+        }
+      }
+    }
+  },
+  callback: function () {
+    const fn = this.compose(this.middleware);
+    debug(&apos;callback compose fn = &apos; + fn)
+
+    var ctx = {
+
+    }
+
+    fn(ctx).then(function(){
+
+    })
+  }
+}
+</code></pre><p>&#x4E3B;&#x8981;&#x53D8;&#x5316;&#x662F;</p>
+<pre><code>  use: function (fn) {
+    if (isGeneratorFunction(fn)) {
+      console.log(&apos;Support for generators will been removed in v3. &apos; +
+                &apos;See the documentation for examples of how to convert old middleware &apos; +
+                &apos;https://github.com/koajs/koa/tree/v2.x#old-signature-middleware-v1x&apos;);
+      fn = convert(fn);
+    }
+    this.middleware.push(fn);
+    return this;
+  },
+</code></pre><p>&#x4E2D;&#x7684;</p>
+<pre><code>    if (isGeneratorFunction(fn)) {
+      console.log(&apos;Support for generators will been removed in v3. &apos; +
+                &apos;See the documentation for examples of how to convert old middleware &apos; +
+                &apos;https://github.com/koajs/koa/tree/v2.x#old-signature-middleware-v1x&apos;);
+      fn = convert(fn);
+    }
+</code></pre><p>&#x5982;&#x679C;fn&#x662F;GeneratorFunction&#xFF08;koa 1.x&#x4E2D;&#x95F4;&#x4EF6;&#xFF09;&#xFF0C;&#x9700;&#x8981;&#x901A;&#x8FC7;convert&#x8F6C;&#x6362;&#x4E00;&#x4E0B;&#xFF0C;&#x8F6C;&#x6210;&#x7C7B;&#x4F3C;&#x7684;</p>
+<pre><code>  const converted = function (ctx, next) {
+    return co.call(ctx, mw.call(ctx, createGenerator(next)))
+  }
+</code></pre><p>&#x8FD9;&#x6837;&#x5C31;&#x4FDD;&#x8BC1;&#x4E86;&#xFF0C;&#x6240;&#x6709;&#x7684;compose&#x91CC;&#x7684;</p>
+<h2 id="%E4%BB%8Ekoa-1-x%E5%88%B0koa-2-x%E7%9A%84%E6%BC%94%E5%8F%98">&#x4ECE;koa 1.x&#x5230;koa 2.x&#x7684;&#x6F14;&#x53D8;</h2>
+<p>&#x6709;&#x4EBA;&#x95EE;&#xFF0C;&#x4E3A;&#x4EC0;&#x4E48;&#x4F60;&#x7684;&#x4F8B;&#x5B50;&#x90FD;&#x662F;koa 1.x&#x7684;&#xFF0C;&#x800C;&#x4F60;&#x63A8;&#x8350;&#x4F7F;&#x7528;&#x7684;koa 2.x&#xFF1F;&#x4E0D;&#x8981;&#x7740;&#x6025;&#xFF0C;&#x542C;&#x6211;&#x6162;&#x6162;&#x9053;&#x6765;&#x3002;</p>
+<p>koa 1.x</p>
+<blockquote>
+<p>&#x5176;&#x5B9E;&#x5C31;&#x662F;compose([f1, f2, ..., fn])&#x8F6C;&#x5316;&#x4E3A;fn(...f2(f1(noop())))&#xFF0C;&#x6700;&#x7EC8;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x662F;&#x4E00;&#x4E2A;generator function&#x3002;</p>
+</blockquote>
+<p>koa 2.x</p>
+<blockquote>
+<p>&#x5176;&#x5B9E;&#x5C31;&#x662F;compose([f1, f2, ..., fn])&#x8F6C;&#x5316;&#x4E3A;f1(...f(n-1)(fn(noop())))&#xFF0C;&#x6700;&#x7EC8;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x662F;&#x4E00;&#x4E2A;function (context, next) {}&#x3002;</p>
+</blockquote>
+<p>&#x5982;&#x679C;&#x662F;<code>function *(next){}</code>&#x4E5F;&#x4F1A;&#x88AB;&#x8F6C;&#x6362;&#x6210;&#x6210;<code>function (context, next) {}</code>&#xFF0C;&#x8FD9;&#x5C31;&#x662F;convert&#x505A;&#x7684;&#x5411;&#x540E;1.x&#x517C;&#x5BB9;&#x3002;</p>
+<ul>
+<li>function (context, next) {} &#x662F;commonfunction&#xFF0C;&#x56E0;&#x4E3A;&#x6700;&#x7EC8;&#x8FD4;&#x56DE;&#x503C;&#x4E5F;&#x662F;&#x5B83;&#xFF0C;&#x6240;&#x4EE5;&#x79F0;&#x4E3A;common&#x4E5F;&#x4E0D;&#x8FC7;&#x5206;</li>
+<li>co.wrap(function *(ctx, next){})&#x5176;&#x5B9E;&#x662F;commonfunction&#x4E00;&#x6837;&#x7684;&#xFF0C;co&#x7684;wrap&#x5C31;&#x662F;&#x6267;&#x884C;&#x6709;&#x53C2;&#x6570;&#x7684;generator&#xFF0C;&#x800C;&#x53C2;&#x6570;&#x4E5F;&#x662F;ctx&#x548C;next&#xFF0C;&#x6240;&#x4EE5;&#x4E5F;&#x662F;&#x5929;&#x751F;&#x652F;&#x6301;&#x7684;&#x3002;</li>
+</ul>
+<p>&#x90A3;&#x4E48;&#x5269;&#x4E0B;&#x7684;&#x5C31;&#x662F;async&#x51FD;&#x6570;&#x4E86;&#x3002;</p>
+<pre><code>// &#x5B9A;&#x4E49;
+async function middleware(context, next) {
+  await next()
+}
+
+// &#x8C03;&#x7528;
+middleware(context, next);
+</code></pre><p>&#x4ECE;&#x8FD9;&#x6BB5;&#x53EF;&#x77E5;&#xFF0C;async&#x51FD;&#x6570;&#x5B9A;&#x4E49;&#x548C;&#x666E;&#x901A;&#x51FD;&#x6570;&#x5B9A;&#x4E49;&#x6267;&#x884C;&#x90FD;&#x662F;&#x4E00;&#x6837;&#x7684;&#xFF08;&#x9664;&#x4E86;&#x9700;&#x8981;es7-stage-3&#x7279;&#x6027;&#x7F16;&#x8BD1;&#xFF09;&#xFF0C;&#x6240;&#x4EE5;&#x65E0;&#x7F1D;&#x96C6;&#x6210;&#xFF0C;&#x552F;&#x4E00;&#x8981;&#x8BF4;&#x660E;&#x7684;&#x5C31;&#x662F;next&#xFF0C;&#x4E0A;&#x6587;&#x8BB2;next&#x5B9E;&#x9645;&#x662F;Promise&#x5BF9;&#x8C61;&#xFF0C;&#x5728;&#x60F3;await&#x5173;&#x952E;&#x5B57;&#xFF0C;&#x662F;&#x4E0D;&#x662F;&#x6709;&#x70B9;&#x604D;&#x7136;&#x5927;&#x609F;&#x4E86;&#xFF1F;</p>
+<p>&#x7EDD;&#x914D;&#x554A;&#x3002;</p>
+<h2 id="koa%E6%BA%90%E7%A0%81%E8%AF%B4%E6%98%8E">koa&#x6E90;&#x7801;&#x8BF4;&#x660E;</h2>
+<h3 id="%E6%A0%B8%E5%BF%83%E6%BA%90%E7%A0%81">&#x6838;&#x5FC3;&#x6E90;&#x7801;</h3>
+<ul>
+<li>koa 1.x&#x7528;&#x7684;&#x662F;compose 2.4+&#xFF0C;&#x6CE8;&#x610F;&#x65E0;convert</li>
+<li>koa 2.x&#x7528;&#x7684;&#x662F;compose 3.1+&#xFF0C;&#x4F7F;&#x7528;convert&#x628A;generatorfunction&#x8F6C;&#x6210;commonfunction&#xFF0C;&#x4EE5;&#x4FBF;&#x540E;&#x7EED;&#x7684;compose&#x3002;</li>
+</ul>
+<h3 id="%E4%B8%BA%E5%95%A52-x%E8%A6%81%E5%A4%9A%E5%87%BA%E4%B8%AActx%EF%BC%9F">&#x4E3A;&#x5565;2.x&#x8981;&#x591A;&#x51FA;&#x4E2A;ctx&#xFF1F;</h3>
+<p><a href="https://github.com/koajs/koa/issues/615" target="_blank">@jonathanong</a></p>
+<p>&#x8FD9;&#x6837;&#x53D8;&#x5316;&#x7684;&#x6700;&#x4E3B;&#x8981;&#x7684;&#x539F;&#x56E0;&#x662F;&#xFF0C;&#x5728;&#x4F60;&#x5199;koa apps &#x65F6;&#x4F7F;&#x7528;async&#x7BAD;&#x5934;&#x51FD;&#x6570;&#x7684;&#x65F6;&#x5019;&#xFF1A;</p>
+<pre><code>app.use(async (ctx, next) =&gt; {
+  await next()
+})
+</code></pre><p>&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4F7F;&#x7528;this&#x662F;&#x4E07;&#x4E07;&#x4E0D;&#x53EF;&#x80FD;&#x7684;&#x3002;</p>
+<p>&#x56E0;&#x4E3A; Arrow Function&#x662F; Lexical scoping&#xFF08;&#x5B9A;&#x4E49;&#x65F6;&#x7ED1;&#x5B9A;&#xFF09;, this&#x6307;&#x5411;&#x5B9A;&#x4E49;Arrow Function&#x65F6;&#x5916;&#x56F4;, &#x800C;&#x4E0D;&#x662F;&#x8FD0;&#x884C;&#x65F6;&#x7684;&#x5BF9;&#x8C61;&#x3002;</p>
+<h3 id="%E5%BC%95%E7%94%A8koa-1-x%E5%92%8C2-x%E7%9A%84%E5%B7%AE%E5%BC%82%E6%A0%B9%E6%BA%90">&#x5F15;&#x7528;koa 1.x&#x548C;2.x&#x7684;&#x5DEE;&#x5F02;&#x6839;&#x6E90;</h3>
+<p>1.x</p>
+<pre><code>var koa = require(&apos;koa&apos;);
+var app = koa();
+</code></pre><p>2.x</p>
+<pre><code>const Koa = require(&apos;koa&apos;);
+const app = new Koa();
+</code></pre><p>&#x6E90;&#x7801;</p>
+<p>1.x</p>
+<pre><code>/**
+ * Application prototype.
+ */
+
+var app = Application.prototype;
+
+/**
+ * Expose `Application`.
+ */
+
+module.exports = Application;
+
+/**
+ * Initialize a new `Application`.
+ *
+ * @api public
+ */
+
+function Application() {
+  if (!(this instanceof Application)) return new Application;
+  this.env = process.env.NODE_ENV || &apos;development&apos;;
+  this.subdomainOffset = 2;
+  this.middleware = [];
+  this.proxy = false;
+  this.context = Object.create(context);
+  this.request = Object.create(request);
+  this.response = Object.create(response);
+}
+</code></pre><p>2.x</p>
+<pre><code>
+/**
+ * Expose `Application` class.
+ * Inherits from `Emitter.prototype`.
+ */
+
+module.exports = class Application extends Emitter {
+
+  /**
+   * Initialize a new `Application`.
+   *
+   * @api public
+   */
+
+  constructor() {
+    super();
+
+    this.proxy = false;
+    this.middleware = [];
+    this.subdomainOffset = 2;
+    this.env = process.env.NODE_ENV || &apos;development&apos;;
+    this.context = Object.create(context);
+    this.request = Object.create(request);
+    this.response = Object.create(response);
+  }
+}
+</code></pre><p>&#x5F88;&#x660E;&#x663E;&#xFF0C;1.x&#x662F;&#x51FD;&#x6570;&#xFF0C;&#x800C;2.x&#x662F;&#x7C7B;&#xFF0C;&#x9700;&#x8981;new&#x6765;&#x5B9E;&#x4F8B;&#x5316;&#x3002;</p>
+<p>&#x6574;&#x4E2A;Koa2.x&#x91CC;&#x53EA;&#x6709;application&#x505A;&#x4E86;&#x7C7B;&#x5316;&#xFF0C;&#x5176;&#x4ED6;&#x7684;&#x8FD8;&#x662F;&#x4FDD;&#x6301;&#x4E4B;&#x524D;&#x7684;&#x98CE;&#x683C;&#xFF0C;&#x5927;&#x6982;&#x8FD8;&#x6CA1;&#x6709;&#x5230;&#x5FC5;&#x987B;&#x4FEE;&#x6539;&#x7684;&#x65F6;&#x5019;&#x5427;&#x3002;</p>
+<h2 id="%E5%B8%B8%E7%94%A8%E4%B8%AD%E9%97%B4%E4%BB%B6">&#x5E38;&#x7528;&#x4E2D;&#x95F4;&#x4EF6;</h2>
+<p>&#x6839;&#x636E;&#x4E2D;&#x95F4;&#x4EF6;&#x5728;&#x6574;&#x4E2A;http&#x5904;&#x7406;&#x6D41;&#x7A0B;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x5C06;&#x4E2D;&#x95F4;&#x4EF6;&#x5927;&#x81F4;&#x5206;&#x4E3A;3&#x7C7B;&#xFF1A;</p>
+<ol>
+<li>Pre-Request &#x901A;&#x5E38;&#x7528;&#x6765;&#x6539;&#x5199;request&#x7684;&#x539F;&#x59CB;&#x6570;&#x636E;</li>
+<li>Request/Response &#x5927;&#x90E8;&#x5206;&#x4E2D;&#x95F4;&#x4EF6;&#x90FD;&#x5728;&#x8FD9;&#x91CC;&#xFF0C;&#x529F;&#x80FD;&#x5404;&#x5F02;</li>
+<li>Post-Response &#x5168;&#x5C40;&#x5F02;&#x5E38;&#x5904;&#x7406;&#xFF0C;&#x6539;&#x5199;response&#x6570;&#x636E;&#x7B49;</li>
+</ol>
+<h2 id="%E7%BB%83%E4%B9%A0koa%E7%94%A8%E6%B3%95%EF%BC%8C%E9%9B%86%E6%88%90%E4%BB%A5%E4%B8%8B%E4%B8%AD%E9%97%B4%E4%BB%B6">&#x7EC3;&#x4E60;koa&#x7528;&#x6CD5;&#xFF0C;&#x96C6;&#x6210;&#x4EE5;&#x4E0B;&#x4E2D;&#x95F4;&#x4EF6;</h2>
+<pre><code>    &quot;koa&quot;: &quot;^2.0.0&quot;,
+    &quot;koa-compress&quot;: &quot;^2.0.0&quot;,
+    &quot;koa-conditional-get&quot;: &quot;^2.0.0&quot;,
+    &quot;koa-etag&quot;: &quot;^3.0.0&quot;,
+    &quot;koa-favicon&quot;: &quot;^2.0.0&quot;,
+    &quot;koa-static&quot;: &quot;^3.0.0&quot;,
+</code></pre><p>app.js</p>
+<pre><code>var serve = require(&apos;koa-static&apos;);
+var Koa = require(&apos;koa&apos;);
+var app = new Koa();
+
+var favicon = require(&apos;koa-favicon&apos;);
+var compress = require(&apos;koa-compress&apos;)
+var conditional = require(&apos;koa-conditional-get&apos;);
+var etag = require(&apos;koa-etag&apos;);
+
+app.use(compress({
+  filter: function (content_type) {
+    return /text/i.test(content_type)
+  },
+  threshold: 2048,
+  flush: require(&apos;zlib&apos;).Z_SYNC_FLUSH
+}))
+
+
+app.use(favicon(__dirname + &apos;/public/favicon.ico&apos;));
+
+// etag works together with conditional-get
+app.use(conditional());
+app.use(etag());
+
+
+// or use absolute paths
+app.use(serve(__dirname + &apos;/dist&apos;));
+
+app.listen(9090);
+
+console.log(&apos;listening on port 9090&apos;);
+</code></pre>
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../koa-getting-start/middleware.html" class="navigation navigation-prev " aria-label="Previous page: 中间件简介"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../koa-getting-start/koa-generator.html" class="navigation navigation-next " aria-label="Next page: 安装Koa-generator"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-toc2/toc2.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2},"edit-link":{"base":"https://github.com/i5ting/stuq-koa/tree/master","label":"Edit This Page"},"github":{"url":"https://github.com/i5ting/stuq-koa/"}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>
