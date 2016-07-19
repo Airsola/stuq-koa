@@ -24,6 +24,7 @@
     * [Lifecycle](koa-getting-start/core/lifecycle.md)
   * [异步流程控制](koa-getting-start/async.md)
   * [压测](koa-getting-start/benchmark.md)
+  * [随堂练习：写一个基于koa的静态http模块并发布](koa-getting-start/exercises.md)
 * [Koa进阶](koa-practice/README.md)
   * [http](koa-practice/mongodb.md)
   * [文件上传](koa-practice/mongodb.md)
