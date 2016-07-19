@@ -322,3 +322,6 @@ http://nodeonly.com/stack/
 
 - es6语法特性支持支持，如generator
 - koa是基于node 4+开发的，使用generator、箭头函数等特性
+- 内存更省，性能更好
+
+关于Node.js版本历史可以看看https://github.com/i5ting/history-of-node-js
