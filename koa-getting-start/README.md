@@ -2,7 +2,7 @@
 
 在学习完Node.js基础之后，就到了学习下一代web框架Koa的时间了。
 
-![Three Tier Architecture](three-tier-architecture.png)
+![Three Tier Architecture](../three-tier-architecture.png)
 
 从这个经典的三层架构图，我们可以知道，Koa位于web server层的微信web框架，它的上游是http协议相关内容，它的下游是db相关内容，也就是说Koa框架所处的位置是连接http和db的桥梁，是非常重要的，在后面讲http和db的时候都会结合着Koa进行讲解。
 
