@@ -1,5 +1,7 @@
 # [koa-generator](github.com/base-n/koa-generator)
 
+<!-- toc -->
+
 这里的generator是生成器的意思，用于生成项目骨架，[express-generator](https://github.com/expressjs/generator)就是一个比较好的例子，虽然比较精简，但结构清晰，足矣满足一般性的开发需求。
 
 鉴于很多人非常熟悉expressjs，这里假定大家也熟悉express-generator

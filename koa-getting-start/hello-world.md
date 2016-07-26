@@ -1,5 +1,6 @@
 # hello world
 
+<!-- toc -->
 
 ## Koa 1.x
 
