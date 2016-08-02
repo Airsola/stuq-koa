@@ -280,7 +280,7 @@ app.listen(3000);
 对比一下
 
 - async函数除了多一个async关键字外，和普通函数无异，同样支持箭头函数（generator是不支持箭头函数写法的）。
-- 与asynch函数搭配的await通过对接promise方法，没有yield的Yieldable强大，但也足够用的
+- 与async函数搭配的await通过对接promise方法，没有yield的Yieldable强大，但也足够用的
 - 2.x中间件async函数跳到下一个中间件是`await next();`，和commonfunction里的`return next()`类似
 
 总结一下，从形式讲，async函数无疑是所有中间件中最耀眼的那个，语言清楚，简洁，结合await关键字，可以非常好的正好Promise资源。它虽好，可是执行的时候却很麻烦，目前Node.js里还没有原生支持async函数，所以只能借助于babel这样编译器工具来完成代码转换。
