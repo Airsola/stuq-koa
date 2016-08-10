@@ -1,13 +1,11 @@
-study-jade
+jade模板引擎
 ==========
 
 Jade是一款高性能简洁易懂的模板引擎，Jade是Haml的Javascript实现，在服务端（NodeJS）及客户端均有支持。
 
 官网 http://jade-lang.com/
 
-
 习惯jade的最好办法：找一个已写好的html代码，用jade重写一遍
-
 
 但是如果你是新手，而且直接拿jade写没有写过的页面，那么你会死的很难看
 
