@@ -25,6 +25,7 @@
 * [Koa进阶](koa-practice/README.md)
   * [http基础](koa-practice/http.md)
   * [http实践](koa-practice/http-practice.md)
+  * [jade](koa-practice/jade.md)
   * [session](koa-practice/session.md)
   * [pub/sub](koa-practice/pubsub.md)
   * [mq](koa-practice/mq.md)
