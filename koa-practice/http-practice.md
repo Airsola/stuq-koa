@@ -113,6 +113,8 @@ app.listen(3000);
 
 注意此时的“Content-Type:text/plain; charset=utf-8”
 
+这种用到的可能性是极其小的，大家了解一下即可
+
 ### html
 
 
@@ -133,6 +135,8 @@ app.listen(3000);
 ![Content Type Html](img/content-type-html.png)
 
 > Content-Type:text/html; charset=utf-8
+
+很明显，返回html就在浏览器里渲染各种html标签，这是我们在浏览器里最常用的做法。所谓的网站等等也都是这样的。
 
 ### json对象
 
@@ -165,6 +169,92 @@ app.listen(3000);
 - https://developer.github.com/v3/
 
 更多见[客户端 API 开发总结](https://cnodejs.org/topic/552b3b9382388cec50cf6d95)
+
+### 使用模板渲染
+
+我们再想想，如果返回的不是html string，而是模板呢？
+
+模板引擎是一种复用思想，通过定义模板，用的时候和数据一起编译，生成html，以便浏览器渲染。从这个定义里我们可以找出几个关键点
+
+> 编译(模板 + 数据) => html
+
+举例
+
+先来集成[koa-views](https://github.com/queckezz/koa-views)，其核心是[consolidate.js](https://github.com/tj/consolidate.js)，一个支持Node.js里大量模板引擎的库。
+
+```
+$ npm i -S koa-views@next
+$ npm i -S pug
+```
+
+app.js
+
+```
+const Koa = require('koa')
+const app = new Koa()
+
+const views = require('koa-views')
+
+// Must be used before any router is used
+app.use(views(__dirname, { extension: 'pug' }))
+
+// response
+app.use(ctx => {
+  return ctx.render('user', {
+    user: 'John'
+  });
+})
+
+app.listen(3000)
+```
+
+要点1: 引用库文件
+
+```
+const views = require('koa-views')
+```
+
+要点2: 进行配置
+
+```
+// Must be used before any router is used
+app.use(views(__dirname, { extension: 'pug' }))
+```
+
+要点3：使用ctx.render
+
+```
+// response
+app.use(ctx => {
+  ctx.render('dir/index', {
+    a: 1
+  })
+});
+```
+
+- 'dir/index'指的是模板文件位置
+- {a:1}是数据
+
+那么render编译后会生成html，讲html string赋值给ctx.body，是不是就可以展示html了？
+
+模板引擎有好多种，下面介绍2种典型的模板引擎
+
+- ejs：嵌入js语法的模板引擎（e = embed），类似于jsp，asp，erb的，在html里嵌入模板特性，如果熟悉html写起来就非常简单，只要区分哪些地方是可变，哪些地方是不变即可
+- jade：缩进式极简写法的模板引擎，发展历史 HAML -> Jade -> Slim -> Slm，最早是ruby里有的，目前以jade用的最多，这种写法虽好，，但需要大脑去转换，这其实是比较麻烦的，如果对html不是特别熟悉，这种思维转换是非常难受的。
+
+更多见 
+
+- https://github.com/tj/consolidate.js#supported-template-engines
+- https://cnodejs.org/topic/57353cc040b2969853981250
+
+### 总结
+
+所有渲染都无外乎以下2种
+
+- 直接渲染： string 有2种文本和html，衍生出使用模板引擎编译生成html
+- 用做api： json object 
+
+其实了解html和koa的模板引擎如何渲染，就已经可以开发网站了。只有api开发，相对高级一点点，一般大些的项目才会使用的。
 
 # 表单传值
 
