@@ -40,7 +40,7 @@
     
 
         
-    <div class="book" data-level="2" data-basepath=".." data-revision="Tue Jul 19 2016 23:29:30 GMT+0800 (CST)">
+    <div class="book" data-level="2" data-basepath=".." data-revision="Thu Aug 11 2016 16:54:09 GMT+0800 (CST)">
     
 
 <div class="book-summary">
@@ -420,51 +420,122 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="3.1" data-path="koa-practice/mongodb.html">
+        <li class="chapter " data-level="3.1" data-path="koa-practice/http.html">
             
-            <span><b>3.1.</b> http</span>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="3.2" data-path="koa-practice/mongodb.html">
-            
-            <span><b>3.2.</b> 文件上传</span>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="3.3" data-path="koa-practice/mongodb.html">
-            
-            <span><b>3.3.</b> session</span>
+                
+                    <a href="../koa-practice/http.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        http基础
+                    </a>
+                
             
             
         </li>
     
-        <li class="chapter " data-level="3.4" data-path="koa-practice/mongodb.html">
+        <li class="chapter " data-level="3.2" data-path="koa-practice/http-practice.html">
             
-            <span><b>3.4.</b> pub/sub</span>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="3.5" data-path="koa-practice/mongodb.html">
-            
-            <span><b>3.5.</b> mq</span>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="3.6" data-path="koa-practice/mongodb.html">
-            
-            <span><b>3.6.</b> cache</span>
+                
+                    <a href="../koa-practice/http-practice.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        http实践
+                    </a>
+                
             
             
         </li>
     
-        <li class="chapter " data-level="3.7" data-path="koa-practice/mongodb.html">
+        <li class="chapter " data-level="3.3" data-path="koa-practice/jade.html">
             
-            <span><b>3.7.</b> cors</span>
+                
+                    <a href="../koa-practice/jade.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        jade
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="koa-practice/session.html">
+            
+                
+                    <a href="../koa-practice/session.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        session
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="koa-practice/pubsub.html">
+            
+                
+                    <a href="../koa-practice/pubsub.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.</b>
+                        
+                        pub/sub
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="koa-practice/mq.html">
+            
+                
+                    <a href="../koa-practice/mq.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.6.</b>
+                        
+                        mq
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="koa-practice/cache.html">
+            
+                
+                    <a href="../koa-practice/cache.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.7.</b>
+                        
+                        cache
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="koa-practice/cors.html">
+            
+                
+                    <a href="../koa-practice/cors.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.8.</b>
+                        
+                        cors
+                    </a>
+                
             
             
         </li>
@@ -905,7 +976,7 @@
                     
                         <h1 id="koa%E5%85%A5%E9%97%A8">Koa&#x5165;&#x95E8;</h1>
 <p>&#x5728;&#x5B66;&#x4E60;&#x5B8C;Node.js&#x57FA;&#x7840;&#x4E4B;&#x540E;&#xFF0C;&#x5C31;&#x5230;&#x4E86;&#x5B66;&#x4E60;&#x4E0B;&#x4E00;&#x4EE3;web&#x6846;&#x67B6;Koa&#x7684;&#x65F6;&#x95F4;&#x4E86;&#x3002;</p>
-<p><img src="three-tier-architecture.png" alt="Three Tier Architecture"></p>
+<p><img src="../three-tier-architecture.png" alt="Three Tier Architecture"></p>
 <p>&#x4ECE;&#x8FD9;&#x4E2A;&#x7ECF;&#x5178;&#x7684;&#x4E09;&#x5C42;&#x67B6;&#x6784;&#x56FE;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x77E5;&#x9053;&#xFF0C;Koa&#x4F4D;&#x4E8E;web server&#x5C42;&#x7684;&#x5FAE;&#x4FE1;web&#x6846;&#x67B6;&#xFF0C;&#x5B83;&#x7684;&#x4E0A;&#x6E38;&#x662F;http&#x534F;&#x8BAE;&#x76F8;&#x5173;&#x5185;&#x5BB9;&#xFF0C;&#x5B83;&#x7684;&#x4E0B;&#x6E38;&#x662F;db&#x76F8;&#x5173;&#x5185;&#x5BB9;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;Koa&#x6846;&#x67B6;&#x6240;&#x5904;&#x7684;&#x4F4D;&#x7F6E;&#x662F;&#x8FDE;&#x63A5;http&#x548C;db&#x7684;&#x6865;&#x6881;&#xFF0C;&#x662F;&#x975E;&#x5E38;&#x91CD;&#x8981;&#x7684;&#xFF0C;&#x5728;&#x540E;&#x9762;&#x8BB2;http&#x548C;db&#x7684;&#x65F6;&#x5019;&#x90FD;&#x4F1A;&#x7ED3;&#x5408;&#x7740;Koa&#x8FDB;&#x884C;&#x8BB2;&#x89E3;&#x3002;</p>
 <h2 id="%E6%A0%B8%E5%BF%83%E5%86%85%E5%AE%B9">&#x6838;&#x5FC3;&#x5185;&#x5BB9;</h2>
 <ul>

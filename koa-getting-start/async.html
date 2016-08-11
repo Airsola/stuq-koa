@@ -40,7 +40,7 @@
     
 
         
-    <div class="book" data-level="2.2" data-basepath=".." data-revision="Tue Jul 19 2016 23:29:30 GMT+0800 (CST)">
+    <div class="book" data-level="2.2" data-basepath=".." data-revision="Thu Aug 11 2016 16:54:09 GMT+0800 (CST)">
     
 
 <div class="book-summary">
@@ -420,51 +420,122 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="3.1" data-path="koa-practice/mongodb.html">
+        <li class="chapter " data-level="3.1" data-path="koa-practice/http.html">
             
-            <span><b>3.1.</b> http</span>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="3.2" data-path="koa-practice/mongodb.html">
-            
-            <span><b>3.2.</b> 文件上传</span>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="3.3" data-path="koa-practice/mongodb.html">
-            
-            <span><b>3.3.</b> session</span>
+                
+                    <a href="../koa-practice/http.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        http基础
+                    </a>
+                
             
             
         </li>
     
-        <li class="chapter " data-level="3.4" data-path="koa-practice/mongodb.html">
+        <li class="chapter " data-level="3.2" data-path="koa-practice/http-practice.html">
             
-            <span><b>3.4.</b> pub/sub</span>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="3.5" data-path="koa-practice/mongodb.html">
-            
-            <span><b>3.5.</b> mq</span>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="3.6" data-path="koa-practice/mongodb.html">
-            
-            <span><b>3.6.</b> cache</span>
+                
+                    <a href="../koa-practice/http-practice.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        http实践
+                    </a>
+                
             
             
         </li>
     
-        <li class="chapter " data-level="3.7" data-path="koa-practice/mongodb.html">
+        <li class="chapter " data-level="3.3" data-path="koa-practice/jade.html">
             
-            <span><b>3.7.</b> cors</span>
+                
+                    <a href="../koa-practice/jade.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        jade
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="koa-practice/session.html">
+            
+                
+                    <a href="../koa-practice/session.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        session
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="koa-practice/pubsub.html">
+            
+                
+                    <a href="../koa-practice/pubsub.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.</b>
+                        
+                        pub/sub
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="koa-practice/mq.html">
+            
+                
+                    <a href="../koa-practice/mq.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.6.</b>
+                        
+                        mq
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="koa-practice/cache.html">
+            
+                
+                    <a href="../koa-practice/cache.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.7.</b>
+                        
+                        cache
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="koa-practice/cors.html">
+            
+                
+                    <a href="../koa-practice/cors.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.8.</b>
+                        
+                        cors
+                    </a>
+                
             
             
         </li>
@@ -904,6 +975,33 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="%E5%BC%82%E6%AD%A5%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6">&#x5F02;&#x6B65;&#x6D41;&#x7A0B;&#x63A7;&#x5236;</h1>
+<!-- toc -->
+<ul>
+<li><a href="#promisea&#x89C4;&#x8303;">Promise/a+&#x89C4;&#x8303;</a><ul>
+<li><a href="#node&#x91CC;&#x7684;promise">node&#x91CC;&#x7684;Promise</a></li>
+<li><a href="#promise&#x662F;&#x4EC0;&#x4E48;">Promise&#x662F;&#x4EC0;&#x4E48;&#xFF1F;</a></li>
+<li><a href="#&#x672F;&#x8BED;">&#x672F;&#x8BED;</a></li>
+<li><a href="#hello-promise">hello promise</a></li>
+<li><a href="#&#x5C01;&#x88C5;api&#x7684;&#x8FC7;&#x7A0B;">&#x5C01;&#x88C5;api&#x7684;&#x8FC7;&#x7A0B;</a></li>
+<li><a href="#&#x6BCF;&#x4E2A;&#x51FD;&#x6570;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x90FD;&#x662F;promise&#x5BF9;&#x8C61;">&#x6BCF;&#x4E2A;&#x51FD;&#x6570;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x90FD;&#x662F;Promise&#x5BF9;&#x8C61;</a></li>
+<li><a href="#&#x94FE;&#x5F0F;&#x7684;thenable">&#x94FE;&#x5F0F;&#x7684;thenable</a></li>
+<li><a href="#&#x72B6;&#x6001;&#x8F6C;&#x6362;">&#x72B6;&#x6001;&#x8F6C;&#x6362;</a></li>
+<li><a href="#reject&#x548C;resove&#x6D41;&#x7A0B;&#x518D;&#x9020;">reject&#x548C;resove&#x6D41;&#x7A0B;&#x518D;&#x9020;</a></li>
+<li><a href="#&#x9519;&#x8BEF;&#x5904;&#x7406;">&#x9519;&#x8BEF;&#x5904;&#x7406;</a></li>
+<li><a href="#nodejs&#x7684;promise&#x5E93;">Node.js&#x7684;promise&#x5E93;</a></li>
+<li><a href="#&#x66FF;&#x6362;bluebird">&#x66FF;&#x6362;bluebird</a></li>
+<li><a href="#promisification">Promisification</a></li>
+<li><a href="#promise&#x7684;5&#x4E2A;api">Promise&#x7684;5&#x4E2A;api</a></li>
+<li><a href="#&#x53C2;&#x8003;&#x9605;&#x8BFB;">&#x53C2;&#x8003;&#x9605;&#x8BFB;</a></li>
+</ul>
+</li>
+<li><a href="#&#x751F;&#x6210;&#x5668;generatorsyield">&#x751F;&#x6210;&#x5668;Generators/yield</a></li>
+<li><a href="#async&#x51FD;&#x6570;await&#x4EE5;&#x524D;&#x8BF4;&#x662F;es7-stage-3">Async&#x51FD;&#x6570;/Await&#xFF08;&#x4EE5;&#x524D;&#x8BF4;&#x662F;ES7 stage-3&#xFF09;</a></li>
+<li><a href="#co&#x5F15;&#x51FA;&#x7684;&#x8840;&#x6848;">co&#x5F15;&#x51FA;&#x7684;&#x201C;&#x8840;&#x6848;&#x201D;</a></li>
+<li><a href="#5&#x79CD;-yieldable">5&#x79CD; yieldable</a></li>
+<li><a href="#&#x63A8;&#x5BFC;&#x51FA;&#x5B66;&#x4E60;&#x91CD;&#x70B9;">&#x63A8;&#x5BFC;&#x51FA;&#x5B66;&#x4E60;&#x91CD;&#x70B9;</a></li>
+</ul>
+<!-- toc stop -->
 <p>&#x4E3B;&#x8981;&#x8BB2;3&#x4E2A;</p>
 <ul>
 <li>Promise</li>
