@@ -44,6 +44,7 @@ URL一般由三部组成:
 3. 主机资源的具体地址。如目录和文件名等，/photo/1.jpg
 
 这是一个完整的URL实例：
+
 http://www.runoob.com/nodejs/nodejs-url.html
 
 
