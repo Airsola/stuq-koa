@@ -40,7 +40,7 @@
     
 
         
-    <div class="book" data-level="3.5" data-basepath=".." data-revision="Thu Aug 11 2016 16:54:09 GMT+0800 (CST)">
+    <div class="book" data-level="3.5" data-basepath=".." data-revision="Wed Aug 17 2016 07:57:30 GMT+0800 (CST)">
     
 
 <div class="book-summary">
@@ -540,6 +540,21 @@
             
         </li>
     
+        <li class="chapter " data-level="3.9" data-path="koa-practice/exercises.html">
+            
+                
+                    <a href="../koa-practice/exercises.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.9.</b>
+                        
+                        随堂练习：集成koa-redis
+                    </a>
+                
+            
+            
+        </li>
+    
 
             </ul>
             
@@ -974,7 +989,301 @@
                 
                     <section class="normal" id="section-">
                     
-                        
+                        <h1 id="pub-sub">pub/sub</h1>
+<p>&#x53D1;&#x5E03;&#x8BA2;&#x9605;&#x6A21;&#x5F0F;</p>
+<p>&#x6838;&#x5FC3;&#x70B9;</p>
+<ul>
+<li>Pub/Sub &#x6A21;&#x578B;&#x5B9A;&#x4E49;&#x4E86;&#x5982;&#x4F55;&#x5411;&#x4E00;&#x4E2A;&#x5185;&#x5BB9;&#x8282;&#x70B9;&#x53D1;&#x5E03;&#x548C;&#x8BA2;&#x9605;&#x6D88;&#x606F;&#xFF0C;&#x8FD9;&#x4E9B;&#x8282;&#x70B9;&#x88AB;&#x79F0;&#x4F5C;&#x4E3B;&#x9898;(topic)&#x3002;</li>
+<li>&#x4E3B;&#x9898;&#x53EF;&#x4EE5;&#x88AB;&#x8BA4;&#x4E3A;&#x662F;&#x6D88;&#x606F;&#x7684;&#x4F20;&#x8F93;&#x4E2D;&#x4ECB;&#xFF0C;&#x53D1;&#x5E03;&#x8005;(publisher)&#x53D1;&#x5E03;&#x6D88;&#x606F;&#x5230;&#x4E3B;&#x9898;&#xFF0C;&#x8BA2;&#x9605;&#x8005;(subscriber) &#x4ECE;&#x4E3B;&#x9898;&#x8BA2;&#x9605;&#x6D88;&#x606F;&#x3002;</li>
+<li>&#x4E3B;&#x9898;&#x4F7F;&#x5F97;&#x6D88;&#x606F;&#x8BA2;&#x9605;&#x8005;&#x548C;&#x6D88;&#x606F;&#x53D1;&#x5E03;&#x8005;&#x4FDD;&#x6301;&#x4E92;&#x76F8;&#x72EC;&#x7ACB;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x63A5;&#x89E6;&#x5373;&#x53EF;&#x4FDD;&#x8BC1;&#x6D88;&#x606F;&#x7684;&#x4F20;&#x9001;&#x3002;</li>
+</ul>
+<h2 id="pub-sub%E8%A7%A3%E5%86%B3%E4%BA%86%E4%BB%80%E4%B9%88%E6%A0%B7%E7%9A%84%E9%97%AE%E9%A2%98%EF%BC%9F">pub/sub&#x89E3;&#x51B3;&#x4E86;&#x4EC0;&#x4E48;&#x6837;&#x7684;&#x95EE;&#x9898;&#xFF1F;</h2>
+<ul>
+<li>&#x8017;&#x65F6;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x6BD4;&#x5982;&#x4E0A;&#x4F20;&#xFF0C;&#x683C;&#x5F0F;&#x8F6C;&#x6362;&#x3001;&#x8BA1;&#x7B97;&#x7B49;&#x5176;&#x4ED6;&#x8017;&#x65F6;&#x4EFB;&#x52A1;&#xFF0C;&#x6D88;&#x8017;&#x7684;&#x65F6;&#x95F4;&#x5927;&#x4E8E;http&#x670D;&#x52A1;&#x5668;&#x7684;&#x8D85;&#x65F6;&#x65F6;&#x95F4;</li>
+<li>&#x7C7B;&#x4F3C;&#x4E8E;im&#xFF0C;&#x4E00;&#x5BF9;&#x4E00;&#xFF0C;&#x4E00;&#x5BF9;&#x591A;&#x3001;&#x7FA4;&#x7EC4;&#x7B49;</li>
+</ul>
+<h2 id="%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B">&#x6280;&#x672F;&#x9009;&#x578B;</h2>
+<p><a href="https://github.com/faye/faye" target="_blank">faye</a>&#xFF0C;&#x6700;&#x65E9;&#x7528;&#x7684;&#x65F6;&#x5019;&#x662F;&#x5199;ruby&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x90A3;&#x65F6;&#x5019;&#x4E3A;&#x4E86;&#x7528;faye&#x800C;&#x4E86;&#x89E3;node&#xFF0C;&#x56E0;&#x4E3A;node&#x7248;&#x672C;&#x7684;faye&#x6548;&#x7387;&#x6BD4;ruby&#x7684;&#x9AD8;&#x975E;&#x5E38;&#x591A;&#xFF0C;&#x4E5F;&#x7B97;&#x662F;&#x201C;&#x56E0;ruby&#x5F97;node&#x201D;&#x5427;&#x3002;</p>
+<blockquote>
+<p>Simple pub/sub messaging for the web <a href="http://faye.jcoglan.com" target="_blank">http://faye.jcoglan.com</a></p>
+</blockquote>
+<h2 id="%E9%9B%86%E6%88%90">&#x96C6;&#x6210;</h2>
+<p>&#x5B89;&#x88C5;</p>
+<pre><code>$ npm i -S faye
+</code></pre><p>&#x6700;&#x7B80;&#x5355;&#x4F8B;&#x5B50;</p>
+<pre><code>var http = require(&apos;http&apos;),
+    faye = require(&apos;faye&apos;);
+
+var server = http.createServer(),
+    bayeux = new faye.NodeAdapter({mount: &apos;/&apos;});
+
+bayeux.attach(server);
+server.listen(8000);
+</code></pre><p>&#x5F88;&#x660E;&#x663E;&#xFF0C;&#x5B83;&#x662F;attach&#x5230;http&#x7684;server&#x5B9E;&#x4F8B;&#x4E0A;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x4E5F;&#x9700;&#x8981;&#x628A;koa&#x6539;&#x6210;&#x5BF9;&#x5E94;&#x7684;</p>
+<p>&#x4F7F;&#x7528;&#x7C7B;&#x4F3C;&#x4E8E;express&#x7684;www&#x5199;&#x6CD5;</p>
+<pre><code>#!/usr/bin/env node
+
+var faye = require(&apos;faye&apos;); 
+
+var bayeux = new faye.NodeAdapter({
+    mount        : &apos;/faye&apos;, 
+    timeout : 45
+});
+
+/**
+ * Module dependencies.
+ */
+
+var app = require(&apos;./app&apos;);
+// console.dir(app)
+
+var debug = require(&apos;debug&apos;)(&apos;demo:server&apos;);
+var http = require(&apos;http&apos;);
+
+/**
+ * Get port from environment and store in Express.
+ */
+
+var port = normalizePort(process.env.PORT || &apos;3000&apos;);
+// app.set(&apos;port&apos;, port);
+
+/**
+ * Create HTTP server.
+ */
+
+var server = http.createServer(app.callback());
+
+bayeux.attach(server);
+
+/**
+ * Listen on provided port, on all network interfaces.
+ */
+
+server.listen(port);
+server.on(&apos;error&apos;, onError);
+server.on(&apos;listening&apos;, onListening);
+
+/**
+ * Normalize a port into a number, string, or false.
+ */
+
+function normalizePort(val) {
+  var port = parseInt(val, 10);
+
+  if (isNaN(port)) {
+    // named pipe
+    return val;
+  }
+
+  if (port &gt;= 0) {
+    // port number
+    return port;
+  }
+
+  return false;
+}
+
+/**
+ * Event listener for HTTP server &quot;error&quot; event.
+ */
+
+function onError(error) {
+  if (error.syscall !== &apos;listen&apos;) {
+    throw error;
+  }
+
+  var bind = typeof port === &apos;string&apos;
+    ? &apos;Pipe &apos; + port
+    : &apos;Port &apos; + port;
+
+  // handle specific listen errors with friendly messages
+  switch (error.code) {
+    case &apos;EACCES&apos;:
+      console.error(bind + &apos; requires elevated privileges&apos;);
+      process.exit(1);
+      break;
+    case &apos;EADDRINUSE&apos;:
+      console.error(bind + &apos; is already in use&apos;);
+      process.exit(1);
+      break;
+    default:
+      throw error;
+  }
+}
+
+/**
+ * Event listener for HTTP server &quot;listening&quot; event.
+ */
+
+function onListening() {
+  var addr = server.address();
+  var bind = typeof addr === &apos;string&apos;
+    ? &apos;pipe &apos; + addr
+    : &apos;port &apos; + addr.port;
+  debug(&apos;Listening on &apos; + bind);
+}
+</code></pre><p>&#x5176;&#x5B9E;&#x6838;&#x5FC3;&#x5F88;&#x7B80;&#x5355;</p>
+<pre><code>var server = http.createServer(app.callback());
+</code></pre><p>&#x8FD9;&#x662F;koa&#x548C;http&#x7684;&#x96C6;&#x6210;&#xFF0C;&#x6240;&#x4EE5;&#x6709;&#x4E86;server&#x5B9E;&#x4F8B;&#x5C31;&#x53EF;&#x4EE5;&#x52A0;faye&#x4E86;&#x3002;</p>
+<pre><code>bayeux.attach(server);
+</code></pre><p>&#x81F3;&#x6B64;&#xFF0C;&#x4E00;&#x4E2A;&#x5EFA;&#x7684;&#x670D;&#x52A1;&#x5C31;&#x6784;&#x5EFA;&#x597D;&#x3002;</p>
+<h2 id="%E6%A8%A1%E5%BC%8F1%EF%BC%9A%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%AE%A2%E9%98%85%EF%BC%8C%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E5%8F%91%E5%B8%83">&#x6A21;&#x5F0F;1&#xFF1A;&#x5BA2;&#x6237;&#x7AEF;&#x8BA2;&#x9605;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x53D1;&#x5E03;</h2>
+<p>&#x6784;&#x5EFA;&#x524D;&#x7AEF;</p>
+<pre><code>extends layouts/layout
+
+block content
+  h1= title
+  p Welcome to StuQ Koa&#x5C0F;&#x73ED;&#x8BFE;&#xFF01;
+  div
+    a(href=&apos;/users/register&apos;) &#x6CE8;&#x518C; 
+    span |
+    a(href=&apos;/users/login&apos;) &#x767B;&#x5F55; 
+    span |
+    a(href=&apos;/users/logout&apos;) &#x9500;&#x6BC1;
+  script(src=&quot;http://127.0.0.1:3000/faye/client.js&quot;)
+  script.
+    var client = new Faye.Client(&apos;http://127.0.0.1:3000/faye&apos;, {
+      timeout : 120,
+          retry       : 5
+      });
+
+      Logger = {
+        incoming: function(message, callback) {
+          console.log(&apos;incoming&apos;, message);
+          callback(message);
+        },
+        outgoing: function(message, callback) {
+          console.log(&apos;outgoing&apos;, message);
+          callback(message);
+        }
+      };
+
+      client.addExtension(Logger);
+
+      client.on(&apos;transport:down&apos;, function() {
+        // the client is offline
+      });
+
+      client.on(&apos;transport:up&apos;, function() {
+        // the client is online
+      });
+
+      var subscription = client.subscribe(&apos;/messages&apos;, function(message) {
+        // handle message
+          alert(message.text);
+      });
+</code></pre><p>&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x53D1;&#x5E03;</p>
+<pre><code>&quot;use strict&quot;
+
+var Faye = require(&apos;faye&apos;); 
+
+const router = require(&apos;koa-router&apos;)()
+
+
+var client = new Faye.Client(&apos;http://127.0.0.1:3000/faye&apos;);
+
+console.log(client)
+
+// &#x9996;&#x9875;
+router.get(&apos;/&apos;, ctx =&gt; {
+  var session = ctx.session;
+
+  setTimeout(function(){
+    console.log(&apos;publish&apos;)
+    client.publish(&apos;/messages&apos;, {
+      text: &apos;Hello world&apos;
+    });
+  },3000)
+
+
+  if (session.current_user) {
+    return ctx.render(&apos;index&apos;, {
+      title: &apos;&#x6F14;&#x793A;session&#x7528;&#x6CD5;: &#x5F53;&#x524D;&#x72B6;&#x6001;&#x4E3A;&#x5DF2;&#x767B;&#x5F55;&#x6216;&#x6CE8;&#x518C;&#x6210;&#x529F;&apos;
+    });
+  } else {
+    return ctx.render(&apos;index&apos;, {
+      title: &apos;&#x6F14;&#x793A;session&#x7528;&#x6CD5;: &#x5F53;&#x524D;&#x72B6;&#x6001;&#x4E3A;&#x6E38;&#x5BA2;&apos;
+    });
+  }
+});
+
+module.exports = router
+</code></pre><p>&#x6838;&#x5FC3;</p>
+<pre><code>    client.publish(&apos;/messages&apos;, {
+      text: &apos;Hello world&apos;
+    });
+</code></pre><h2 id="%E6%A8%A1%E5%BC%8F2%EF%BC%9A%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%AE%A2%E9%98%85%EF%BC%8C%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%8F%91%E5%B8%83">&#x6A21;&#x5F0F;2&#xFF1A;&#x5BA2;&#x6237;&#x7AEF;&#x8BA2;&#x9605;&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x53D1;&#x5E03;</h2>
+<pre><code>    &lt;script type=&quot;text/javascript&quot;&gt;
+      var client = new Faye.Client(&apos;http://127.0.0.1:3000/faye&apos;, {
+        timeout : 120,
+        retry       : 5
+    });
+
+    Logger = {
+      incoming: function(message, callback) {
+        console.log(&apos;incoming&apos;, message);
+        callback(message);
+      },
+      outgoing: function(message, callback) {
+        console.log(&apos;outgoing&apos;, message);
+        callback(message);
+      }
+    };
+
+    client.addExtension(Logger);
+
+    client.on(&apos;transport:down&apos;, function() {
+      // the client is offline
+    });
+
+    client.on(&apos;transport:up&apos;, function() {
+      // the client is online
+    });
+
+
+    var subscription = client.subscribe(&apos;/foo&apos;, function(message) {
+      // handle message
+        console.log(message);
+    });
+
+    setTimeout(function(){
+        var publication = client.publish(&apos;/foo&apos;, {text: &apos;Hi there, foo test&apos;});
+
+        publication.then(function() {
+          alert(&apos;Message received by server!&apos;);
+        }, function(error) {
+          alert(&apos;There was a problem: &apos; + error.message);
+        });
+
+    },2000);
+&lt;/script&gt;
+</code></pre><p>&#x6838;&#x5FC3;</p>
+<pre><code>var publication = client.publish(&apos;/foo&apos;, {text: &apos;Hi there, foo test&apos;});
+</code></pre><p>&#x662F;&#x4E0D;&#x662F;&#x6709;&#x70B9;&#x50CF;im&#xFF1F;</p>
+<h2 id="%E6%95%88%E7%8E%87%E9%97%AE%E9%A2%98">&#x6548;&#x7387;&#x95EE;&#x9898;</h2>
+<p>&#x5B83;&#x6709;engine&#x7684;&#x6982;&#x5FF5;&#xFF0C;&#x5373;&#x5B58;&#x50A8;&#x5F15;&#x64CE;</p>
+<p><a href="https://faye.jcoglan.com/node/engines.html" target="_blank">https://faye.jcoglan.com/node/engines.html</a></p>
+<ul>
+<li>faye-redis</li>
+<li>faye-redis-sharded</li>
+<li>faye-couchbase </li>
+</ul>
+<pre><code>var faye      = require(&apos;faye&apos;),
+    fayeRedis = require(&apos;faye-redis&apos;);
+
+var server = new faye.NodeAdapter({
+  mount:    &apos;/faye&apos;,
+  timeout:  45,
+  engine:   {
+    type:   fayeRedis,
+    host:   &apos;localhost&apos;,
+    port:   6379
+  }
+});
+</code></pre><h2 id="%E6%9C%8D%E5%8A%A1%E5%8C%96">&#x670D;&#x52A1;&#x5316;</h2>
+<p>&#x628A;&#x8FD9;&#x6837;&#x7684;pub/sub&#x4E22;&#x51FA;&#x53BB;&#xFF0C;&#x53D8;&#x6210;http&#x63A5;&#x53E3;&#xFF0C;&#x4F1A;&#x4E0D;&#x4F1A;&#x66F4;&#x7B80;&#x5355;&#x6613;&#x7528;</p>
+<p><a href="https://github.com/i5ting/fayeserver" target="_blank">https://github.com/i5ting/fayeserver</a></p>
+
                     
                     </section>
                 

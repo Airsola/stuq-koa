@@ -20,7 +20,7 @@
         
     
     
-    <link rel="next" href="../koa-with-db/index.html" />
+    <link rel="next" href="../koa-practice/exercises.html" />
     
     
     <link rel="prev" href="../koa-practice/cache.html" />
@@ -40,7 +40,7 @@
     
 
         
-    <div class="book" data-level="3.8" data-basepath=".." data-revision="Thu Aug 11 2016 16:54:09 GMT+0800 (CST)">
+    <div class="book" data-level="3.8" data-basepath=".." data-revision="Wed Aug 17 2016 07:57:30 GMT+0800 (CST)">
     
 
 <div class="book-summary">
@@ -540,6 +540,21 @@
             
         </li>
     
+        <li class="chapter " data-level="3.9" data-path="koa-practice/exercises.html">
+            
+                
+                    <a href="../koa-practice/exercises.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.9.</b>
+                        
+                        随堂练习：集成koa-redis
+                    </a>
+                
+            
+            
+        </li>
+    
 
             </ul>
             
@@ -974,7 +989,64 @@
                 
                     <section class="normal" id="section-">
                     
-                        
+                        <h1 id="cors%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98">cors&#x8DE8;&#x57DF;&#x95EE;&#x9898;</h1>
+<h2 id="cors%E5%A5%97%E4%BB%B6">cors&#x5957;&#x4EF6;</h2>
+<ul>
+<li><a href="https://github.com/evert0n/koa-cors" target="_blank">https://github.com/evert0n/koa-cors</a></li>
+<li><a href="https://github.com/expressjs/cors" target="_blank">https://github.com/expressjs/cors</a></li>
+</ul>
+<h2 id="%E4%BD%BF%E7%94%A8nginx">&#x4F7F;&#x7528;nginx</h2>
+<ul>
+<li>nginx<ul>
+<li>&#x524D;&#x7AEF;&#xFF1A;moa-frontend<ul>
+<li>public&#x4E0B;&#x9762;&#x7684;&#x91C7;&#x7528;nginx&#x505A;&#x53CD;&#x5411;&#x4EE3;&#x7406;</li>
+<li>&#x5176;&#x4ED6;&#x7684;&#x91C7;&#x7528;express+jade&#x7CBE;&#x7B80;&#x4EE3;&#x7801;&#xFF08;ajax&#x4E0E;&#x540E;&#x7AEF;&#x4EA4;&#x4E92;&#xFF09;</li>
+</ul>
+</li>
+<li>&#x540E;&#x7AEF;</li>
+</ul>
+</li>
+</ul>
+<pre><code>    server {
+        listen       8000;
+        server_name  localhost;
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html {
+            root   html;
+        }
+
+        location / {
+            proxy_redirect off;
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+              proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header Host $http_host;
+              proxy_set_header X-NginX-Proxy true;
+              proxy_pass http://127.0.0.1:3010;
+            proxy_redirect off;
+        } 
+
+        location /api {
+            proxy_set_header X-Real-IP $remote_addr;
+              proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header Host $http_host;
+              proxy_set_header X-NginX-Proxy true;
+              proxy_pass http://127.0.0.1:3005;
+            proxy_redirect off;
+        }
+    }
+</code></pre><p>nginx&#x9ED8;&#x8BA4;&#x662F;80&#x7AEF;&#x53E3;&#xFF0C;&#x6240;&#x4EE5;<code>/</code> &#x548C; <code>/api</code> &#x662F;&#x540C;&#x6E90;&#x7684;.</p>
+<p>&#x8FD9;&#x5176;&#x5B9E;&#x4E5F;&#x662F;&#x524D;&#x540E;&#x7AEF;&#x5206;&#x79BB;&#x6BD4;&#x8F83;&#x597D;&#x7684;&#x5B9E;&#x8DF5;&#x3002;</p>
+<h2 id="%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%8A">&#x6D4F;&#x89C8;&#x5668;&#x4E0A;</h2>
+<p>For OSX,&#x7EC8;&#x7AEF;&#x91CC;</p>
+<pre><code>$ open -a Google\ Chrome --args --disable-web-security
+</code></pre><p>For Linux :</p>
+<pre><code>$ google-chrome --disable-web-security
+</code></pre><p>&#x5982;&#x679C;&#x4F60;&#x4E5F;&#x60F3;&#x5C1D;&#x8BD5;&#x53BB;&#x8BBF;&#x95EE;&#x672C;&#x5730;&#x6587;&#x4EF6;&#xFF0C;&#x7528;&#x4E8E;&#x5F00;&#x53D1;&#xFF0C;&#x6BD4;&#x5982;ajax&#x6216;json&#xFF0C;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x7528;&#x4E0B;&#x9762;&#x8FD9;&#x4E2A;flag</p>
+<pre><code>-&#x2013;allow-file-access-from-files
+</code></pre><p>For Windows</p>
+<pre><code>chrome.exe --disable-web-security
+</code></pre>
                     
                     </section>
                 
@@ -987,7 +1059,7 @@
         <a href="../koa-practice/cache.html" class="navigation navigation-prev " aria-label="Previous page: cache"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../koa-with-db/index.html" class="navigation navigation-next " aria-label="Next page: Koa与数据库"><i class="fa fa-angle-right"></i></a>
+        <a href="../koa-practice/exercises.html" class="navigation navigation-next " aria-label="Next page: 随堂练习：集成koa-redis"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

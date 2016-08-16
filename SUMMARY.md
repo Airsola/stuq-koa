@@ -31,6 +31,7 @@
   * [mq](koa-practice/mq.md)
   * [cache](koa-practice/cache.md)
   * [cors](koa-practice/cors.md)
+  * [随堂练习：集成koa-redis](koa-practice/exercises.md)
 * [Koa与数据库](koa-with-db/README.md)
   * [mongodb](koa-with-db/mongodb.md)
   * [mongoose](koa-with-db/mongoose.md)

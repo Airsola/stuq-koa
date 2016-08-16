@@ -40,7 +40,7 @@
     
 
         
-    <div class="book" data-level="3.6" data-basepath=".." data-revision="Thu Aug 11 2016 16:54:09 GMT+0800 (CST)">
+    <div class="book" data-level="3.6" data-basepath=".." data-revision="Wed Aug 17 2016 07:57:30 GMT+0800 (CST)">
     
 
 <div class="book-summary">
@@ -540,6 +540,21 @@
             
         </li>
     
+        <li class="chapter " data-level="3.9" data-path="koa-practice/exercises.html">
+            
+                
+                    <a href="../koa-practice/exercises.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.9.</b>
+                        
+                        随堂练习：集成koa-redis
+                    </a>
+                
+            
+            
+        </li>
+    
 
             </ul>
             
@@ -974,7 +989,28 @@
                 
                     <section class="normal" id="section-">
                     
-                        
+                        <h1 id="mq">mq</h1>
+<p>&#x6D88;&#x606F;&#x961F;&#x5217;</p>
+<p>MQ&#x5168;&#x79F0;&#x4E3A;Message Queue, &#x6D88;&#x606F;&#x961F;&#x5217;&#xFF08;MQ&#xFF09;&#x662F;&#x4E00;&#x79CD;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5BF9;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x901A;&#x4FE1;&#x65B9;&#x6CD5;&#x3002;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x901A;&#x8FC7;&#x8BFB;&#x5199;&#x51FA;&#x5165;&#x961F;&#x5217;&#x7684;&#x6D88;&#x606F;&#xFF08;&#x9488;&#x5BF9;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x6570;&#x636E;&#xFF09;&#x6765;&#x901A;&#x4FE1;&#xFF0C;&#x800C;&#x65E0;&#x9700;&#x4E13;&#x7528;&#x8FDE;&#x63A5;&#x6765;&#x94FE;&#x63A5;&#x5B83;&#x4EEC;&#x3002;&#x6D88;&#x606F;&#x4F20;&#x9012;&#x6307;&#x7684;&#x662F;&#x7A0B;&#x5E8F;&#x4E4B;&#x95F4;&#x901A;&#x8FC7;&#x5728;&#x6D88;&#x606F;&#x4E2D;&#x53D1;&#x9001;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x901A;&#x4FE1;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x901A;&#x8FC7;&#x76F4;&#x63A5;&#x8C03;&#x7528;&#x5F7C;&#x6B64;&#x6765;&#x901A;&#x4FE1;&#xFF0C;&#x76F4;&#x63A5;&#x8C03;&#x7528;&#x901A;&#x5E38;&#x662F;&#x7528;&#x4E8E;&#x8BF8;&#x5982;&#x8FDC;&#x7A0B;&#x8FC7;&#x7A0B;&#x8C03;&#x7528;&#x7684;&#x6280;&#x672F;&#x3002;&#x6392;&#x961F;&#x6307;&#x7684;&#x662F;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x901A;&#x8FC7; &#x961F;&#x5217;&#x6765;&#x901A;&#x4FE1;&#x3002;&#x961F;&#x5217;&#x7684;&#x4F7F;&#x7528;&#x9664;&#x53BB;&#x4E86;&#x63A5;&#x6536;&#x548C;&#x53D1;&#x9001;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x540C;&#x65F6;&#x6267;&#x884C;&#x7684;&#x8981;&#x6C42;&#x3002;</p>
+<ul>
+<li><a href="https://github.com/Automattic/kue" target="_blank">https://github.com/Automattic/kue</a></li>
+<li><a href="http://www.rabbitmq.com/" target="_blank">http://www.rabbitmq.com/</a></li>
+</ul>
+<h2 id="kue">kue</h2>
+<pre><code>var kue = require(&apos;kue&apos;)
+  , queue = kue.createQueue();
+
+var job = queue.create(&apos;email&apos;, {
+    title: &apos;welcome email for tj&apos;
+  , to: &apos;tj@learnboost.com&apos;
+  , template: &apos;welcome-email&apos;
+}).save( function(err){
+   if( !err ) console.log( job.id );
+});
+</code></pre><h2 id="rabbitmq">rabbitmq</h2>
+<p>&#x662F;erlang&#x5199;&#x7684;&#x5F00;&#x6E90;&#x3001;&#x9AD8;&#x5E76;&#x53D1;&#x7684;mq&#xFF0C;&#x76EE;&#x524D;&#x5E94;&#x7528;&#x8FD8;&#x662F;&#x6BD4;&#x8F83;&#x5E7F;&#x7684;&#x3002;</p>
+<p><a href="http://www.rabbitmq.com/getstarted.html" target="_blank">http://www.rabbitmq.com/getstarted.html</a></p>
+
                     
                     </section>
                 
