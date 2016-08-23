@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
-        <title>什么是Koa？ | StuQ Koa在线课程</title>
+        <title>了解索引 | StuQ Koa在线课程</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.0.1">
@@ -20,10 +20,10 @@
         
     
     
-    <link rel="next" href="../koa-getting-start/async.html" />
+    <link rel="next" href="../koa-with-db/optimize.html" />
     
     
-    <link rel="prev" href="../koa-getting-start/index.html" />
+    <link rel="prev" href="../koa-with-db/aggregation.html" />
     
 
         
@@ -40,7 +40,7 @@
     
 
         
-    <div class="book" data-level="2.1" data-basepath=".." data-revision="Wed Aug 24 2016 06:47:19 GMT+0800 (CST)">
+    <div class="book" data-level="4.13" data-basepath=".." data-revision="Wed Aug 24 2016 06:47:19 GMT+0800 (CST)">
     
 
 <div class="book-summary">
@@ -249,7 +249,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="2.1" data-path="koa-getting-start/koa.html">
+        <li class="chapter " data-level="2.1" data-path="koa-getting-start/koa.html">
             
                 
                     <a href="../koa-getting-start/koa.html">
@@ -756,7 +756,7 @@
             
         </li>
     
-        <li class="chapter " data-level="4.13" data-path="koa-with-db/indexes.html">
+        <li class="chapter active" data-level="4.13" data-path="koa-with-db/indexes.html">
             
                 
                     <a href="../koa-with-db/indexes.html">
@@ -1094,267 +1094,183 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="%E4%B8%8B%E4%B8%80%E4%BB%A3web%E6%A1%86%E6%9E%B6koa">&#x4E0B;&#x4E00;&#x4EE3;web&#x6846;&#x67B6;Koa</h1>
-<!-- toc -->
-<ul>
-<li><a href="#koa&#x662F;&#x4EC0;&#x4E48;">Koa&#x662F;&#x4EC0;&#x4E48;&#xFF1F;</a></li>
-<li><a href="#koa&#x80FD;&#x5E72;&#x4EC0;&#x4E48;">Koa&#x80FD;&#x5E72;&#x4EC0;&#x4E48;&#xFF1F;</a></li>
-<li><a href="#koa&#x597D;&#x5728;&#x54EA;&#x91CC;">Koa&#x597D;&#x5728;&#x54EA;&#x91CC;&#xFF1F;</a></li>
-<li><a href="#koa&#x5206;&#x652F;&#x4F53;&#x7CFB;">Koa&#x5206;&#x652F;&#x4F53;&#x7CFB;</a><ul>
-<li><a href="#koa-1&#x57FA;&#x4E8E;co&#x548C;generator&#x7684;&#x4E2D;&#x95F4;&#x4EF6;&#x53EA;&#x6709;&#x4E00;&#x79CD;">Koa 1&#xFF08;&#x57FA;&#x4E8E;co&#x548C;generator&#x7684;&#xFF0C;&#x4E2D;&#x95F4;&#x4EF6;&#x53EA;&#x6709;&#x4E00;&#x79CD;&#xFF09;</a></li>
-<li><a href="#koa-2&#x652F;&#x6301;3&#x79CD;&#x4E2D;&#x95F4;&#x4EF6;co&#x53D8;&#x6210;&#x4E86;&#x53EF;&#x9009;&#x4F9D;&#x8D56;">Koa 2&#xFF08;&#x652F;&#x6301;3&#x79CD;&#x4E2D;&#x95F4;&#x4EF6;&#xFF0C;co&#x53D8;&#x6210;&#x4E86;&#x53EF;&#x9009;&#x4F9D;&#x8D56;&#xFF09;</a><ul>
-<li><a href="#common-function">common function</a></li>
-<li><a href="#generatoryield&#x6B64;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#x4F9D;&#x8D56;co">generator/yield(&#x6B64;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#x4F9D;&#x8D56;co)</a></li>
-<li><a href="#asyncawait">async/await</a></li>
-</ul>
-</li>
-<li><a href="#&#x4F9D;&#x8D56;&#x6A21;&#x5757;&#x5BF9;&#x6BD4;">&#x4F9D;&#x8D56;&#x6A21;&#x5757;&#x5BF9;&#x6BD4;</a></li>
-</ul>
-</li>
-<li><a href="#&#x6280;&#x672F;&#x6808;&#x6F14;&#x53D8;">&#x6280;&#x672F;&#x6808;&#x6F14;&#x53D8;</a></li>
-<li><a href="#why-nodejs-4x">Why Node.js 4.x&#xFF1F;</a></li>
-</ul>
-<!-- toc stop -->
-<h2 id="koa%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F">Koa&#x662F;&#x4EC0;&#x4E48;&#xFF1F;</h2>
-<p>Koa&#x662F;Node.js&#x4E0B;&#x4E00;&#x4EE3;web&#x6846;&#x67B6;</p>
-<p>&#x5B98;&#x65B9;&#x4ECB;&#x7ECD;</p>
-<pre><code>Expressive HTTP middleware for node.js to make web applications and APIs more enjoyable to write. Koa&apos;s middleware stack flows in a stack-like manner, allowing you to perform actions downstream then filter and manipulate the response upstream. Koa&apos;s use of generators also greatly increases the readability and robustness of your application.
+                        <h1 id="%E7%B4%A2%E5%BC%95%E4%BC%98%E5%8C%96">&#x7D22;&#x5F15;&#x4F18;&#x5316;</h1>
+<h2 id="%E4%BB%80%E4%B9%88%E6%98%AF%E7%B4%A2%E5%BC%95%EF%BC%9F">&#x4EC0;&#x4E48;&#x662F;&#x7D22;&#x5F15;&#xFF1F;</h2>
+<p>&#x6570;&#x636E;&#x5E93;&#x7684;&#x7D22;&#x5F15;&#x4E0E;&#x4E66;&#x7C4D;&#x7684;&#x7D22;&#x5F15;&#x7C7B;&#x4F3C;&#xFF0C;&#x6709;&#x4E86;&#x7D22;&#x5F15;&#x5C31;&#x4E0D;&#x9700;&#x8981;&#x7FFB;&#x8F6C;&#x6574;&#x672C;&#x4E66;&#x3002;&#x6570;&#x636E;&#x5E93;&#x7684;&#x7D22;&#x5F15;&#x8DDF;&#x8FD9;&#x4E2A;&#x539F;&#x7406;&#x4E00;&#x6837;&#xFF0C;&#x9996;&#x5148;&#x5728;&#x7D22;&#x5F15;&#x4E2D;&#x627E;&#xFF0C;&#x5728;&#x7D22;&#x5F15;&#x4E2D;&#x627E;&#x5230;&#x6761;&#x76EE;&#x4EE5;&#x540E;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x8DF3;&#x8F6C;&#x5230;&#x76EE;&#x6807;&#x6587;&#x6863;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x4ECE;&#x800C;&#x4F7F;&#x67E5;&#x8BE2;&#x901F;&#x5EA6;&#x63D0;&#x9AD8;&#x51E0;&#x4E2A;&#x6570;&#x636E;&#x91CF;&#x7EA7;&#x3002;</p>
+<p>&#x4E0D;&#x4F7F;&#x7528;&#x7D22;&#x5F15;&#x7684;&#x67E5;&#x8BE2;&#x79F0;&#x4E3A;&#x5168;&#x8868;&#x626B;&#x63CF;&#xFF08;&#x8FD9;&#x4E2A;&#x672F;&#x8BED;&#x6765;&#x6E90;&#x4E8E;&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x5E93;&#xFF09;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x5FC5;&#x987B;&#x67E5;&#x627E;&#x5B8C;&#x4E00;&#x6574;&#x672C;&#x4E66;&#x624D;&#x80FD;&#x627E;&#x5230;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#x3002;&#x8FD9;&#x4E2A;&#x8FC7;&#x7A0B;&#x8DDF;&#x6211;&#x4EEC;&#x5728;&#x4E00;&#x672C;&#x6CA1;&#x6709;&#x7D22;&#x5F15;&#xFF08;&#x76EE;&#x5F55;&#xFF09;&#x7684;&#x4E66;&#x4E2D;&#x67E5;&#x627E;&#x4FE1;&#x606F;&#x5F88;&#x50CF;&#xFF1A;&#x4ECE;&#x7B2C;&#x4E00;&#x9875;&#x5F00;&#x59CB;&#x4E00;&#x76F4;&#x8BFB;&#x5B8C;&#x6574;&#x672C;&#x4E66;&#x3002;&#x901A;&#x5E38;&#x6765;&#x8BF4;&#xFF0C;&#x5E94;&#x8BE5;&#x5C3D;&#x91CF;&#x907F;&#x514D;&#x4F7F;&#x7528;&#x5168;&#x8868;&#x626B;&#x63CF;&#xFF0C;&#x56E0;&#x4E3A;&#x5BF9;&#x4E8E;&#x5927;&#x96C6;&#x5408;&#x6765;&#x8BF4;&#xFF0C;&#x5168;&#x8868;&#x626B;&#x63CF;&#x7684;&#x6548;&#x7387;&#x975E;&#x5E38;&#x4F4E;&#x3002;</p>
+<p>&#x867D;&#x7136;MongoDB&#x7684;&#x7D22;&#x5F15;&#x5728;&#x5B58;&#x50A8;&#x7ED3;&#x6784;&#x4E0A;&#x90FD;&#x662F;&#x4E00;&#x6837;&#x7684;&#xFF0C;&#x4F46;&#x662F;&#x6839;&#x636E;&#x4E0D;&#x540C;&#x7684;&#x5E94;&#x7528;&#x5C42;&#x9700;&#x6C42;&#xFF0C;&#x8FD8;&#x662F;&#x5206;&#x6210;&#x4E86;&#x552F;&#x4E00;&#x7D22;&#x5F15;&#xFF08;unique&#xFF09;&#x3001;&#x7A00;&#x758F;&#x7D22;&#x5F15;&#xFF08;sparse&#xFF09;&#x3001;&#x591A;&#x503C;&#x7D22;&#x5F15;&#xFF08;multikey&#xFF09;&#x7B49;&#x51E0;&#x79CD;&#x7C7B;&#x578B;&#x3002;</p>
+<p>Mongodb&#x7684;&#x7D22;&#x5F15;&#x51E0;&#x4E4E;&#x4E0E;&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x5E93;&#x7684;&#x7D22;&#x5F15;&#x4E00;&#x6A21;&#x4E00;&#x6837;&#xFF0C;&#x6240;&#x4EE5;&#x9002;&#x7528;&#x4E8E;&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x5E93;&#x7D22;&#x5F15;&#x4F18;&#x5316;&#x6280;&#x5DE7;&#xFF0C;&#x5728;&#x8FD9;&#x91CC;&#x5C31;&#x4E0D;&#x591A;&#x8BF4;&#x4E86;&#x3002;</p>
+<h2 id="mongodb%E5%88%9B%E5%BB%BA%E7%B4%A2%E5%BC%95">mongodb&#x521B;&#x5EFA;&#x7D22;&#x5F15;</h2>
+<p>&#x521B;&#x5EFA;&#x7D22;&#x5F15;&#x4F7F;&#x7528;db.collectionName.ensureIndex(...)&#x65B9;&#x6CD5;&#x8FDB;&#x884C;&#x521B;&#x5EFA;&#xFF1B;</p>
+<h3 id="1%E3%80%81%E5%88%9B%E5%BB%BA%E6%99%AE%E9%80%9A%E7%B4%A2%E5%BC%95">1&#x3001;&#x521B;&#x5EFA;&#x666E;&#x901A;&#x7D22;&#x5F15;</h3>
+<pre><code>&gt; db.users.ensureIndex({&quot;name&quot;:1})
+</code></pre><p>&#x8FD9;&#x6837;&#x5C31;&#x5728;users&#x8FD9;&#x4E2A;&#x96C6;&#x5408;&#x4E0A;&#x9762;&#x7684;name&#x5B57;&#x6BB5;&#x4E0A;&#x9762;&#x521B;&#x5EFA;&#x4E86;&#x4E00;&#x4E2A;name_1&#x7684;&#x7D22;&#x5F15;&#xFF0C;{&quot;name&quot;:1}&#x8BF4;&#x660E;&#x5EFA;&#x7ACB;&#x7684;&#x7D22;&#x5F15;&#x662F;&#x5347;&#x5E8F;&#x7684;&#xFF0C;&#x5982;&#x679C;{&quot;name&quot;:-1}&#x8BF4;&#x660E;&#x521B;&#x5EFA;&#x7684;&#x7D22;&#x5F15;&#x662F;&#x964D;&#x5E8F;&#x7684;&#x3002;</p>
+<h3 id="2%E3%80%81%E5%88%9B%E5%BB%BA%E6%99%AE%E9%80%9A%E5%A4%8D%E5%90%88%E7%B4%A2%E5%BC%95">2&#x3001;&#x521B;&#x5EFA;&#x666E;&#x901A;&#x590D;&#x5408;&#x7D22;&#x5F15;</h3>
+<pre><code>db.users.ensureIndex({&quot;name&quot;:1,&quot;age&quot;:1})
+</code></pre><p>&#x8FD9;&#x6837;&#x5C31;&#x5728;users&#x8FD9;&#x4E2A;&#x96C6;&#x5408;&#x4E0A;&#x9762;&#x7684;name&#x548C;age&#x5B57;&#x6BB5;&#x4E0A;&#x9762;&#x521B;&#x5EFA;&#x4E86;&#x4E00;&#x4E2A;name_1_age_1&#x7684;&#x7D22;&#x5F15;.</p>
+<h3 id="3%E3%80%81%E5%88%9B%E5%BB%BA%E5%94%AF%E4%B8%80%E7%B4%A2%E5%BC%95">3&#x3001;&#x521B;&#x5EFA;&#x552F;&#x4E00;&#x7D22;&#x5F15;</h3>
+<p>&#x552F;&#x4E00;&#x7D22;&#x5F15;&#x53EF;&#x4EE5;&#x786E;&#x4FDD;&#x96C6;&#x5408;&#x91CC;&#x9762;&#x7684;&#x6BCF;&#x4E00;&#x4E2A;&#x6587;&#x6863;&#x6307;&#x5B9A;&#x7684;&#x952E;&#x90FD;&#x6709;&#x552F;&#x4E00;&#x503C;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5982;&#x679C;&#x60F3;&#x4FDD;&#x8BC1;&#x4E0D;&#x540C;&#x6587;&#x6863;&#x7684;name&#x952E;&#x62E5;&#x6709;&#x4E0D;&#x540C;&#x7684;&#x503C;&#xFF0C;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x552F;&#x4E00;&#x7D22;&#x5F15;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#xFF1A;</p>
+<pre><code>&gt; db.dept.ensureIndex({&quot;name&quot;:1},{&quot;unique&quot;:true})
+</code></pre><p>&#x521B;&#x5EFA;&#x5B8C;&#x552F;&#x4E00;&#x7D22;&#x5F15;&#x4EE5;&#x540E;&#xFF0C;&#x5982;&#x679C;&#x60F3;&#x5411;dept&#x96C6;&#x5408;&#x4E2D;&#x6DFB;&#x52A0;&#x5982;&#x4E0B;&#x6587;&#x6863;&#xFF1A;</p>
+<pre><code>&gt; db.dept.insert({ &quot;_id&quot; : 1, &quot;name&quot; : &quot;ickes&quot; })  
+&gt; db.dept.insert({ &quot;_id&quot; : 2, &quot;name&quot; : &quot;ickes&quot; })
+</code></pre><p>&#x4F1A;&#x53D1;&#x73B0;&#x53EA;&#x6709;&#x7B2C;&#x4E00;&#x4E2A;&#x6587;&#x6863;&#x6DFB;&#x52A0;&#x8FDB;&#x53BB;&#x4E86;&#xFF0C;&#x6DFB;&#x52A0;&#x7B2C;&#x4E8C;&#x4E2A;&#x65F6;&#x5C31;&#x4F1A;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#xFF0C;&#x6240;&#x4EE5;&#x4F7F;&#x7528;&#x552F;&#x4E00;&#x7D22;&#x5F15;&#x6765;&#x5E94;&#x5BF9;&#x5076;&#x5C14;&#x53EF;&#x80FD;&#x51FA;&#x73B0;&#x952E;&#x91CD;&#x590D;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x5728;&#x8FD0;&#x884C;&#x65F6;&#x5BF9;&#x91CD;&#x590D;&#x952E;&#x8FDB;&#x884C;&#x8FC7;&#x6EE4;&#x3002;&quot;_id&quot;&#x5C31;&#x662F;&#x8FD9;&#x4E2D;&#x7C7B;&#x578B;&#x7684;&#x7D22;&#x5F15;&#xFF0C;&#x8FD9;&#x4E2A;&#x7D22;&#x5F15;&#x4F1A;&#x5728;&#x521B;&#x5EFA;&#x96C6;&#x5408;&#x65F6;&#x81EA;&#x52A8;&#x521B;&#x5EFA;&#x3002;</p>
+<h3 id="4%E3%80%81%E5%88%9B%E5%BB%BA%E5%A4%8D%E5%90%88%E5%94%AF%E4%B8%80%E7%B4%A2%E5%BC%95">4&#x3001;&#x521B;&#x5EFA;&#x590D;&#x5408;&#x552F;&#x4E00;&#x7D22;&#x5F15;</h3>
+<p>&#x521B;&#x5EFA;&#x590D;&#x5408;&#x552F;&#x4E00;&#x7D22;&#x5F15;&#x65F6;&#xFF0C;&#x5355;&#x4E2A;&#x952E;&#x7684;&#x503C;&#x53EF;&#x4EE5;&#x76F8;&#x540C;&#xFF0C;&#x4F46;&#x662F;&#x6240;&#x6709;&#x952E;&#x7684;&#x7EC4;&#x5408;&#x7684;&#x503C;&#x5FC5;&#x987B;&#x662F;&#x552F;&#x4E00;&#x7684;&#x3002;</p>
+<pre><code>&gt; db.users.ensureIndex({&quot;name&quot;:1,&quot;age&quot;:1},{&quot;unique&quot;:true})
+</code></pre><h3 id="5%E3%80%81%E5%88%9B%E5%BB%BA%E5%94%AF%E4%B8%80%E7%B4%A2%E5%BC%95%E6%97%B6%E5%8E%BB%E9%99%A4%E9%87%8D%E5%A4%8D">5&#x3001;&#x521B;&#x5EFA;&#x552F;&#x4E00;&#x7D22;&#x5F15;&#x65F6;&#x53BB;&#x9664;&#x91CD;&#x590D;</h3>
+<p>&#x5728;&#x5DF2;&#x6709;&#x7684;&#x96C6;&#x5408;&#x4E0A;&#x9762;&#x521B;&#x5EFA;&#x552F;&#x4E00;&#x7D22;&#x5F15;&#x65F6;&#xFF0C;&#x53EF;&#x80FD;&#x5931;&#x8D25;&#xFF0C;&#x56E0;&#x4E3A;&#x96C6;&#x5408;&#x4E2D;&#x53EF;&#x80FD;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#x91CD;&#x590D;&#x503C;&#x4E86;&#xFF0C;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
+<pre><code>&gt; db.dept.find()   
+{ &quot;_id&quot; : 1, &quot;name&quot; : &quot;ickes&quot; }  
+{ &quot;_id&quot; : 2, &quot;name&quot; : &quot;ickes&quot; }  
+{ &quot;_id&quot; : 3, &quot;name&quot; : &quot;ickes1&quot; }  
+{ &quot;_id&quot; : 4, &quot;name&quot; : &quot;eks&quot; }  
+{ &quot;_id&quot; : 5, &quot;name&quot; : &quot;eks&quot; }
+</code></pre><p>&#x4ECE;&#x4E0A;&#x9762;&#x7684;&#x96C6;&#x5408;&#x4E2D;&#x770B;&#x51FA;name&#x5DF2;&#x7ECF;&#x6709;&#x5927;&#x91CF;&#x91CD;&#x590D;&#x503C;&#xFF0C;&#x521B;&#x5EFA;&#x552F;&#x4E00;&#x7D22;&#x5F15;&#x65F6;&#x629B;&#x51FA;&#x5F02;&#x5E38;</p>
+<pre><code>&gt; db.dept.ensureIndex({&quot;name&quot;:1},{&quot;unique&quot;:true})  
+{  
+        &quot;createdCollectionAutomatically&quot; : false,  
+        &quot;numIndexesBefore&quot; : 1,  
+        &quot;ok&quot; : 0,  
+        &quot;errmsg&quot; : &quot;E11000 duplicate key error index: test.dept.$name_1  dup key  
+: { : \&quot;eks\&quot; }&quot;,  
+        &quot;code&quot; : 11000  
+}
+</code></pre><p>&#x901A;&#x5E38;&#x9700;&#x8981;&#x5BF9;&#x5DF2;&#x6709;&#x7684;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x5904;&#x7406;&#xFF08;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x805A;&#x5408;&#x6846;&#x67B6;&#xFF0C;&#x540E;&#x9762;&#x4F1A;&#x8BF4;&#xFF09;&#xFF0C;&#x627E;&#x51FA;&#x91CD;&#x590D;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x60F3;&#x529E;&#x6CD5;&#x5904;&#x7406;&#x3002;
+     &#x5728;&#x6781;&#x5C11;&#x6570;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x53EF;&#x80FD;&#x5E0C;&#x671B;&#x76F4;&#x63A5;&#x5220;&#x9664;&#x91CD;&#x590D;&#x7684;&#x503C;&#x3002;&#x521B;&#x5EFA;&#x7D22;&#x5F15;&#x65F6;&#x4F7F;&#x7528;&quot;dropDups&quot;&#x9009;&#x9879;&#xFF0C;&#x5982;&#x679C;&#x9047;&#x5230;&#x91CD;&#x590D;&#x7684;&#x503C;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x4F1A;&#x88AB;&#x4FDD;&#x7559;&#xFF0C;&#x4E4B;&#x540E;&#x7684;&#x91CD;&#x590D;&#x6587;&#x6863;&#x90FD;&#x4F1A;&#x88AB;&#x5220;&#x9664;&#x3002;</p>
+<pre><code>&gt;  db.dept.ensureIndex({&quot;name&quot;:1},{&quot;unique&quot;:true,&quot;dropDups&quot;:true})  
+{  
+        &quot;createdCollectionAutomatically&quot; : false,  
+        &quot;numIndexesBefore&quot; : 1,  
+        &quot;numIndexesAfter&quot; : 2,  
+        &quot;ok&quot; : 1  
+}
+</code></pre><p>&quot;dropDups&quot;&#x4F1A;&#x5F3A;&#x5236;&#x6027;&#x7684;&#x5EFA;&#x7ACB;&#x552F;&#x4E00;&#x7D22;&#x5F15;&#xFF0C;&#x4F46;&#x662F;&#x8FD9;&#x4E2A;&#x65B9;&#x5F0F;&#x592A;&#x7C97;&#x66B4;&#x4E86;&#xFF1A;&#x4F60;&#x65E0;&#x6CD5;&#x63A7;&#x5236;&#x90A3;&#x4E9B;&#x6587;&#x6863;&#x9700;&#x8981;&#x88AB;&#x4FDD;&#x7559;&#xFF0C;&#x90A3;&#x4E9B;&#x6587;&#x6863;&#x9700;&#x8981;&#x88AB;&#x5220;&#x9664;&#xFF08;&#x4ECE;&#x4E0A;&#x9762;&#x6253;&#x5370;&#x7684;&#x4FE1;&#x606F;&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#xFF0C;&#x5982;&#x679C;&#x6587;&#x6863;&#x88AB;&#x5220;&#x9664;&#x4E86;&#xFF0C;MongoDB&#x4E5F;&#x4E0D;&#x4F1A;&#x7ED9;&#x51FA;&#x63D0;&#x793A;&#x4FE1;&#x606F;&#xFF09;&#x3002;&#x5BF9;&#x4E8E;&#x6BD4;&#x8F83;&#x91CD;&#x8981;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x5343;&#x4E07;&#x4E0D;&#x8981;&#x4F7F;&#x7528;&quot;dropDups&quot;.</p>
+<h3 id="6%E3%80%81%E5%88%9B%E5%BB%BA%E7%A8%80%E7%96%8F%E7%B4%A2%E5%BC%95">6&#x3001;&#x521B;&#x5EFA;&#x7A00;&#x758F;&#x7D22;&#x5F15;</h3>
+<p>&#x552F;&#x4E00;&#x7D22;&#x5F15;&#x4F1A;&#x628A;null&#x503C;&#x770B;&#x505A;&#x503C;&#xFF0C;&#x6240;&#x4EE5;&#x65E0;&#x6CD5;&#x5C06;&#x7F3A;&#x5C11;&#x952E;&#x7684;&#x591A;&#x4E2A;&#x6587;&#x6863;&#x63D2;&#x5165;&#x5230;&#x5EFA;&#x7ACB;&#x7684;&#x552F;&#x4E00;&#x7D22;&#x5F15;&#x7684;&#x96C6;&#x5408;&#x4E2D;&#x3002;&#x7136;&#x800C;&#xFF0C;&#x5728;&#x67D0;&#x4E9B;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4F60;&#x53EF;&#x80FD;&#x5E0C;&#x671B;&#x552F;&#x4E00;&#x7D22;&#x5F15;&#x53EA;&#x9488;&#x5BF9;&#x5305;&#x542B;&#x76F8;&#x5E94;&#x952E;&#x7684;&#x6587;&#x6863;&#x751F;&#x6548;&#x3002;&#x5982;&#x679C;&#x6709;&#x4E00;&#x4E2A;&#x53EF;&#x80FD;&#x5B58;&#x5728;&#x4E5F;&#x6709;&#x53EF;&#x80FD;&#x4E0D;&#x5B58;&#x5728;&#x7684;&#x5B57;&#x6BB5;&#xFF0C;&#x5F53;&#x5B57;&#x6BB5;&#x5B58;&#x5728;&#x65F6;&#x662F;&#x552F;&#x4E00;&#x7D22;&#x5F15;&#xFF0C;&#x4E0D;&#x5B58;&#x65F6;&#x4E0D;&#x505A;&#x5904;&#x7406;&#xFF0C;&#x8FD9;&#x65F6;&#x5C31;&#x53EF;&#x4EE5;&#x5C06;unique&#x548C;sparse&#x9009;&#x9879;&#x7EC4;&#x5408;&#x5728;&#x4E00;&#x8D77;&#x4F7F;&#x7528;&#x3002;</p>
+<p>&#x4F7F;&#x7528;sparse&#x9009;&#x9879;&#x5C31;&#x53EF;&#x4EE5;&#x521B;&#x5EFA;&#x7A00;&#x758F;&#x7D22;&#x5F15;&#x3002;&#x4F8B;&#x5982;&#x96C6;&#x5408;&#x7684;&#x7ED3;&#x6784;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>&gt; db.sparse.find()  
+{ &quot;_id&quot; : 1, &quot;x&quot; : 1 }  
+{ &quot;_id&quot; : 2, &quot;x&quot; : 2 }  
+{ &quot;_id&quot; : 3, &quot;x&quot; : null }  
+{ &quot;_id&quot; : 4 }
+</code></pre><p>&#x521B;&#x5EFA;&#x7A00;&#x758F;&#x7D22;&#x5F15;</p>
+<pre><code>&gt; db.sparse.ensureIndex({&quot;x&quot;:1},{&quot;unique&quot;:true,&quot;sparse&quot;:true})
+</code></pre><p>&#x7A00;&#x758F;&#x7D22;&#x5F15;&#x4E0D;&#x5FC5;&#x662F;&#x552F;&#x4E00;&#x7684;&#x3002;&#x53EA;&#x8981;&#x53BB;&#x6389;unique&#x9009;&#x9879;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x975E;&#x552F;&#x4E00;&#x7684;&#x7A00;&#x758F;&#x7D22;&#x5F15;</p>
+<p>MongoDB&#x7684;&#x7A00;&#x758F;&#x7D22;&#x5F15;&#x4E0E;&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x7684;&#x7A00;&#x758F;&#x7D22;&#x5F15;&#x662F;&#x5B8C;&#x5168;&#x4E0D;&#x540C;&#x7684;&#x6982;&#x5FF5;&#x3002;&#x57FA;&#x672C;&#x4E0A;&#x6765;&#x8BF4;&#xFF0C;MongoDB&#x4E2D;&#x7684;&#x7A00;&#x758F;&#x7D22;&#x5F15;&#x53EA;&#x662F;&#x4E0D;&#x9700;&#x8981;&#x5C06;&#x6BCF;&#x4E2A;&#x6587;&#x6863;&#x90FD;&#x4F5C;&#x4E3A;&#x7D22;&#x5F15;&#x6761;&#x76EE;&#x3002;&#x90A3;&#x4E48;&#x95EE;&#x9898;&#x6765;&#x4E86;&#xFF0C;&#x6839;&#x636E;&#x662F;&#x5426;&#x4F7F;&#x7528;&#x7A00;&#x758F;&#x7D22;&#x5F15;&#xFF0C;&#x540C;&#x4E00;&#x4E2A;&#x67E5;&#x8BE2;&#x7684;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x53EF;&#x80FD;&#x4E0D;&#x540C;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#x4E0A;&#x9762;&#x6587;&#x6863;&#xFF0C;&#x5F53;&#x5728;x&#x4E0A;&#x9762;&#x6267;&#x884C;&#x67E5;&#x8BE2;&#x65F6;&#xFF0C;&#x4ED6;&#x4F1A;&#x8FD4;&#x56DE;&#x76F8;&#x5E94;&#x5339;&#x914D;&#x7684;&#x6587;&#x6863;&#xFF1A;</p>
+<pre><code>&gt; db.sparse.find({&quot;x&quot;:{&quot;$ne&quot;:1}}).hint({}) --hint({})&#x5F3A;&#x5236;&#x4E0D;&#x4F7F;&#x7528;&#x7D22;&#x5F15;  
+{ &quot;_id&quot; : 2, &quot;x&quot; : 2 }  
+{ &quot;_id&quot; : 3, &quot;x&quot; : null }  
+{ &quot;_id&quot; : 4 }
+</code></pre><p>&#x5982;&#x679C;&#x5728;x&#x5B57;&#x6BB5;&#x4E0A;&#x9762;&#x4F7F;&#x7528;&#x7D22;&#x5F15;&#xFF0C;&#x90A3;&#x4E48;{ &quot;_id&quot; : 4 }&#x7684;&#x6587;&#x6863;&#x5C06;&#x4E0D;&#x4F1A;&#x8FD4;&#x56DE;&#xFF0C;&#x56E0;&#x4E3A;&#x4ED6;&#x4E0D;&#x5728;&#x7D22;&#x5F15;&#x4E2D;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code>&gt; db.sparse.find({&quot;x&quot;:{&quot;$ne&quot;:1}}).hint({&quot;x&quot;:1})  
+{ &quot;_id&quot; : 3, &quot;x&quot; : null }  
+{ &quot;_id&quot; : 2, &quot;x&quot; : 2 }
+</code></pre><h2 id="mongoose%E7%B4%A2%E5%BC%95%E7%B1%BB%E5%9E%8B">mongoose&#x7D22;&#x5F15;&#x7C7B;&#x578B;</h2>
+<pre><code>var mongoose = require(&apos;mongoose&apos;);
 
-Only methods that are common to nearly all HTTP servers are integrated directly into Koa&apos;s small ~550 SLOC codebase. This includes things like content negotiation, normalization of node inconsistencies, redirection, and a few others.
-
-Koa is not bundled with any middleware.
-</code></pre><p>&#x7531; Express &#x539F;&#x73ED;&#x4EBA;&#x9A6C;&#x6253;&#x9020;&#x7684; koa&#xFF0C;&#x81F4;&#x529B;&#x4E8E;&#x6210;&#x4E3A;&#x4E00;&#x4E2A;&#x66F4;&#x5C0F;&#x3001;&#x66F4;&#x5065;&#x58EE;&#x3001;&#x66F4;&#x5BCC;&#x6709;&#x8868;&#x73B0;&#x529B;&#x7684; Web &#x6846;&#x67B6;&#x3002;&#x4F7F;&#x7528; koa &#x7F16;&#x5199; web &#x5E94;&#x7528;&#xFF0C;&#x901A;&#x8FC7;&#x7EC4;&#x5408;&#x4E0D;&#x540C;&#x7684; generator&#xFF0C;&#x53EF;&#x4EE5;&#x514D;&#x9664;&#x91CD;&#x590D;&#x7E41;&#x7410;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x5D4C;&#x5957;&#xFF0C;&#x5E76;&#x6781;&#x5927;&#x5730;&#x63D0;&#x5347;&#x5E38;&#x7528;&#x9519;&#x8BEF;&#x5904;&#x7406;&#x6548;&#x7387;&#x3002;Koa &#x4E0D;&#x5728;&#x5185;&#x6838;&#x65B9;&#x6CD5;&#x4E2D;&#x7ED1;&#x5B9A;&#x4EFB;&#x4F55;&#x4E2D;&#x95F4;&#x4EF6;&#xFF0C;&#x5B83;&#x4EC5;&#x4EC5;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x8F7B;&#x91CF;&#x4F18;&#x96C5;&#x7684;&#x51FD;&#x6570;&#x5E93;&#xFF0C;&#x4F7F;&#x5F97;&#x7F16;&#x5199; Web &#x5E94;&#x7528;&#x548C;API&#x53D8;&#x5F97;&#x5F97;&#x5FC3;&#x5E94;&#x624B;&#x3002;</p>
-<p>Koa&#x4E2D;&#x95F4;&#x4EF6;&#x7684;&#x6808;&#x6D41;&#x4EE5;&#x7C7B;&#x4F3C;&#x6808;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x5141;&#x8BB8;&#x4F60;&#x4E0B;&#x884C;&#x6267;&#x884C;&#x52A8;&#x4F5C;&#xFF0C;&#x7136;&#x540E;&#x8FC7;&#x6EE4;&#x548C;&#x64CD;&#x4F5C;&#x54CD;&#x5E94;&#x7684;upstream&#xFF0C;&#x8FD9;&#x5176;&#x5B9E;&#x662F;&#x548C;express&#x6709;&#x533A;&#x522B;&#x7684;&#x53E6;&#x4E00;&#x4E2A;&#x5927;&#x70B9;&#x3002;</p>
-<p>Koa &#x5E94;&#x7528;&#x662F;&#x4E00;&#x4E2A;&#x5305;&#x542B;&#x4E00;&#x7CFB;&#x5217;&#x4E2D;&#x95F4;&#x4EF6; generator &#x51FD;&#x6570;&#x7684;&#x5BF9;&#x8C61;&#x3002; &#x8FD9;&#x4E9B;&#x4E2D;&#x95F4;&#x4EF6;&#x51FD;&#x6570;&#x57FA;&#x4E8E; request &#x8BF7;&#x6C42;&#x4EE5;&#x4E00;&#x4E2A;&#x7C7B;&#x4F3C;&#x4E8E;&#x6808;&#x7684;&#x7ED3;&#x6784;&#x7EC4;&#x6210;&#x5E76;&#x4F9D;&#x6B21;&#x6267;&#x884C;&#x3002; Koa &#x7C7B;&#x4F3C;&#x4E8E;&#x5176;&#x4ED6;&#x4E2D;&#x95F4;&#x4EF6;&#x7CFB;&#x7EDF;&#xFF08;&#x6BD4;&#x5982; Ruby&apos;s Rack &#x3001;Connect &#x7B49;&#xFF09;&#xFF0C; &#x7136;&#x800C; Koa &#x7684;&#x6838;&#x5FC3;&#x8BBE;&#x8BA1;&#x601D;&#x8DEF;&#x662F;&#x4E3A;&#x4E2D;&#x95F4;&#x4EF6;&#x5C42;&#x63D0;&#x4F9B;&#x9AD8;&#x7EA7;&#x8BED;&#x6CD5;&#x7CD6;&#x5C01;&#x88C5;&#xFF0C;&#x4EE5;&#x589E;&#x5F3A;&#x5176;&#x4E92;&#x7528;&#x6027;&#x548C;&#x5065;&#x58EE;&#x6027;&#xFF0C;&#x5E76;&#x4F7F;&#x5F97;&#x7F16;&#x5199;&#x4E2D;&#x95F4;&#x4EF6;&#x53D8;&#x5F97;&#x76F8;&#x5F53;&#x6709;&#x8DA3;&#x3002;</p>
-<p>Koa &#x5305;&#x542B;&#x4E86;&#x50CF; content-negotiation&#xFF08;&#x5185;&#x5BB9;&#x534F;&#x5546;&#xFF09;&#x3001;cache freshness&#xFF08;&#x7F13;&#x5B58;&#x5237;&#x65B0;&#xFF09;&#x3001;proxy support&#xFF08;&#x4EE3;&#x7406;&#x652F;&#x6301;&#xFF09;&#x548C; redirection&#xFF08;&#x91CD;&#x5B9A;&#x5411;&#xFF09;&#x7B49;&#x5E38;&#x7528;&#x4EFB;&#x52A1;&#x65B9;&#x6CD5;&#x3002; &#x4E0E;&#x63D0;&#x4F9B;&#x5E9E;&#x5927;&#x7684;&#x51FD;&#x6570;&#x652F;&#x6301;&#x4E0D;&#x540C;&#xFF0C;Koa&#x53EA;&#x5305;&#x542B;&#x5F88;&#x5C0F;&#x7684;&#x4E00;&#x90E8;&#x5206;&#xFF0C;&#x56E0;&#x4E3A;Koa&#x5E76;&#x4E0D;&#x7ED1;&#x5B9A;&#x4EFB;&#x4F55;&#x4E2D;&#x95F4;&#x4EF6;&#x3002;</p>
-<h2 id="koa%E8%83%BD%E5%B9%B2%E4%BB%80%E4%B9%88%EF%BC%9F">Koa&#x80FD;&#x5E72;&#x4EC0;&#x4E48;&#xFF1F;</h2>
-<p>&#x4E3B;&#x8981;&#x7528;&#x9014;</p>
-<ul>
-<li>&#x7F51;&#x7AD9;&#xFF08;&#x6BD4;&#x5982;cnode&#x8FD9;&#x6837;&#x7684;&#x8BBA;&#x575B;&#xFF09;</li>
-<li>api&#xFF08;&#x4E09;&#x7AEF;&#xFF1A;pc&#x3001;&#x79FB;&#x52A8;&#x7AEF;&#x3001;h5&#xFF09;</li>
-<li>&#x4E0E;&#x5176;&#x4ED6;&#x6A21;&#x5757;&#x642D;&#x914D;&#xFF0C;&#x6BD4;&#x5982;&#x548C;socket.io&#x642D;&#x914D;&#x5199;&#x5F39;&#x5E55;&#x3001;im&#xFF08;&#x5373;&#x65F6;&#x804A;&#x5929;&#xFF09;&#x7B49;</li>
-</ul>
-<p>koa&#x662F;&#x5FAE;&#x578B;web&#x6846;&#x67B6;&#xFF0C;&#x4F46;&#x5B83;&#x4E5F;&#x662F;&#x4E2A;Node.js&#x6A21;&#x5757;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x6211;&#x4EEC;&#x4E5F;&#x53EF;&#x4EE5;&#x5229;&#x7528;&#x5B83;&#x505A;&#x4E00;&#x4E9B;http&#x76F8;&#x5173;&#x7684;&#x4E8B;&#x513F;&#x3002;&#x4E3E;&#x4F8B;&#xFF1A;&#x5B9E;&#x73B0;&#x7C7B;&#x4F3C;&#x4E8E;http-server&#x8FD9;&#x6837;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x5728;vue&#x6216;react&#x5F00;&#x53D1;&#x91CC;&#xFF0C;&#x5728;&#x722C;&#x866B;&#x91CC;&#xFF0C;&#x5229;&#x7528;&#x8DEF;&#x7531;&#x89E6;&#x53D1;&#x722C;&#x866B;&#x4EFB;&#x52A1;&#x7B49;&#x3002;&#x6BD4;&#x5982;&#x5728;bin&#x6A21;&#x5757;&#x91CC;&#xFF0C;&#x96C6;&#x6210;koa&#x6A21;&#x5757;&#xFF0C;&#x542F;&#x52A8;&#x4E2A;static-http-server&#x8FD9;&#x6837;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x90FD;&#x662F;&#x975E;&#x5E38;&#x5BB9;&#x6613;&#x7684;&#x3002;</p>
-<h2 id="koa%E5%A5%BD%E5%9C%A8%E5%93%AA%E9%87%8C%EF%BC%9F">Koa&#x597D;&#x5728;&#x54EA;&#x91CC;&#xFF1F;</h2>
-<p>&#x548C;Express&#x5BF9;&#x6BD4;</p>
-<p>1&#xFF09;&#x4F9D;&#x8D56;&#x7684;Node.js&#x7248;&#x672C;</p>
-<p>Koa &#x76EE;&#x524D;&#x9700;&#x8981; &gt;=0.11.x&#x7248;&#x672C;&#x7684; node &#x73AF;&#x5883;&#x3002;&#x5E76;&#x9700;&#x8981;&#x5728;&#x6267;&#x884C; node &#x7684;&#x65F6;&#x5019;&#x9644;&#x5E26; --harmony &#x6765;&#x5F15;&#x5165; generators &#x3002;</p>
-<p>express&#x65E0;&#x6240;&#x8C13;&#xFF0C;&#x76EE;&#x524D;0.10+&#x90FD;ok&#xFF0C;&#x751A;&#x81F3;&#x66F4;&#x4F4E;&#x7248;&#x672C;</p>
-<p>2&#xFF09;&#x4E2D;&#x95F4;&#x4EF6;</p>
-<p>&#x548C; express &#x57FA;&#x4E8E;&#x7684;&#x4E2D;&#x95F4;&#x4EF6;Connect&#xFF0C;&#x4F7F;&#x7528;&#x8D77;&#x6765;&#x5DEE;&#x522B;&#x5E76;&#x4E0D;&#x5927;&#xFF0C;&#x601D;&#x60F3;&#x90FD;&#x662F;&#x4E00;&#x6837;&#x7684;&#xFF0C;&#x5B83;&#x91CC;&#x9762;&#x8BF4;&#x7684;</p>
-<pre><code>&#x589E;&#x5F3A;&#x5176;&#x4E92;&#x7528;&#x6027;&#x548C;&#x5065;&#x58EE;&#x6027;
-</code></pre><p>koa&#x4E3B;&#x8981;&#x662F;&#x901A;&#x8FC7;Context&#x6765;&#x5904;&#x7406;&#xFF0C;&#x907F;&#x514D;&#x91CC;&#x6BCF;&#x4E2A;&#x4E2D;&#x95F4;&#x4EF6;&#x4F20;&#x9012;&#x8BF7;&#x6C42;&#x548C;&#x54CD;&#x5E94;&#xFF0C;&#x6574;&#x4F53;&#x6765;&#x8BF4;&#x66F4;&#x65B9;&#x4FBF;&#xFF0C;&#x800C;&#x4E14;&#x5BF9;es6&#x8BED;&#x6CD5;&#x652F;&#x6301;&#x66F4;&#x597D;&#x3002;</p>
-<p>3&#xFF09;&#x6D41;&#x7A0B;&#x5904;&#x7406;</p>
-<p>&#x63D0;&#x4F9B;&#x4E86;&#x66F4;&#x4E30;&#x5BCC;&#x7684;&#x6D41;&#x7A0B;&#x5904;&#x7406;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;generator&#xFF0C;&#x7EC4;&#x5408;&#x4E0D;&#x540C;&#x7684; generator&#xFF0C;&#x53EF;&#x4EE5;&#x514D;&#x9664;&#x91CD;&#x590D;&#x7E41;&#x7410;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x5D4C;&#x5957;&#x3002;koa2&#x66F4;&#x662F;&#x652F;&#x6301;&#x4E86;ES 7 stage-3&#x91CC;&#x7684;async/await</p>
-<p>4&#xFF09;&#x5F02;&#x5E38;&#x5904;&#x7406;</p>
-<p>koa 1.x</p>
-<ul>
-<li>&#x901A;&#x8FC7; try catch &#x6765;&#x6355;&#x83B7;&#x6240;&#x6709;&#x7684;&#x5F02;&#x5E38;</li>
-<li>&#x6240;&#x6709; throw &#x51FA;&#x53BB;&#x7684; error &#x90FD;&#x4F1A;&#x88AB; koa &#x6355;&#x83B7;&#x5230;</li>
-</ul>
-<p>koa 2.x</p>
-<ul>
-<li>async&#x548C;generator&#x5199;&#x6CD5;&#x7684;&#x4E2D;&#x95F4;&#x4EF6;&#xFF0C;&#x901A;&#x8FC7; try catch &#x6765;&#x6355;&#x83B7;&#x6240;&#x6709;&#x7684;&#x5F02;&#x5E38;</li>
-<li>promise&#x5199;&#x6CD5;&#x7684;&#x4E2D;&#x95F4;&#x4EF6;&#xFF0C;&#x91C7;&#x7528;promise&#x7684;&#x5F02;&#x5E38;&#x6355;&#x83B7;&#x65B9;&#x5F0F;</li>
-<li>&#x6240;&#x6709; throw &#x51FA;&#x53BB;&#x7684; error &#x90FD;&#x4F1A;&#x88AB; koa &#x6355;&#x83B7;&#x5230;</li>
-</ul>
-<p>5&#xFF09;&#x5927;&#x5C0F;</p>
-<p>Koa&#x662F;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x4E2D;&#x95F4;&#x4EF6;&#x6346;&#x7ED1;&#x7684;&#xFF0C;&#x8FDE;&#x8DEF;&#x7531;&#x90FD;&#x6CA1;&#x6709;&#x5185;&#x7F6E;&#xFF0C;&#x6240;&#x4EE5;&#x5B83;&#x66F4;&#x7EAF;&#x7CB9;&#x3001;&#x5E72;&#x51C0;&#x4E00;&#x4E9B;&#x3002;</p>
-<p>Express&#x63D0;&#x4F9B;&#x4E86;&#x5065;&#x58EE;&#x7684;&#x8DEF;&#x7531;&#xFF0C;&#x96C6;&#x6210;&#x4E86;&#x5C11;&#x91CF;&#x4E2D;&#x95F4;&#x4EF6;&#xFF08;&#x5176;&#x5B9E;&#x662F;&#x72EC;&#x7ACB;&#x51FA;&#x53BB;&#x7684;&#xFF09;</p>
-<h2 id="koa%E5%88%86%E6%94%AF%E4%BD%93%E7%B3%BB">Koa&#x5206;&#x652F;&#x4F53;&#x7CFB;</h2>
-<p>&#x4E3B;&#x8981;&#x5206;&#x4E3A; koa 1.x&#x548C;koa 2.x</p>
-<h3 id="koa-1%EF%BC%88%E5%9F%BA%E4%BA%8Eco%E5%92%8Cgenerator%E7%9A%84%EF%BC%8C%E4%B8%AD%E9%97%B4%E4%BB%B6%E5%8F%AA%E6%9C%89%E4%B8%80%E7%A7%8D%EF%BC%89">Koa 1&#xFF08;&#x57FA;&#x4E8E;co&#x548C;generator&#x7684;&#xFF0C;&#x4E2D;&#x95F4;&#x4EF6;&#x53EA;&#x6709;&#x4E00;&#x79CD;&#xFF09;</h3>
-<p>koa-getting-start/1.x/app.js</p>
-<pre><code>var koa = require(&apos;koa&apos;);
-var app = koa();
-
-// logger
-
-app.use(function *(next){
-  var start = new Date;
-  yield next;
-  var ms = new Date - start;
-  console.log(&apos;%s %s - %s&apos;, this.method, this.url, ms);
-});
-
-// response
-
-app.use(function *(){
-  this.body = &apos;Hello World&apos;;
-});
-
-app.listen(3000);
-</code></pre><h3 id="koa-2%EF%BC%88%E6%94%AF%E6%8C%813%E7%A7%8D%E4%B8%AD%E9%97%B4%E4%BB%B6%EF%BC%8Cco%E5%8F%98%E6%88%90%E4%BA%86%E5%8F%AF%E9%80%89%E4%BE%9D%E8%B5%96%EF%BC%89">Koa 2&#xFF08;&#x652F;&#x6301;3&#x79CD;&#x4E2D;&#x95F4;&#x4EF6;&#xFF0C;co&#x53D8;&#x6210;&#x4E86;&#x53EF;&#x9009;&#x4F9D;&#x8D56;&#xFF09;</h3>
-<ul>
-<li>common function</li>
-<li>generator/yield(&#x6B64;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#x4F9D;&#x8D56;co)</li>
-<li>async/await</li>
-</ul>
-<h4 id="common-function">common function</h4>
-<p>koa-getting-start/2.x/app.js</p>
-<pre><code>const Koa = require(&apos;koa&apos;);
-const app = new Koa();
-
-// logger
-
-app.use((ctx, next) =&gt; {
-  const start = new Date();
-  return next().then(() =&gt; {
-    const ms = new Date() - start;
-    console.log(`${ctx.method} ${ctx.url} - ${ms}ms`);
-  });
-});
-
-// response
-app.use(ctx =&gt; {
-  ctx.body = &apos;Hello Koa&apos;;
-});
-
-app.listen(3000);
+mongoose.Schema.indexTypes.forEach(index =&gt; {
+  console.log(index)
+})
 </code></pre><p>&#x6267;&#x884C;</p>
-<pre><code>$ node app.js
-</code></pre><h4 id="generator-yield-%E6%AD%A4%E7%A7%8D%E6%83%85%E5%86%B5%E4%B8%8B%E4%BE%9D%E8%B5%96co">generator/yield(&#x6B64;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#x4F9D;&#x8D56;co)</h4>
-<p>&#x6B64;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#x4F9D;&#x8D56;babel&#x7F16;&#x8BD1;&#xFF0C;&#x76EE;&#x524D;Node.js&#x8FD8;&#x4E0D;&#x652F;&#x6301;async&#x51FD;&#x6570;&#xFF0C;&#x4E0D;&#x8FC7;&#x5F88;&#x5FEB;&#x5C31;&#x652F;&#x6301;&#x4E86;&#xFF0C;v8-5.1&#x5DF2;&#x7ECF;&#x5B9E;&#x73B0;&#x4E86;&#xFF0C;node&#x4E5F;&#x5DF2;&#x7ECF;&#x7740;&#x624B;&#x5408;&#x5E76;&#x4E86;</p>
-<p>koa-getting-start/2.x/app2.js</p>
-<pre><code>const Koa = require(&apos;koa&apos;);
-const co = require(&apos;co&apos;);
-const app = new Koa();
-
-// logger
-
-app.use(co.wrap(function *(ctx, next) {
-  const start = new Date();
-  yield next();
-  const ms = new Date() - start;
-  console.log(`${ctx.method} ${ctx.url} - ${ms}ms`);
-}));
-
-// response
-app.use(ctx =&gt; {
-  ctx.body = &apos;Hello Koa&apos;;
+<pre><code>$ node mongoose/indexTypes.js
+2d
+2dsphere
+hashed
+text
+</code></pre><h2 id="mongoose%E7%B4%A2%E5%BC%95%E5%AE%9A%E4%B9%89">mongoose&#x7D22;&#x5F15;&#x5B9A;&#x4E49;</h2>
+<pre><code> ContactSchema = new Schema({
+    ...
+    owner: {
+      type: Schema.ObjectId,
+      required: true,
+      index: true
+    }
 });
-
-app.listen(3000);
-</code></pre><p>&#x6267;&#x884C;</p>
-<pre><code>$ runkoa app2.js
-</code></pre><p>&#x8FD9;&#x91CC;&#x4E3A;&#x4E86;&#x4ECE;&#x7B80;&#xFF0C;&#x4F7F;&#x7528;&#x5C01;&#x88C5;babel&#x7684;runkoa&#x6765;&#x6267;&#x884C;&#x3002;</p>
-<h4 id="async-await">async/await</h4>
-<p>koa-getting-start/2.x/app3.js</p>
-<pre><code>const Koa = require(&apos;koa&apos;);
-const app = new Koa();
-
-// logger
-
-app.use(async (ctx, next) =&gt; {
-  const start = new Date();
-  await next();
-  const ms = new Date() - start;
-  console.log(`${ctx.method} ${ctx.url} - ${ms}ms`);
-});
-
-// response
-app.use(ctx =&gt; {
-  ctx.body = &apos;Hello Koa&apos;;
-});
-
-app.listen(3000);
-</code></pre><p>&#x6267;&#x884C;</p>
-<pre><code>$ runkoa app3.js
-</code></pre><h3 id="%E4%BE%9D%E8%B5%96%E6%A8%A1%E5%9D%97%E5%AF%B9%E6%AF%94">&#x4F9D;&#x8D56;&#x6A21;&#x5757;&#x5BF9;&#x6BD4;</h3>
-<pre><code>&#x279C;  koa-benchmark git:(master) &#x2717; npm i -S koa@1
-koa@1.2.0 node_modules/koa
-&#x251C;&#x2500;&#x2500; error-inject@1.0.0(&#x4E00;&#x6837;)
-&#x251C;&#x2500;&#x2500; koa-compose@2.4.0&#xFF08;1&#x662F;2.4&#x800C;2&#x662F;3.1&#xFF09;
-&#x251C;&#x2500;&#x2500; escape-html@1.0.3(&#x4E00;&#x6837;)
-&#x251C;&#x2500;&#x2500; destroy@1.0.4(&#x4E00;&#x6837;)
-&#x251C;&#x2500;&#x2500; koa-is-json@1.0.0(&#x4E00;&#x6837;)
-&#x251C;&#x2500;&#x2500; fresh@0.3.0(&#x4E00;&#x6837;)
-&#x251C;&#x2500;&#x2500; vary@1.1.0(&#x4E00;&#x6837;)
-&#x251C;&#x2500;&#x2500; only@0.0.2(&#x4E00;&#x6837;)
-&#x251C;&#x2500;&#x2500; statuses@1.2.1(&#x4E00;&#x6837;)
-&#x251C;&#x2500;&#x2500; parseurl@1.3.1(&#x4E00;&#x6837;)
-&#x251C;&#x2500;&#x2500; content-type@1.0.1(&#x4E00;&#x6837;)
-&#x251C;&#x2500;&#x2500; co@4.6.0(&#x53EA;&#x6709;1&#x6709;)
-&#x251C;&#x2500;&#x2500; content-disposition@0.5.1(&#x4E00;&#x6837;)
-&#x251C;&#x2500;&#x2500; delegates@1.0.0(&#x4E00;&#x6837;)
-&#x251C;&#x2500;&#x2500; http-assert@1.2.0 (deep-equal@1.0.1)(&#x4E00;&#x6837;)
-&#x251C;&#x2500;&#x2500; debug@2.2.0 (ms@0.7.1)(&#x4E00;&#x6837;)
-&#x251C;&#x2500;&#x2500; mime-types@2.1.10 (mime-db@1.22.0)(&#x4E00;&#x6837;)
-&#x251C;&#x2500;&#x2500; type-is@1.6.12 (media-typer@0.3.0)(&#x4E00;&#x6837;)
-&#x251C;&#x2500;&#x2500; http-errors@1.4.0 (inherits@2.0.1)(&#x4E00;&#x6837;)
-&#x251C;&#x2500;&#x2500; on-finished@2.3.0 (ee-first@1.1.1)(&#x4E00;&#x6837;)
-&#x251C;&#x2500;&#x2500; cookies@0.6.1 (keygrip@1.0.1, depd@1.1.0)(&#x4E00;&#x6837;)
-&#x251C;&#x2500;&#x2500; accepts@1.3.2 (negotiator@0.6.0)(&#x4E00;&#x6837;)
-&#x2514;&#x2500;&#x2500; composition@2.3.0 (any-promise@1.1.0)(&#x53EA;&#x6709;1&#x6709;)
-&#x279C;  koa-benchmark git:(master) &#x2717; npm i -S koa@2
-koa@2.0.0 node_modules/koa
-&#x251C;&#x2500;&#x2500; error-inject@1.0.0(&#x4E00;&#x6837;)
-&#x251C;&#x2500;&#x2500; escape-html@1.0.3(&#x4E00;&#x6837;)
-&#x251C;&#x2500;&#x2500; destroy@1.0.4(&#x4E00;&#x6837;)
-&#x251C;&#x2500;&#x2500; koa-is-json@1.0.0(&#x4E00;&#x6837;)
-&#x251C;&#x2500;&#x2500; fresh@0.3.0(&#x4E00;&#x6837;)
-&#x251C;&#x2500;&#x2500; only@0.0.2(&#x4E00;&#x6837;)
-&#x251C;&#x2500;&#x2500; vary@1.1.0(&#x4E00;&#x6837;)
-&#x251C;&#x2500;&#x2500; statuses@1.2.1(&#x4E00;&#x6837;)
-&#x251C;&#x2500;&#x2500; parseurl@1.3.1(&#x4E00;&#x6837;)
-&#x251C;&#x2500;&#x2500; content-type@1.0.1(&#x4E00;&#x6837;)
-&#x251C;&#x2500;&#x2500; content-disposition@0.5.1(&#x4E00;&#x6837;)
-&#x251C;&#x2500;&#x2500; delegates@1.0.0(&#x4E00;&#x6837;)
-&#x251C;&#x2500;&#x2500; is-generator-function@1.0.3(&#x53EA;&#x6709;2&#x6709;)
-&#x251C;&#x2500;&#x2500; depd@1.1.0(&#x53EA;&#x6709;2&#x6709;)
-&#x251C;&#x2500;&#x2500; on-finished@2.3.0 (ee-first@1.1.1)(&#x4E00;&#x6837;)
-&#x251C;&#x2500;&#x2500; http-errors@1.4.0 (inherits@2.0.1)(&#x4E00;&#x6837;)
-&#x251C;&#x2500;&#x2500; type-is@1.6.12 (media-typer@0.3.0)(&#x4E00;&#x6837;)
-&#x251C;&#x2500;&#x2500; mime-types@2.1.10 (mime-db@1.22.0)(&#x4E00;&#x6837;)
-&#x251C;&#x2500;&#x2500; koa-compose@3.1.0 (any-promise@1.1.0)&#xFF08;1&#x662F;2.4&#x800C;2&#x662F;3.1&#xFF09;
-&#x251C;&#x2500;&#x2500; http-assert@1.2.0 (deep-equal@1.0.1)(&#x4E00;&#x6837;)
-&#x251C;&#x2500;&#x2500; cookies@0.6.1 (keygrip@1.0.1)(&#x4E00;&#x6837;)
-&#x251C;&#x2500;&#x2500; koa-convert@1.2.0 (co@4.6.0)(&#x53EA;&#x6709;2&#x6709;)
-&#x251C;&#x2500;&#x2500; debug@2.2.0 (ms@0.7.1)(&#x4E00;&#x6837;)
-&#x2514;&#x2500;&#x2500; accepts@1.3.2 (negotiator@0.6.0)(&#x4E00;&#x6837;)
-</code></pre><p>&#x5DEE;&#x5F02;&#x5982;&#x4E0B;</p>
-<p>&#x53EA;&#x6709;koa 1&#x6709;</p>
-<pre><code>&#x251C;&#x2500;&#x2500; co@4.6.0(&#x53EA;&#x6709;1&#x6709;)
-&#x2514;&#x2500;&#x2500; composition@2.3.0 (any-promise@1.1.0)(&#x53EA;&#x6709;1&#x6709;)
-</code></pre><p>&#x53EA;&#x6709;koa 2&#x6709;</p>
-<pre><code>&#x251C;&#x2500;&#x2500; is-generator-function@1.0.3(&#x53EA;&#x6709;2&#x6709;)
-&#x251C;&#x2500;&#x2500; koa-convert@1.2.0 (co@4.6.0)(&#x53EA;&#x6709;2&#x6709;)
-</code></pre><p>koa 1 &#x548C; koa 2 &#x90FD;&#x6709;&#xFF0C;&#x4F46;&#x7248;&#x672C;&#x4E0D;&#x540C;</p>
-<pre><code>&#x251C;&#x2500;&#x2500; koa-compose@3.1.0 (any-promise@1.1.0)&#xFF08;1&#x662F;2.4&#x800C;2&#x662F;3.1&#xFF09;
-</code></pre><h2 id="%E6%8A%80%E6%9C%AF%E6%A0%88%E6%BC%94%E5%8F%98">&#x6280;&#x672F;&#x6808;&#x6F14;&#x53D8;</h2>
-<p><a href="http://nodeonly.com/stack/" target="_blank">http://nodeonly.com/stack/</a></p>
-<p>&#x76EE;&#x5F55;</p>
-<p>2016&#x5347;&#x7EA7;Node 4.x&#x548C;Koa</p>
+</code></pre><p>&#x4E5F;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x7684;</p>
+<pre><code>ContactSchema.ensureIndexes(owner);
+</code></pre><h2 id="%E6%8F%92%E4%BB%B6%E9%87%8C%E5%A6%82%E4%BD%95%E5%A2%9E%E5%8A%A0%E7%B4%A2%E5%BC%95%EF%BC%9F">&#x63D2;&#x4EF6;&#x91CC;&#x5982;&#x4F55;&#x589E;&#x52A0;&#x7D22;&#x5F15;&#xFF1F;</h2>
+<h2 id="%E6%80%BB%E7%BB%93">&#x603B;&#x7ED3;</h2>
+<h2 id="%E7%B4%A2%E5%BC%95%E7%B1%BB%E5%9E%8B">&#x7D22;&#x5F15;&#x7C7B;&#x578B;</h2>
+<p>MongoDB&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E9B;&#x4E0D;&#x540C;&#x7684;&#x7D22;&#x5F15;&#x7C7B;&#x578B;&#x652F;&#x6301;&#x7684;&#x6570;&#x636E;&#x548C;&#x67E5;&#x8BE2;&#x7684;&#x5177;&#x4F53;&#x7C7B;&#x578B;</p>
 <ul>
-<li>Web&#x6846;&#x67B6;&#xFF1A;koa</li>
-<li>&#x6570;&#x636E;&#x5E93;&#xFF1A;mongoose</li>
-<li>&#x6D4B;&#x8BD5;&#xFF1A;ava</li>
-<li>&#x6D41;&#x7A0B;&#x63A7;&#x5236;&#xFF1A;bluebird&#xFF08;generator&#x3001;async&#xFF09;</li>
-<li>&#x8C03;&#x8BD5;&#xFF1A;vscode</li>
+<li>Default _id (&#x9ED8;&#x8BA4;_id&#x7D22;&#x5F15;)</li>
+<li>Single Field (&#x5355;&#x5B57;&#x6BB5;&#x7D22;&#x5F15;)</li>
+<li>Compound Index (&#x590D;&#x5408;&#x7D22;&#x5F15;[&#x591A;&#x5B57;&#x6BB5;&#x7D22;&#x5F15;])</li>
+<li>MultiKey Index (&#x591A;&#x952E;&#x7D22;&#x5F15;)</li>
+<li>Geospatial Index (&#x5730;&#x7406;&#x7A7A;&#x95F4;&#x7D22;&#x5F15;)</li>
+<li>Text Indexes (&#x6587;&#x672C;&#x7D22;&#x5F15;)</li>
+<li>Hashed Indexes (&#x54C8;&#x5E0C;&#x7801;&#x7D22;&#x5F15;)</li>
 </ul>
-<p>2015</p>
-<ul>
-<li>Web&#x6846;&#x67B6;&#xFF1A;express</li>
-<li>&#x6570;&#x636E;&#x5E93;&#xFF1A;mongoose</li>
-<li>&#x6D4B;&#x8BD5;&#xFF1A;mocha + chai</li>
-<li>&#x6D41;&#x7A0B;&#x63A7;&#x5236;&#xFF1A;bluebird&#xFF08;&#x4F20;&#x7EDF;&#x7684;promise&#xFF09;</li>
-<li>&#x8C03;&#x8BD5;&#xFF1A;node-inspector</li>
-</ul>
-<p>&#x6838;&#x5FC3;&#x53D8;&#x66F4;&#xFF1A;es&#x8BED;&#x6CD5;&#x652F;&#x6301;</p>
-<ul>
-<li>&#x4F7F;&#x7528;Node.js 4.x&#x6216;5.x&#x91CC;&#x7684;es6&#x7279;&#x6027;&#xFF0C;&#x5982;&#x679C;&#x60F3;&#x73A9;&#x66F4;&#x9AD8;&#x7EA7;&#x7684;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;babel&#x7F16;&#x8BD1;&#x652F;&#x6301;es7&#x7279;&#x6027;</li>
-<li>&#x5408;&#x7406;&#x4F7F;&#x7528;standard &#x4EE3;&#x7801;&#x98CE;&#x683C;&#x7EA6;&#x5B9A;</li>
-<li>es6&#x8BED;&#x6CD5;&#xFF0C;&#x5199;&#x7684;&#x4E00;&#x822C;&#xFF0C;&#x6BD4;&#x8F83;&#x5570;&#x55E6;&#xFF0C;&#x51D1;&#x5408;&#x770B;&#x5427; <a href="http://es6.ruanyifeng.com/" target="_blank">http://es6.ruanyifeng.com/</a></li>
-<li>&#x9700;&#x8981;&#x5927;&#x5BB6;&#x91CD;&#x89C6;OO&#xFF08;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#xFF09;&#x5199;&#x6CD5;&#x7684;&#x5B66;&#x4E60;&#x548C;&#x4F7F;&#x7528;&#xFF0C;&#x8FD9;&#x662F;es&#x7684;&#x53E6;&#x4E00;&#x4E2A;&#x597D;&#x5904;,&#x63A8;&#x8350;&#x8521;&#x4F1F;&#x5C0F;&#x5144;&#x5F1F;&#x7684;&#x300A;JavaScript Patterns&#x300B; examples in ECMAScript6</li>
-</ul>
-<h2 id="why-node-js-4-x%EF%BC%9F">Why Node.js 4.x&#xFF1F;</h2>
-<ul>
-<li>es6&#x8BED;&#x6CD5;&#x7279;&#x6027;&#x652F;&#x6301;&#x652F;&#x6301;&#xFF0C;&#x5982;generator</li>
-<li>koa&#x662F;&#x57FA;&#x4E8E;node 4+&#x5F00;&#x53D1;&#x7684;&#xFF0C;&#x4F7F;&#x7528;generator&#x3001;&#x7BAD;&#x5934;&#x51FD;&#x6570;&#x7B49;&#x7279;&#x6027;</li>
-<li>&#x5185;&#x5B58;&#x66F4;&#x7701;&#xFF0C;&#x6027;&#x80FD;&#x66F4;&#x597D;</li>
-</ul>
-<p>&#x5173;&#x4E8E;Node.js&#x7248;&#x672C;&#x5386;&#x53F2;&#x53EF;&#x4EE5;&#x770B;&#x770B;<a href="https://github.com/i5ting/history-of-node-js" target="_blank">https://github.com/i5ting/history-of-node-js</a></p>
+<h3 id="default-id-%E9%BB%98%E8%AE%A4-id%E7%B4%A2%E5%BC%95">Default _id (&#x9ED8;&#x8BA4;_id&#x7D22;&#x5F15;)</h3>
+<p>&#x6240;&#x6709;mongodb&#x9ED8;&#x8BA4;&#x90FD;&#x6709;&#x4E00;&#x4E2A;_id&#x5B57;&#x6BB5;&#x7D22;&#x5F15;&#xFF0C;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x4E0D;&#x6307;&#x5B9A;_id&#x7684;&#x503C;&#x4F1A;&#x81EA;&#x52A8;&#x751F;&#x6210;&#x4E00;&#x4E2A;ObjectId&#x503C;&#x3002;
+&#x8BE5;_id&#x7D22;&#x5F15;&#x662F;&#x552F;&#x4E00;&#x7684;&#xFF0C;&#x5E76;&#x4E14;&#x53EF;&#x4EE5;&#x9632;&#x6B62;&#x5BA2;&#x6237;&#x7AEF;&#x5BF9;_id&#x5B57;&#x6BB5;&#x503C;&#x76F8;&#x540C;&#x63D2;&#x5165;&#x4E24;&#x4E2A;&#x3002;</p>
+<pre><code># &#x67E5;&#x8BE2;articles&#x96C6;&#x5408;&#x7684;&#x7D22;&#x5F15;
+db.articles.getIndexes();
+# &#x6DFB;&#x52A0;titlei&#x5B57;&#x6BB5;&#x7D22;&#x5F15;&#xFF0C;&#x5E76;&#x4E14;&#x4E3A;&#x5347;&#x5E8F;
+db.articles.ensureIndex({title:1});
+#&#x91CD;&#x6784;&#x7D22;&#x5F15;(&#x614E;&#x7528;)
+db.articles.reIndex();
+</code></pre><p>&#x6CE8;&#x610F;&#xFF1A;&#x7D22;&#x5F15;&#x6392;&#x5E8F;&#x89C4;&#x5219;&#x5347;&#x5E8F;&#xFF1A;1&#xFF0C;&#x964D;&#x5E8F;-1</p>
+<h3 id="single-field-%E5%8D%95%E5%AD%97%E6%AE%B5%E7%B4%A2%E5%BC%95">Single Field (&#x5355;&#x5B57;&#x6BB5;&#x7D22;&#x5F15;)</h3>
+<p>mongodb&#x5141;&#x8BB8;&#x5B9A;&#x4E49;&#x5355;&#x4E2A;&#x5B57;&#x6BB5;&#x7684;&#x7D22;&#x5F15;&#xFF0C;&#x4E0E;default _id&#x4E00;&#x6837;&#xFF0C;&#x53EA;&#x662F;&#x5B57;&#x6BB5;&#x4E0D;&#x540C;&#x3002;</p>
+<h3 id="compound-index-%E5%A4%8D%E5%90%88%E7%B4%A2%E5%BC%95-%E5%A4%9A%E5%AD%97%E6%AE%B5%E7%B4%A2%E5%BC%95">Compound Index (&#x590D;&#x5408;&#x7D22;&#x5F15;[&#x591A;&#x5B57;&#x6BB5;&#x7D22;&#x5F15;])</h3>
+<p>mongodb&#x4E2D;&#x53EF;&#x4EE5;&#x81EA;&#x5B9A;&#x591A;&#x4E2A;&#x5B57;&#x6BB5;&#x7684;&#x7D22;&#x5F15;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x590D;&#x5408;&#x6307;&#x6807;&#x5305;&#x62EC;{userid&#xFF1A;1&#xFF0C;score&#xFF1A;-1 }&#xFF0C;&#x7D22;&#x5F15;&#x6392;&#x5E8F;&#x7B2C;&#x4E00;&#x7684;&#x7528;&#x6237;&#x540D;&#x540E;&#xFF0C;&#x5728;&#x6BCF;&#x4E00;&#x4E2A;&#x7528;&#x6237;&#x6807;&#x8BC6;&#x7B26;&#x503C;&#xFF0C;&#x6309;&#x5F97;&#x5206;++&#x5012;&#x5E8F;++&#x6392;&#x5E8F;&#x3002;</p>
+<pre><code>{
+    &quot;_id&quot;: ObjectId(...),
+    &quot;item&quot;: &quot;Banana&quot;,
+    &quot;category&quot;: [&quot;food&quot;, &quot;produce&quot;, &quot;grocery&quot;],
+    &quot;location&quot;: &quot;4th Street Store&quot;,
+    &quot;stock&quot;: 4,
+    &quot;type&quot;: &quot;cases&quot;,
+    &quot;arrival&quot;: Date(...)
+}
+</code></pre><p>&#x521B;&#x5EFA;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre><code># &#x521B;&#x5EFA;item&#x3001;stock&#x5B57;&#x6BB5;&#x7684;&#x590D;&#x5408;&#x7D22;&#x5F15;&#xFF0C;&#x5E76;&#x4E14;&#x5347;&#x5E8F;&#x6392;&#x5E8F;
+db.products.ensureIndex( { &quot;item&quot;: 1, &quot;stock&quot;: 1 } )
+&#x6CE8;&#x610F;&#xFF1A;Hashed &#x5B57;&#x6BB5;&#x4E0D;&#x80FD;&#x521B;&#x5EFA;&#x7D22;&#x5F15;&#xFF0C;&#x5982;&#x679C;&#x521B;&#x5EFA;&#x5C06;&#x51FA;&#x73B0;&#x9519;&#x8BEF;
+</code></pre><p>Application Sort Order &#x4F7F;&#x7528;&#x6848;&#x4F8B;&#xFF1A;&#x964D;&#x5E8F;&#x7528;&#x6237;&#x540D;&#x5347;&#x5E8F;&#x65F6;&#x95F4;&#x3002;</p>
+<pre><code># &#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#x96C6;&#x4E2D;&#x6392;&#x5E8F;
+db.events.find().sort( { username: -1, date: 1 } )
+# &#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#x96C6;&#x4E2D;&#x6392;&#x5E8F;
+db.user_scores.find().sort({score:-1,date:-1}).limit(1)
+# &#x6267;&#x884C;&#x76F8;&#x5173;&#x67E5;&#x8BE2;&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#x67E5;&#x8BE2;&#x6548;&#x7387;&#x5927;&#x5927;&#x63D0;&#x9AD8;
+</code></pre><h3 id="multikey-index-%E5%A4%9A%E9%94%AE%E7%B4%A2%E5%BC%95">MultiKey Index (&#x591A;&#x952E;&#x7D22;&#x5F15;)</h3>
+<p>&#x5B98;&#x65B9;&#x6587;&#x6863;&#x4E2D;&#x7ED9;&#x51FA;&#x8FD9;&#x6837;&#x4E00;&#x4E2A;&#x6848;&#x4F8B;&#xFF1A;</p>
+<pre><code>{
+    userid:&quot;marker&quot;,
+    address:[
+        {zip:&quot;618255&quot;},
+        {zip:&quot;618254&quot;}
+    ]
 
+}
+# &#x521B;&#x5EFA;&#x7D22;&#x5F15;,&#x5E76;&#x5C06;zip&#x5347;&#x5E8F;&#x6392;&#x5217;
+db.users.ensureIndex({&quot;address.zip&quot;: 1});
+
+# &#x5047;&#x5982;&#x6211;&#x4EEC;&#x505A;&#x8FD9;&#x6837;&#x7684;&#x67E5;&#x8BE2;
+db.users.find({&quot;addr&quot;:{&quot;$in&quot;:[{zip:&quot;618254&quot;}]}})
+</code></pre><p>&#x6CE8;&#x610F;&#xFF1A;&#x4F60;&#x53EF;&#x4EE5;&#x521B;&#x5EFA; &#x591A;&#x952E;&#x590D;&#x5408;&#x7D22;&#x5F15;(multikey compound indexes)</p>
+<h3 id="geospatial-index-%E5%9C%B0%E7%90%86%E7%A9%BA%E9%97%B4%E7%B4%A2%E5%BC%95">Geospatial Index (&#x5730;&#x7406;&#x7A7A;&#x95F4;&#x7D22;&#x5F15;)</h3>
+<pre><code>db.places.ensureIndex( { loc : &quot;2dsphere&quot; } )
+</code></pre><h3 id="text-indexes-%E6%96%87%E6%9C%AC%E7%B4%A2%E5%BC%95">Text Indexes (&#x6587;&#x672C;&#x7D22;&#x5F15;)</h3>
+<p>&#x6587;&#x672C;&#x7D22;&#x5F15;&#x662F;&#x5728;2.4&#x7248;&#x672C;&#x66F4;&#x65B0;&#x7684;&#xFF0C;&#x63D0;&#x4F9B;&#x4E86;&#x6587;&#x672C;&#x641C;&#x7D22;&#x6587;&#x6863;&#x4E2D;&#x7684;&#x96C6;&#x5408;&#x529F;&#x80FD;&#xFF0C;&#x6587;&#x672C;&#x7D22;&#x5F15;&#x5305;&#x542B;&#xFF1A;&#x5B57;&#x7B26;&#x4E32;&#x3001;&#x5B57;&#x7B26;&#x6570;&#x7EC4;&#x3002;&#x4F7F;&#x7528;$text&#x505A;&#x67E5;&#x8BE2;&#x64CD;&#x4F5C;&#x3002;</p>
+<p>2.6&#x7248;&#x672C; &#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#x4F7F;&#x6587;&#x672C;&#x641C;&#x7D22;&#x529F;&#x80FD;&#x3002;&#x5728;MongoDB 2.4&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x4F7F;&#x6587;&#x672C;&#x641C;&#x7D22;&#x529F;&#x80FD;&#x624B;&#x52A8;&#x521B;&#x5EFA;&#x5168;&#x6587;&#x7D22;&#x5F15;&#x548C;&#x6267;&#x884C;&#x6587;&#x672C;&#x641C;&#x7D22;</p>
+<pre><code># &#x521B;&#x5EFA;&#x6587;&#x672C;&#x7D22;&#x5F15; (2.6&#x4F60;&#x5C31;&#x4E0D;&#x7528;&#x8FD9;&#x4E48;&#x9EBB;&#x70E6;&#x4E86;&#x54E6;)
+db.articles.ensureIndex({content:&quot;text&quot;});
+</code></pre><p>&#x590D;&#x5408;&#x7D22;&#x5F15;&#x53EF;&#x4EE5;&#x5305;&#x542B;&#x6587;&#x672C;&#x7D22;&#x5F15; &#x79F0;&#x4E3A;&#xFF1A;&#x590D;&#x5408;&#x6587;&#x672C;&#x7D22;&#x5F15;(compound text indexes)&#xFF0C;&#x4F46;&#x6709;&#x9650;&#x5236;</p>
+<ol>
+<li>&#x590D;&#x5408;&#x6587;&#x672C;&#x7D22;&#x5F15;&#x4E0D;&#x80FD;&#x5305;&#x542B;&#x4EFB;&#x4F55;&#x5176;&#x4ED6;&#x7279;&#x6B8A;&#x7D22;&#x5F15;&#x7C7B;&#x578B;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A;&#x591A;&#x952E;&#x7D22;&#x5F15;(multi-key Indexes)</li>
+<li>&#x5982;&#x679C;&#x590D;&#x5408;&#x6587;&#x672C;&#x7D22;&#x5F15;&#x5305;&#x542B;&#x6587;&#x672C;&#x7D22;&#x5F15;&#x7684;&#x952E;&#xFF0C;&#x6267;&#x884C;$text&#x67E5;&#x8BE2;&#x5FC5;&#x987B;&#x76F8;&#x540C;&#x67E5;&#x8BE2;&#x6761;&#x4EF6;&#x3002;&#x53EF;&#x80FD;&#x7FFB;&#x8BD1;&#x4E0D;&#x5BF9;&#x539F;&#x6587;&#xFF1A;
+&#xFF08;If the compound text index includes keys preceding the text index key, to perform a $text search, the query
+predicate must include equality match conditions on the preceding keys1&#xFF09;</li>
+</ol>
+<h3 id="hashed-indexes-%E5%93%88%E5%B8%8C%E7%A0%81%E7%B4%A2%E5%BC%95">Hashed Indexes (&#x54C8;&#x5E0C;&#x7801;&#x7D22;&#x5F15;)</h3>
+<p>&#x54C8;&#x5E0C;&#x7D22;&#x5F15;&#x5728;2.4&#x7248;&#x672C;&#x66F4;&#x65B0;&#x7684;&#xFF0C;&#x5C06;&#x5B9E;&#x4F53;&#x7684;&#x7684;&#x54C8;&#x5E0C;&#x503C;&#x4F5C;&#x4E3A;&#x7D22;&#x5F15;&#x5B57;&#x6BB5;&#xFF0C;</p>
+<pre><code># &#x7ED9;user_scores&#x7684;score&#x5B57;&#x6BB5;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x54C8;&#x5E0C;&#x7D22;&#x5F15;
+db.user_scores.ensureIndex( { score: &quot;hashed&quot; } )
+</code></pre>
                     
                     </section>
                 
@@ -1364,10 +1280,10 @@ koa@2.0.0 node_modules/koa
         </div>
 
         
-        <a href="../koa-getting-start/index.html" class="navigation navigation-prev " aria-label="Previous page: Koa入门"><i class="fa fa-angle-left"></i></a>
+        <a href="../koa-with-db/aggregation.html" class="navigation navigation-prev " aria-label="Previous page: AGGREGATION 关联"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../koa-getting-start/async.html" class="navigation navigation-next " aria-label="Next page: 异步流程控制"><i class="fa fa-angle-right"></i></a>
+        <a href="../koa-with-db/optimize.html" class="navigation navigation-next " aria-label="Next page: 了解优化"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

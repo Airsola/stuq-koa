@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
-        <title>关系 | StuQ Koa在线课程</title>
+        <title>关系（1对1，1对多）在mongoose里如何实现 | StuQ Koa在线课程</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.0.1">
@@ -20,10 +20,10 @@
         
     
     
-    <link rel="next" href="../koa-with-db/extend.html" />
+    <link rel="next" href="../koa-with-db/aggregation.html" />
     
     
-    <link rel="prev" href="../koa-with-db/hook.html" />
+    <link rel="prev" href="../koa-with-db/pagination.html" />
     
 
         
@@ -40,7 +40,7 @@
     
 
         
-    <div class="book" data-level="4.5" data-basepath=".." data-revision="Wed Aug 17 2016 07:57:30 GMT+0800 (CST)">
+    <div class="book" data-level="4.11" data-basepath=".." data-revision="Wed Aug 24 2016 06:47:19 GMT+0800 (CST)">
     
 
 <div class="book-summary">
@@ -584,95 +584,65 @@
                         
                             <b>4.1.</b>
                         
-                        mongodb
+                        mongodb安装
                     </a>
                 
             
             
         </li>
     
-        <li class="chapter " data-level="4.2" data-path="koa-with-db/mongoose.html">
+        <li class="chapter " data-level="4.2" data-path="koa-with-db/model.html">
+            
+                
+                    <a href="../koa-with-db/model.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        了解mvc里m的作用，以及什么样的代码该放到模型里
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="koa-with-db/mongoose.html">
             
                 
                     <a href="../koa-with-db/mongoose.html">
                         <i class="fa fa-check"></i>
                         
-                            <b>4.2.</b>
-                        
-                        mongoose
-                    </a>
-                
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="4.3" data-path="koa-with-db/pagination.html">
-            
-                
-                    <a href="../koa-with-db/pagination.html">
-                        <i class="fa fa-check"></i>
-                        
                             <b>4.3.</b>
                         
-                        分页
+                        mongoose入门
                     </a>
                 
             
             
         </li>
     
-        <li class="chapter " data-level="4.4" data-path="koa-with-db/hook.html">
-            
-                
-                    <a href="../koa-with-db/hook.html">
-                        <i class="fa fa-check"></i>
-                        
-                            <b>4.4.</b>
-                        
-                        回调
-                    </a>
-                
-            
-            
-        </li>
-    
-        <li class="chapter active" data-level="4.5" data-path="koa-with-db/relationship.html">
-            
-                
-                    <a href="../koa-with-db/relationship.html">
-                        <i class="fa fa-check"></i>
-                        
-                            <b>4.5.</b>
-                        
-                        关系
-                    </a>
-                
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="4.6" data-path="koa-with-db/extend.html">
+        <li class="chapter " data-level="4.4" data-path="koa-with-db/extend.html">
             
                 
                     <a href="../koa-with-db/extend.html">
                         <i class="fa fa-check"></i>
                         
-                            <b>4.6.</b>
+                            <b>4.4.</b>
                         
-                        扩展
+                        扩展mongoose模型statics方法和methods的区别
                     </a>
                 
             
             
         </li>
     
-        <li class="chapter " data-level="4.7" data-path="koa-with-db/virtual.html">
+        <li class="chapter " data-level="4.5" data-path="koa-with-db/virtual.html">
             
                 
                     <a href="../koa-with-db/virtual.html">
                         <i class="fa fa-check"></i>
                         
-                            <b>4.7.</b>
+                            <b>4.5.</b>
                         
                         虚拟属性
                     </a>
@@ -681,60 +651,195 @@
             
         </li>
     
-        <li class="chapter " data-level="4.8" data-path="koa-with-db/plugin.html">
+        <li class="chapter " data-level="4.6" data-path="koa-with-db/hook.html">
+            
+                
+                    <a href="../koa-with-db/hook.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.6.</b>
+                        
+                        回调：pre和post的差别
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="koa-with-db/plugin.html">
             
                 
                     <a href="../koa-with-db/plugin.html">
                         <i class="fa fa-check"></i>
                         
-                            <b>4.8.</b>
+                            <b>4.7.</b>
                         
-                        插件
+                        mongoose的插件机制
                     </a>
                 
             
             
         </li>
     
-        <li class="chapter " data-level="4.9" data-path="koa-with-db/aggregation.html">
+        <li class="chapter " data-level="4.8" data-path="koa-with-db/bluebird.html">
+            
+                
+                    <a href="../koa-with-db/bluebird.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.8.</b>
+                        
+                        mongoose+promise
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.9" data-path="koa-with-db/mongoosedao.html">
+            
+                
+                    <a href="../koa-with-db/mongoosedao.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.9.</b>
+                        
+                        mongoosedao
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.10" data-path="koa-with-db/pagination.html">
+            
+                
+                    <a href="../koa-with-db/pagination.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.10.</b>
+                        
+                        分页
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.11" data-path="koa-with-db/relationship.html">
+            
+                
+                    <a href="../koa-with-db/relationship.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.11.</b>
+                        
+                        关系（1对1，1对多）在mongoose里如何实现
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.12" data-path="koa-with-db/aggregation.html">
             
                 
                     <a href="../koa-with-db/aggregation.html">
                         <i class="fa fa-check"></i>
                         
-                            <b>4.9.</b>
+                            <b>4.12.</b>
                         
-                        Aggregation关联
+                        AGGREGATION 关联
                     </a>
                 
             
             
         </li>
     
-        <li class="chapter " data-level="4.10" data-path="koa-with-db/optimize.html">
+        <li class="chapter " data-level="4.13" data-path="koa-with-db/indexes.html">
+            
+                
+                    <a href="../koa-with-db/indexes.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.13.</b>
+                        
+                        了解索引
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.14" data-path="koa-with-db/optimize.html">
             
                 
                     <a href="../koa-with-db/optimize.html">
                         <i class="fa fa-check"></i>
                         
-                            <b>4.10.</b>
+                            <b>4.14.</b>
                         
-                        索引优化
+                        了解优化
                     </a>
                 
             
             
         </li>
     
-        <li class="chapter " data-level="4.11" data-path="koa-with-db/other.html">
+        <li class="chapter " data-level="4.15" data-path="koa-with-db/mongooseconnection.html">
             
                 
-                    <a href="../koa-with-db/other.html">
+                    <a href="../koa-with-db/mongooseconnection.html">
                         <i class="fa fa-check"></i>
                         
-                            <b>4.11.</b>
+                            <b>4.15.</b>
                         
-                        其他
+                        mongooseconnection
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.16" data-path="koa-with-db/install.html">
+            
+                
+                    <a href="../koa-with-db/install.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.16.</b>
+                        
+                        了解mongodb的部署与部署
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.17" data-path="koa-with-db/user.html">
+            
+                
+                    <a href="../koa-with-db/user.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.17.</b>
+                        
+                        UserModel
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.18" data-path="koa-with-db/exercises.html">
+            
+                
+                    <a href="../koa-with-db/exercises.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.18.</b>
+                        
+                        随堂练习：完善用户注册、登录、管理
                     </a>
                 
             
@@ -989,7 +1094,8 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="%E5%85%B3%E7%B3%BB%EF%BC%881%E5%AF%B91%EF%BC%8C1%E5%AF%B9%E5%A4%9A%EF%BC%89%E5%9C%A8mongoose%E9%87%8C%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0">&#x5173;&#x7CFB;&#xFF08;1&#x5BF9;1&#xFF0C;1&#x5BF9;&#x591A;&#xFF09;&#x5728;mongoose&#x91CC;&#x5982;&#x4F55;&#x5B9E;&#x73B0;</h1>
+                        <h1 id="%E5%85%B3%E7%B3%BB%EF%BC%881%E5%AF%B91%EF%BC%8C1%E5%AF%B9%E5%A4%9A%EF%BC%8C%E5%A4%9A%E5%AF%B9%E5%A4%9A%EF%BC%89%E5%9C%A8mongoose%E9%87%8C%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0">&#x5173;&#x7CFB;&#xFF08;1&#x5BF9;1&#xFF0C;1&#x5BF9;&#x591A;&#xFF0C;&#x591A;&#x5BF9;&#x591A;&#xFF09;&#x5728;mongoose&#x91CC;&#x5982;&#x4F55;&#x5B9E;&#x73B0;</h1>
+<p>&#x6700;&#x597D;&#x7684;&#x529E;&#x6CD5;&#x8FD8;&#x662F;&#x5199;&#x4E00;&#x4E2A;&#x771F;&#x5B9E;&#x7684;&#x9879;&#x76EE;&#xFF0C;&#x4ECE;&#x535A;&#x5BA2;&#x9879;&#x76EE;&#x5F00;&#x59CB;&#x3002;</p>
 <h2 id="%E4%BA%86%E8%A7%A3%E5%85%B3%E7%B3%BB%EF%BC%881%E5%AF%B91%EF%BC%8C1%E5%AF%B9%E5%A4%9A%EF%BC%89%E5%9C%A8mongoose%E9%87%8C%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0">&#x4E86;&#x89E3;&#x5173;&#x7CFB;&#xFF08;1&#x5BF9;1&#xFF0C;1&#x5BF9;&#x591A;&#xFF09;&#x5728;mongoose&#x91CC;&#x5982;&#x4F55;&#x5B9E;&#x73B0;</h2>
 <pre><code>UserSchema = new Schema({
     ...
@@ -1014,7 +1120,9 @@
 });
 
 ContactSchema.find({}).populate(&#x2018;owner&#x2019;).exec(callback);
-</code></pre>
+</code></pre><h2 id="%E5%85%B3%E8%81%94%E7%9C%9F%E7%9A%84%E5%A5%BD%E4%B9%88%EF%BC%9F">&#x5173;&#x8054;&#x771F;&#x7684;&#x597D;&#x4E48;&#xFF1F;</h2>
+<p>&#x4ECE;&#x5206;&#x5E93;&#x5206;&#x8868;&#x7684;&#x89D2;&#x5EA6;&#x8BB2;</p>
+
                     
                     </section>
                 
@@ -1024,10 +1132,10 @@ ContactSchema.find({}).populate(&#x2018;owner&#x2019;).exec(callback);
         </div>
 
         
-        <a href="../koa-with-db/hook.html" class="navigation navigation-prev " aria-label="Previous page: 回调"><i class="fa fa-angle-left"></i></a>
+        <a href="../koa-with-db/pagination.html" class="navigation navigation-prev " aria-label="Previous page: 分页"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../koa-with-db/extend.html" class="navigation navigation-next " aria-label="Next page: 扩展"><i class="fa fa-angle-right"></i></a>
+        <a href="../koa-with-db/aggregation.html" class="navigation navigation-next " aria-label="Next page: AGGREGATION 关联"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
