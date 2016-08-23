@@ -50,6 +50,7 @@
   * [mongooseconnection](koa-with-db/mongooseconnection.md)
   * [了解mongodb的部署与部署](koa-with-db/install.md)
   * [UserModel](koa-with-db/user.md)
+  * [随堂练习：完善用户注册、登录、管理](koa-with-db/exercises.md)
 * [项目实战](koa-in-action/README.md)
 * [部署](koa-deployment/README.md)
   * [购买](koa-deployment/buy.md)

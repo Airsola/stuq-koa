@@ -75,14 +75,14 @@ db.connection.on("open", function () {
 执行代码
 
 ```
-$ node book-source/db/helloworld/connect.js
+$ node koa-with-db/helloworld/connect.js
 数据库连接成功
 ```
 
 当mongodb没有启动的时候会报错，当出现如下问题，请执行`mhg`启动mongodb即可
 
 ```
-$ node book-source/db/helloworld/connect.js
+$ node koa-with-db/helloworld/connect.js
 数据库连接失败：MongoError: connect ECONNREFUSED 127.0.0.1:27017
 ```
 
@@ -128,7 +128,7 @@ kitty.save(function (err) {
 执行如下
 
 ```
-$ node book-source/db/helloworld/helloworld.js
+$ node koa-with-db/helloworld/helloworld.js
 ```
 
 如无错误日志，即代表数据保存成功。此时打开robo mongodb客户端查看一下具体数据是否保存成功。
