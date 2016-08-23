@@ -1,22 +1,3 @@
-## 了解索引优化
-
-```
- ContactSchema = new Schema({
-    ...
-    owner: {
-      type: Schema.ObjectId,
-      required: true,
-      index: true
-    }
-});
-```
-
-也可以这样的
-
-```
-ContactSchema.ensureIndexes(owner);
-```
-
 # 优化
 
 
@@ -58,6 +39,4 @@ db.setProfilingLevel(2, 20)
 ```
 db['system.profile'].find()
 ```
-
-
 
