@@ -204,7 +204,7 @@ test.cb('#User.login(username, password) fail with password is incorrect', t => 
 ```
 $ npm run hook
 
-> koa-db@1.0.0 hook /Users/sang/workspace/17koa/book-source/db
+> koa-db@1.0.0 hook koa-with-db/
 > ava -v hook/test.js
 
 
