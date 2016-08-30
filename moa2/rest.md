@@ -25,63 +25,66 @@ edit_user GET    /users/:id/edit(.:format) users#edit
 
 是不是代码非常清晰？
 
-既然它是最佳实践，我们也没必要再自己搞一套,只需要因express制宜即可
+既然它是最佳实践，我们也没必要再自己搞一套,只需要因express/koa制宜即可
 
-*  GET    /orders[/]        => order.list()
-*  GET    /orders/new       => order.new()
-*  GET    /orders/:id       => order.show()
-*  GET    /orders/:id/edit  => order.edit()
-*  POST   /orders[/]        => order.create()
-*  PATCH  /orders/:id       => order.update()
-*  DELETE /orders/:id       => order.destroy()
+ *  GET    /locations[/]        => location.list()
+ *  GET    /locations/new       => location.new()
+ *  GET    /locations/:id       => location.show()
+ *  GET    /locations/:id/edit  => location.edit()
+ *  POST   /locations[/]        => location.create()
+ *  PATCH  /locations/:id       => location.update()
+ *  DELETE /locations/:id       => location.destroy()
 
 
-在app/routes/order.js里
+在app/routes/locations.js里
 
 ```
-var express = require('express');
-var router = express.Router();
+"use strict";
 
-// mount all middlewares in app/middlewares, examples:
-// 
-// router.route('/')
-//  .get($middlewares.check_session_is_expired, $.list)
-//  .post($.create);
-// 
+var router = require('koa-router')();
+const co = require('co');
+
 var $middlewares  = require('mount-middlewares')(__dirname);
 
 // core controller
-var $ = require('mount-controllers')(__dirname).orders_controller;
-
+var $ = require('mount-controllers')(__dirname).locations_controller;
 
 /**
  * Auto generate RESTful url routes.
  *
  * URL routes:
  *
- *  GET    /orders[/]        => order.list()
- *  GET    /orders/new       => order.new()
- *  GET    /orders/:id       => order.show()
- *  GET    /orders/:id/edit  => order.edit()
- *  POST   /orders[/]        => order.create()
- *  PATCH  /orders/:id       => order.update()
- *  DELETE /orders/:id       => order.destroy()
+ *  GET    /locations[/]        => location.list()
+ *  GET    /locations/new       => location.new()
+ *  GET    /locations/:id       => location.show()
+ *  GET    /locations/:id/edit  => location.edit()
+ *  POST   /locations[/]        => location.create()
+ *  PATCH  /locations/:id       => location.update()
+ *  DELETE /locations/:id       => location.destroy()
  *
  */
 
-router.get('/new', $.new);  
+router.get('/new', $.new); 
+ 
 router.get('/:id/edit', $.edit);
 
-router.route('/')
-  .get($.list)
-  .post($.create);
+router.get('/', $.list);
 
-router.route('/:id')
-  .patch($.update)
-  .get($.show)
-  .delete($.destroy);
+router.post('/', $.create);
+
+router.get('/:id', $.show);
+
+router.patch('/:id', $.update);
+
+router.delete('/:id', $.destroy);
+
+// -- custom routes
+
+
+
 
 module.exports = router;
+
 ```
 
 于是所有东西就都丢到controller里去。

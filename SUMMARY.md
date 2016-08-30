@@ -65,6 +65,7 @@
   * [没REST怎么行？](moa2/rest.md)
   * [脚手架scaffold](moa2/scaffold.md)
   * [更多](moa2/more.md)
+  * [随堂练习：自己动手集成sequelize](moa2/exercises.md)
 * [项目实战](koa-in-action/README.md)
 * [部署](koa-deployment/README.md)
   * [购买](koa-deployment/buy.md)
