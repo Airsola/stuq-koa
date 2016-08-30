@@ -1,4 +1,4 @@
-## 使用supervisor
+## 使用nodemon
 
 livereolad
 
@@ -6,14 +6,14 @@ livereolad
 - supervisor
 
 ```
-npm i -S supervisor
+npm i -D nodemon
 ```
 
 修改package.json
 
 ```
   "scripts": {
-    "start": "./node_modules/.bin/supervisor bin/www"
+    "start": "./node_modules/.bin/nodemon bin/www"
   },
 ```
 
@@ -23,4 +23,6 @@ npm i -S supervisor
 npm start
 ```
 
-改一下routes里的代码试试，你再也不要重启了
+改一下routes/index.js里的代码试试，你再也不要重启了
+
+演示效果

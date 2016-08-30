@@ -53,7 +53,7 @@
   * [随堂练习：完善用户注册、登录、管理](koa-with-db/exercises.md)
 * [从0开始写一个基于Koa的web框架](moa2/README.md)
   * [生成项目](moa2/create.md)
-  * [使用supervisor](moa2/supervisor.md)
+  * [使用nodemon](moa2/supervisor.md)
   * [自动挂载路由](moa2/mount-routes.md)
   * [添加测试](moa2/test.md)
   * [添加mongoose](moa2/mongoose.md)
