@@ -34,107 +34,103 @@ var userSchema = new Schema(
 );
 
 var User = mongoose.model('User', userSchema);
-var UserDao = new MongooseDao(User);
+<!-- var UserDao = new MongooseDao(User); -->
  
-module.exports = UserDao;
+module.exports = User;
 ```
 
 ### 测试user.js
 
 ```
-var request = require('supertest');
-var assert  = require('chai').assert;
-var expect  = require('chai').expect;
-require('chai').should();
+import test from 'ava'
+import superkoa from 'superkoa'
 
-require('../db')
+// 1、引入`mongoose connect`
+require('../db');
 
-var User = require('../models/user')
+// 2、引入`User` Model
+const User = require('../models/user');
 
-// 测试代码基本结构
-describe('UserModel', function(){
-	before(function() {
-    // runs before all tests in this block
-  })
-  after(function(){
-    // runs after all tests in this block
-  })
-  beforeEach(function(){
-    // runs before each test in this block
-  })
-  afterEach(function(){
-    // runs after each test in this block
-  })
-	
-  describe('#save()', function(){
-    it('should return stuq when user save', function(done){
-      User.create({"name":"stuq","password":"password"},function(err, user){
-        if(err){
-            expect(err).to.be.not.null;
-            done();
-        }
+// 3、定义`user` Entity
+let user = new User({
+  username: 'i5ting',
+  password: '0123456789'
+});
 
-        expect(user.name).to.be.a('string');
-        expect(user.name).to.equal('stuq');
-        done();
-      });
-    })
-  })
-})
+test.cb('#save()', t => {
+  user.save((err, u) => {
+    if (err) log(err)
+    t.is(u.username, 'i5ting');
+    t.end()
+  });
+});
+
 ```
 
 在测试完成后需要在after里删除测试数据，保证测试完整性，自己写吧
 
 ### 在路由里增加user创建和api测试
 
-routes/user.js
+routes/users.js
 
 ```
 var User = require('../models/user')
+var router = require('koa-router')();
 
-router.post('/register', function(req, res, next) {
-  var name = req.body.name;
-  var password = req.body.password;
-  User.create({
-    "name":name,
+router.get('/', function (ctx, next) {
+  ctx.body = 'this a users response!';
+});
+
+router.post('/register2', function(ctx, next) {
+  var name = ctx.request.body.username;
+  var password = ctx.request.body.password;
+  
+  var u = new User({
+    "username":name,
     "password":password
-  },function(err, user){
-    if(err){
-      res.json('register failed with err');
+  })
+  console.log(u)
+  return u.save(function (err, user) {
+    console.log(err)
+    console.log(user)
+    if (err) {
+      return ctx.body = {'info': 'register failed with err'};
     }
       
-    res.json('register sucess');
+    return ctx.body = {'info': 'register sucess'};
   });
 });
+
+module.exports = router;
+
 ```
 
 test/user_api.js
 
 ```
-var request = require('supertest');
-var assert  = require('chai').assert;
-var expect  = require('chai').expect;
-require('chai').should();
+import test from 'ava'
+import superkoa from 'superkoa'
 
-var app = require('../app');
+var req = superkoa(require('path').resolve(__dirname, '../app'))
+  
+test.cb("POST /users/register", t => {
+  req
+    .post('/users/register2')
+    .field('username', 'stuq')
+    .field('password', '123456')
+    .set('Accept', 'application/json')
+    .expect('Content-Type', /json/)
+    .expect(200, function (err, res) {
+      t.ifError(err)
 
-require('../db')
-
-describe('POST /users/register', function(){
-  it('respond register with json', function(done){
-    request(app)
-      .post('/users/register')
-      .field('name', 'stuq')
-      .field('password', '123456')
-      .set('Accept', 'application/json')
-      .expect('Content-Type', /json/)
-      .expect(200, done);
-  })
-})
+      t.is(res.body.info, 'register sucess', 'res.text == Hello Koa')
+      t.end()
+    });
+});
 ```
 
 测试
 
 ```
-mocha -u bdd test/user_api.js
+ava -v test/user_api.js
 ```
