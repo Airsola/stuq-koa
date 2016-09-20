@@ -4,7 +4,15 @@
 
 ## v1：纯静态
 
+### 技术栈
 
+- http://light7.cn/
+- http://zeptojs.com/
+- http://www.swiper.com.cn/
+
+### 参考
+
+- http://www.smartisan.com/cn/#/home
 
 ## v2：预处理 + 模板
 
@@ -72,5 +80,9 @@ $ harp server
 
 生成html，然后放到http服务器里即可
 
-## v3：前后端分离
+## v3：render
 
+典型的ctx.render{模板 + 数据} =>  HTML
+
+
+## moa2-frontend
