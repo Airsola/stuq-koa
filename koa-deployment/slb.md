@@ -1,6 +1,6 @@
-我的线上环境是阿里云，既然阿里云有SLB，比自己运维一个要省事儿的多，事实上，自己做也真不一定做得比它好，本文试图以haproxy来解释一下slb的原理
+线上环境是阿里云，既然阿里云有SLB，比自己运维一个要省事儿的多，事实上，自己做也真不一定做得比它好，本节试图以haproxy来解释一下slb的原理
 
-讲解haproxy的目的是介绍负载算法，便于理解SLB，最后给出node-slb解决方案
+讲解haproxy的目的是介绍负载算法，便于理解SLB
 
 ## 目前比较流行的
 
@@ -121,7 +121,7 @@ HAProxy的算法有如下8种：
 - rdp-cookie(name)，表示根据据cookie(name)来锁定并哈希每一次TCP请求。
 
 
-## SLB是神马
+## SLB
 
 负载均衡（Server Load Balancer，简称SLB）是对多台云服务器进行流量分发的负载均衡服务。SLB可以通过流量分发扩展应用系统对外的服务能力，通过消除单点故障提升应用系统的可用性
 
@@ -138,12 +138,11 @@ see http://tengine.taobao.org/
 
 创建slb
 
-![1.png](//dn-cnode.qbox.me/FtsMbDlyilG2itdha2dJNbb1YcSI)
-
+![Slb](img/slb.png)
 
 点击管理按钮，进入实例详情
 
-![2.png](//dn-cnode.qbox.me/FvkQ6j3WSuT2u_69XG-KjJB8M1Yb)
+![Slb](img/slb1.png)
 
 没啥需要改的，我们直接看服务监听功能，看看如何配置slb
 
@@ -152,11 +151,11 @@ see http://tengine.taobao.org/
 - 带宽
 - 健康检查等
 
-![3.png](//dn-cnode.qbox.me/FsuvA67vcNLr5Rw7L5Aurx4LoNdO)
+![Slb](img/slb2.png)
 
 点击编辑按钮，此时可以看到具体配置页面
 
-![4.png](//dn-cnode.qbox.me/FvIIlcf7QaPL8MWG97L8oRHFKnD_)
+![Slb](img/slb3.png)
 
 
 目前slb支持2种转发规则
@@ -175,19 +174,19 @@ see http://tengine.taobao.org/
 
 假设我现在有一个ecs服务器为已填加
 
-![5.png](//dn-cnode.qbox.me/FjsGTmA1fhEZRt52GUpTebWQ9uxD)
+![Slb](img/slb4.png)
 
 点击【未添加的服务器】，此时会列出未加入负载池的ecs服务器 
 
-![6.png](//dn-cnode.qbox.me/Fg5bulgyHv3mZy9kPTz_eEvN_5H5)
+![Slb](img/slb5.png)
 
 选中一台服务器
 
-![7.png](//dn-cnode.qbox.me/FjLo0dGzXxDbbxFaoOtIonsoFFfc)
+![Slb](img/slb6.png)
 
 点击批量添加
 
-![8.png](//dn-cnode.qbox.me/FnsjDqnXco-vuGZ-Rhbiw9v3OX0_)
+![Slb](img/slb7.png)
 
 配置一下权重，如果机器性能一样就配置权重一样，性能越好，权重越大
 
@@ -195,100 +194,21 @@ see http://tengine.taobao.org/
 
 完成配置后，已添加服务器里就有了2台服务器
 
-![9.png](//dn-cnode.qbox.me/FrPQGvf9XhZH-gNuZzvfXWaSy0WP)
+![Slb](img/slb8.png)
 
 保证你的服务器都启动，比如2台服务器的80端口都正常即可
 
 此时你需要做的是把你的域名解析到slb服务器的ip地址上
 
-## node-slb
+## 妙用
 
-an expressjs middleware for aliyun slb
+1台服务器绑定多个域名
 
-### 缘起
-
-http://bbs.aliyun.com/read/188736.html?page=1
-
-2）请问健康检查发的什么请求？ head 还是 get？ 
-head请求。 
-
-如果express路由没有处理head请求的话，会触发其他路由，可能会出现请求重定向死循环
-
-## 原理
-
-    var debug = require('debug')('slb');
-
-    module.exports = function (req, res, next) {
-      if(req.method.toLowerCase() == 'head'){    
-        debug('[ALIYUN.COM LOG]: SLB health checking....OK...');
-        return res.sendStatus(200);
-      }
-  
-      next();
-    };
-
-原理非常简单：以中间件的形式，处理一下req.method为head的适合，终止此请求即可
-
-
-### 安装
-
-    npm install --save node-slb
-
-### 用法
-
-    var slb = require('node-slb');
-
-    var app = express();
-    app.user(slb);
-
-### 测试
-
-
-首先启动demo的服务
-
-    ➜  node-slb git:(master) ✗ npm start
-
-    > node-slb@1.0.0 start /Users/sang/workspace/github/node-slb
-    > cd demo && npm install && npm start
-
-
-    > url@0.0.0 start /Users/sang/workspace/github/node-slb/demo
-    > node ./bin/www
-
-执行test命令，测试请求
-
-    ➜  node-slb git:(master) ✗ npm test
-
-    > node-slb@1.0.0 test /Users/sang/workspace/github/node-slb
-    > curl -i -X HEAD http://127.0.0.1:3000
-
-    HTTP/1.1 200 OK
-    X-Powered-By: Express
-    Content-Type: text/plain; charset=utf-8
-    Content-Length: 2
-    ETag: W/"2-d736d92d"
-    Date: Mon, 29 Jun 2015 03:46:49 GMT
-    Connection: keep-alive
-
-此时，观察服务器日志
-
-    ➜  node-slb git:(master) ✗ npm start
-
-    > node-slb@1.0.0 start /Users/sang/workspace/github/node-slb
-    > cd demo && npm install && npm start
-
-
-    > url@0.0.0 start /Users/sang/workspace/github/node-slb/demo
-    > DEBUG=slb node ./bin/www
-
-    [ALIYUN.COM LOG]: SLB health checking....OK...
-  
-如果出现`[ALIYUN.COM LOG]: SLB health checking....OK...`说明正常。
-
-如果想打印日志，可以DEBUG=slb，如果不想打印日志，默认即无。
+- api.runkoa.com
+- admin.runkoa.com
+- h5.runkoa.com
 
 ## 总结
 
 - 首先介绍了haproxy和负载均衡算法
 - 介绍了阿里云slb用法
-- 给出node-slb，一个express中间件

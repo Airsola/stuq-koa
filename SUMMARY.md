@@ -85,3 +85,4 @@
   * [负载均衡](koa-deployment/slb.md)
   * [pm2](koa-deployment/pm2.md)
   * [监控](koa-deployment/monitor.md)
+  * [随堂练习：自己动手部署阿里云](koa-deployment/exercises.md)
