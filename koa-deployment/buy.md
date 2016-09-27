@@ -71,5 +71,4 @@ https://account.aliyun.com/login/login.htm?oauth_callback=https%3A%2F%2Fwww.aliy
 - 安装nginx
 - 使用pm2部署node代码
 
-其实这之前还有如何连接服务器，创建用户等服务器必备操作，我们下次再讲
-
+其实这之前还有如何连接服务器，创建用户等服务器必备操作，我们下节再讲

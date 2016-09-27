@@ -1,13 +1,12 @@
-## 部署nodejs应用
+# 部署nodejs应用
 
-### 基础
+## 基础
 
 - git clone
 - npm i
 - pm2 start
 
-
-### 修改nginx
+## 修改nginx
 
 ```
 cat /etc/nginx/sites-enabled/default
@@ -65,7 +64,3 @@ server {
 ```
 sudo nginx -s reload
 ```
-
-## 使用gulp和ftp部署
-
-https://github.com/nodeonly/gulp-sftp
