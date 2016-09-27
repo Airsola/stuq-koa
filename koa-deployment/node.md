@@ -1,7 +1,8 @@
+# 安装nodejs
 
-## 安装nodejs
+3m安装法
 
-### 安装nvm
+## 安装nvm
 
 ```
 $ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh | bash
@@ -23,7 +24,7 @@ Node Version Manager
 ```
 $ nvm install 4
 Downloading https://nodejs.org/dist/v4.3.2/node-v4.3.2-linux-x64.tar.xz...
-######################################################################## 100.0%
+#################################### 100.0%
 Now using node v4.3.2 (npm v2.14.12)
 Creating default alias: default -> 4 (-> v4.3.2)
 $ node -v
@@ -37,7 +38,7 @@ $  nvm alias default 4.3
 default -> 4.3 (-> v4.3.2)
 ```
 
-### 确认npm版本
+## 确认npm版本
 
 ```
 $ npm -v
@@ -46,7 +47,7 @@ $ npm -v
 
 只要大于2.9.1即可，如不是，请`npm i -g npm@2.9.1`
 
-### 安装nrm
+## 安装nrm
 
 ```
 $ npm i -g nrm
