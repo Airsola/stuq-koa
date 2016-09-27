@@ -1,7 +1,5 @@
 # 前端
 
-![1](img/1.png)
-
 ## v1：纯静态
 
 ### 技术栈
@@ -84,5 +82,3 @@ $ harp server
 
 典型的ctx.render{模板 + 数据} =>  HTML
 
-
-## moa2-frontend

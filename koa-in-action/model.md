@@ -1,4 +1,4 @@
-# model
+# 重写model
 
 推导出商品模型
 product
@@ -19,6 +19,8 @@ product
 - 是否推荐
 
 > moag product name:string detail:string sales_num:string price:string slides:string category:string type:string remark:string created_at:string updated_at:string is_delete:string is_index:string is_top_slide:string recommend:string -k -c
+
+修改如下
 
 ```
 "use strict";
