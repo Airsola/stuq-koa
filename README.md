@@ -120,3 +120,7 @@
 - Koa 2 实例demo https://cnodejs.org/topic/570ae6c012def0933c43abc9
 - Koa 2实用入门 https://cnodejs.org/topic/5709959abc564eaf3c6a48c8
 - https://github.com/moajs/moa2
+
+## 非StuQ会员沟通方式
+
+![Connect](img/connect.jpg)
